@@ -204,6 +204,7 @@ section.success {
   text-align: center;
   top: 50%;
   margin-top: -12px;
+    padding: 0 10px;
   color: white;
 }
 #portfolio .portfolio-item .portfolio-link .caption .caption-content i {
