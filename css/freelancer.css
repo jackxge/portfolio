@@ -475,7 +475,13 @@ fieldset[disabled] .btn-success.active {
   opacity: 0;
   display: none;
 }
-
+.portfolio-modal .modal-content .storebtn {
+  margin-bottom: 15px;
+}
+.portfolio-modal p {
+    text-align: left;
+    text-indent:20px;
+}
 
 
 
@@ -497,12 +503,7 @@ fieldset[disabled] .btn-success.active {
   }
   .navbar-custom.affix .navbar-brand {
     font-size: 1.5em;
-  }
-  .portfolio-modal .modal-content .storebtn {
-  margin-bottom: 15px;
-}
-    
-    
+  } 
 }
 
 @media (max-width: 767px) {
@@ -512,10 +513,6 @@ fieldset[disabled] .btn-success.active {
   section.first {
     padding-top: 75px;
   }
-  .portfolio-modal .modal-content .storebtn {
-  height:40px;
-    margin-bottom: 15px;
-}
 }
 
 @media (min-width: 767px) {
