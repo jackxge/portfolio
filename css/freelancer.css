@@ -42,7 +42,7 @@ hr.star-primary {
 }
 hr.star-light:after,
 hr.star-primary:after {
-  content: "\f005";
+  content: "\f13d";
   font-family: FontAwesome;
   display: inline-block;
   position: relative;
@@ -204,7 +204,7 @@ section.success {
   text-align: center;
   top: 50%;
   margin-top: -12px;
-    padding: 0 10px;
+  padding: 0 10px;
   color: white;
 }
 #portfolio .portfolio-item .portfolio-link .caption .caption-content i {
