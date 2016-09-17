@@ -91,6 +91,8 @@ header .intro-text .skills {
   font-size: 1.25em;
   font-weight: 300;
 }
+
+
 @media (min-width: 768px) {
   header .container {
     padding-top: 200px;
@@ -103,6 +105,8 @@ header .intro-text .skills {
     font-size: 1.75em;
   }
 }
+
+
 .navbar-custom {
   background: #fff;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -158,26 +162,6 @@ header .intro-text .skills {
   color: #232B2B;
   border-color: #232B2B;
 }
-@media (min-width: 768px) {
-  .navbar-custom {
-    padding: 25px 0;
-    -webkit-transition: padding 0.3s;
-    -moz-transition: padding 0.3s;
-    transition: padding 0.3s;
-  }
-  .navbar-custom .navbar-brand {
-    font-size: 2em;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-  }
-  .navbar-custom.affix {
-    padding: 10px 0;
-  }
-  .navbar-custom.affix .navbar-brand {
-    font-size: 1.5em;
-  }
-}
 section {
   padding: 100px 0;
 }
@@ -188,14 +172,6 @@ section h2 {
 section.success {
   background: #232B2B;
   color: white;
-}
-@media (max-width: 767px) {
-  section {
-    padding: 75px 0;
-  }
-  section.first {
-    padding-top: 75px;
-  }
 }
 #portfolio .portfolio-item {
   margin: 0 0 15px;
@@ -239,11 +215,6 @@ section.success {
 }
 #portfolio * {
   z-index: 2;
-}
-@media (min-width: 767px) {
-  #portfolio .portfolio-item {
-    margin: 0 0 30px;
-  }
 }
 .floating-label-form-group {
   position: relative;
@@ -462,12 +433,6 @@ fieldset[disabled] .btn-success.active {
   margin-bottom: 30px;
 }
 
-.portfolio-modal .modal-content .storebtn {
-  max-height: 70px;
-  width: auto;
-  margin-bottom: 15px;
-}
-
 .portfolio-modal .modal-content .item-details {
   margin: 30px 0;
 }
@@ -509,4 +474,52 @@ fieldset[disabled] .btn-success.active {
 .portfolio-modal .modal-backdrop {
   opacity: 0;
   display: none;
+}
+
+
+
+
+@media (min-width: 768px) {
+  .navbar-custom {
+    padding: 25px 0;
+    -webkit-transition: padding 0.3s;
+    -moz-transition: padding 0.3s;
+    transition: padding 0.3s;
+  }
+  .navbar-custom .navbar-brand {
+    font-size: 2em;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .navbar-custom.affix {
+    padding: 10px 0;
+  }
+  .navbar-custom.affix .navbar-brand {
+    font-size: 1.5em;
+  }
+  .portfolio-modal .modal-content .storebtn {
+  margin-bottom: 15px;
+}
+    
+    
+}
+
+@media (max-width: 767px) {
+  section {
+    padding: 75px 0;
+  }
+  section.first {
+    padding-top: 75px;
+  }
+  .portfolio-modal .modal-content .storebtn {
+  height:40px;
+    margin-bottom: 15px;
+}
+}
+
+@media (min-width: 767px) {
+  #portfolio .portfolio-item {
+    margin: 0 0 30px;
+  }
 }
