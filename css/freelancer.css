@@ -501,6 +501,26 @@ fieldset[disabled] .btn-success.active {
 }
 
 
+a.button {
+    border-radius: 5px;
+    border: 1px solid #232B2B;
+    color: black;
+    margin-top: 20px;
+    padding: 7px 15px;
+    width: 150px;
+    height: 10px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a.button:hover {
+    background-color: #232B2B;
+    color: white;
+}
+
+
 @media (min-width: 768px) {
   .navbar-custom {
     padding: 25px 0;
