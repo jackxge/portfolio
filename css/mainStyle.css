@@ -67,14 +67,28 @@ header {
   text-align: center;
   background: #232B2B;
   color: white;
+  padding-top: 60px;
 }
 header .container {
-  padding-top: 100px;
+  padding-top: 150px;
   padding-bottom: 50px;
+  width: 100%;
+}
+
+.headpack {
+    pointer-events: none;
+  position:absolute;
+    margin-top: 50px;
+  left: 0;
+  right: 0;
+  z-index:0
 }
 header img {
   display: block;
-  margin: 0 auto 20px;
+  margin: 0 auto 10px;
+    width: 20%;
+    min-width: 200px;
+    max-width: 300px;
 }
 header .intro-text .name {
   display: block;
@@ -82,28 +96,45 @@ header .intro-text .name {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 2em;
+    width: 100%;
 }
 header .intro-text .skills {
   font-size: 1.25em;
   font-weight: 300;
 }
 
+#particles-js{
+  width: 100%;
+  height: 100%;
+    min-height: 480px;
+  margin-left: 0;
+  margin-right: 0;
+  position:relative;
+}
+
 
 @media (min-width: 768px) {
   header .container {
-    padding-top: 200px;
+    padding-top: 150px;
     padding-bottom: 100px;
   }
+.headpack {
+    margin-top: 5%;
+}
   header .intro-text .name {
     font-size: 4.75em;
   }
   header .intro-text .skills {
     font-size: 1.75em;
   }
+  canvas{
+  display:block;
+}
 }
 
 
 .navbar-custom {
+  height: 60px;
   background: #fff;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
@@ -170,8 +201,11 @@ section.success {
   color: white;
 }
 #portfolio .portfolio-item {
+    float: left;
+    display: inline-block;
   margin: 0 0 15px;
   right: 0;
+    
 }
 #portfolio .portfolio-item .portfolio-link {
   display: block;
@@ -519,7 +553,7 @@ a.button:hover {
 
 @media (min-width: 768px) {
   .navbar-custom {
-    padding: 25px 0;
+    padding: 5px 0;
     -webkit-transition: padding 0.3s;
     -moz-transition: padding 0.3s;
     transition: padding 0.3s;
