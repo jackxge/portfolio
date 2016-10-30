@@ -15,8 +15,9 @@
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="css/mainStyle.min.css" rel="stylesheet">
-
+    <link href="css/mainStyle.css" rel="stylesheet">
+    <link href="css/timeStyle.css" rel="stylesheet">
+    
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -102,7 +103,7 @@
                                     </strong>
                                 </li>
                             </ul>
-                            <div class="row">
+                            <div class="row storedownload">
                                 <div class="col-md-4 col-md-offset-2">
                                     <a href="https://itunes.apple.com/us/app/motiongen/id1065657088?ls=1&mt=8">
                                         <img  src="img/portfolio/appstore.jpg" class="img-responsive storebtn" alt=""></a></div>
@@ -111,10 +112,64 @@
                                         <img  src="img/portfolio/googlestore.jpg" class="img-responsive storebtn" alt=""></a></div>
                             </div>
                             <img src="img/portfolio/motiongenflow.png" class="img-responsive img-centered" alt="">
-                            <p>MotionGen has two functionalities: synthesis and simulation. As long as we have known, this is the only inverse kinematics linkage design app on both app store and google play store. The first version presents both functions on one screen because we were focusing on bigger screens such as iPad, PC and Web. This design gives user more choices that they can easily switch into any modes based on different tasks. You can find the 1.0 version in app store and google play store at <a href="http://www.stonybrook.edu/commcms/motiongen/">Official Site</a>. </p> 
-                            <p>From users' feedback and our observation, we knew that a lot of people used smaller devices such as phones or other android touchpads because they are easy to carry. It was clearly that the previous design left less usable areas on the screen. Some devices could not even handle an effective two-finger movement. We also found that most users only used one function for a specific given task. Therefore we separated the two and redesigned the animation of the panels to hide or pop out buttons based on the procedures in the linkage design. This new design will take most use of the smaller screens and simplify the design procedures to provide a smoother, more intuitive and professional design experience.</p>
-                            <p>The project was started in late of 2012. I was the only person developing this app for iOS devices with the support of Stony Brook University. After the first version being released and a few conferences, we added a couple of team members to polish the app, extend the functionalities and develop android and web app. Thanks to many talented team members, it has now been very well developed and more functionalities are added.</p>
-                            <p>Here is a demonstration on how MotionGen (Ver. 1.0) works to solve a four bar synthesis problem by Matthew Fink.</p>
+                            <h3>Introduction</h3>
+                            <p>MotionGen has two functionalities: synthesis and simulation. The 1.0 version presents both functions on one screen because we were focusing on bigger screens such as iPad, PC and Web. This new design gives user more choices that they can easily switch into any modes based on different tasks. You can find the 1.0 version in app store and google play store at <a href="http://www.stonybrook.edu/commcms/motiongen/">Official Site</a>. </p> 
+                            <h3>"We take user testing seriously"</h3>
+                            <p>Ever from the early stage of the first version,  we took much attentionon user testing. We tried to obtain feedback from students as early as possible so that we can quickly switch different ideas and interate design concept.</p>
+                            <p>The new design concept also came from users' feedback and our observation. We knew that a lot of people used smaller devices such as phones or other android touchpads because they are easy to carry. It was clearly that the previous design left less usable areas on the screen and made it difficult to use on phones. Some devices could not even handle an effective two-finger movement if the screen is small. We also found that most users only used one function for a specific given task. Therefore we separated the two and redesigned the animation of the panels to hide or pop out buttons based on the procedures in the linkage design. This new design will take most use of the smaller screens and simplify the design procedures to provide a smoother, more intuitive and professional design experience.</p>
+                            <h3>The Project</h3>
+                            <p>The project was started in late of 2012. I was glad to be the first person developing this app for iOS devices with the support of Stony Brook University. After the first version being released and a few conferences, we added several team members to polish the app, extend the functionalities and develop android and web app. Thanks to many talented team members, it has now been very well developed and more functionalities are added.</p>
+                            
+                            <h3>A Brief Timeline</h3>
+                            <section class="timeline">
+                              <ul>
+                                <li>
+                                  <div>
+                                    <h5>08.2012</h5>
+                                      <p>It all started from a personal linkage design app for fun.</p>
+                                  </div>
+                                </li>
+                                  <li>
+                                  <div>
+                                    <h5>10.2012</h5>
+                                    <p>Defined the new functionalities and concepts. Meanwhile, first stage development started.</p>
+                                  </div>
+                                </li>
+                                  <li>
+                                  <div>
+                                    <h5>01.2013</h5>
+                                    <p>Five position synthesis realized. Initial design and development finished.</p>
+                                  </div>
+                                </li>
+                                  <li>
+                                  <div>
+                                    <h5>04.2013</h5>
+                                    <p>Four position and three position synthesis added. Presented on TALENT Colloquium.</p>
+                                  </div>
+                                </li>
+                                  <li>
+                                  <div>
+                                    <h5>09.2014</h5>
+                                    <p>More link types added. First version design was set and core functions were finished.</p>
+                                  </div>
+                                </li>
+                                  <li>
+                                  <div>
+                                    <h5>10.2014</h5>
+                                    <p>Presented in TEDxSBU.</p>
+                                  </div>
+                                </li>
+                                  <li>
+                                  <div>
+                                    <h5>12.2015</h5>
+                                    <p>Published on App Store.</p>
+                                  </div>
+                                </li>
+                                <!-- more list items here -->
+                              </ul>
+                            </section>
+                            <h3>Here are some Videos</h3>
+                            <p>This is the demonstration on how MotionGen (Ver. 1.0) works to solve a four bar synthesis problem by Matthew Fink.</p>
                             <div class="videoemb">
                             <iframe src="https://www.youtube.com/embed/-6NrLTWqhyk" frameborder="0" allowfullscreen class="ytube"></iframe>
                             </div>
@@ -122,15 +177,16 @@
                             <div class="videoemb">
                             <iframe src="https://www.youtube.com/embed/tr5f8X4rDD8" frameborder="0" allowfullscreen class="ytube"></iframe>
                             </div>
-                            <p>MotionGen was featured in TED talk on Machine Design Innovation through Technology and Innovation 2014. (Demonstration at 13:38min)</p>
+                            <p>MotionGen was featured in TED talkX on Machine Design Innovation through Technology and Innovation 2014. (Demonstration at 13:38min)</p>
                             <div class="videoemb">
                             <iframe src="https://www.youtube.com/embed/iSW_G0nb11Q" frameborder="0" allowfullscreen class="ytube"></iframe>
                             </div>
                             <p>The app had also helped in designing the sit-to-stand linkage system of the prototype of a patent protected mobility assist chair developed by Professor Anurag Purwar and Biodex Medical Systems. Relative information about the device can be found <a href="http://www.stonybrook.edu/commcms/mobilityassist/media.html">here</a>.</p>
-                            <p>We presented a poster demonstrating the perfect combination of research and its industrial application in a conference at the first stage of the app development.</p>
+                            <p>We presented a poster demonstrating the perfect combination of research and its industrial application in TALENT conference at the first stage of the app development.</p>
                             <img src="img/portfolio/2013-poster.jpg" class="img-responsive img-centered" alt="">
                             <p>This is the 2016 poster we presented to show our recent research on the theoretical foundation that will be applied to future versions of the app.</p>
                             <img src="img/portfolio/2016-poster.jpg" class="img-responsive img-centered" alt="">
+                            <h3>Acknowledgement</h3>
                             <p>The success of the app should be acknowledged to sponsors and everyone in the team:</p>
                             <p>&middot; <a href="http://facultycenter.stonybrook.edu/pages/2012-grant-recipients">Teaching and Learning Enhancements with New Technology Grant</a>, Stony Brook University, NY</p>
                             <p>&middot; <a href="http://commons.suny.edu/iitg/freshman-design-innovation/">SUNY Innovative Instruction Technology Grant</a> (IITG) 2014-2015</p>
@@ -161,15 +217,48 @@
     <!-- Theme JavaScript -->
     <script src="js/themeFile.min.js"></script>
     
+    
+    
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-84600651-1', 'auto');
-      ga('send', 'pageview');
-    </script>
+    function isElementInViewport(el) {
+      var rect = el.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+        
+        var items = document.querySelectorAll(".timeline li");
+ 
+// code for the isElementInViewport function
+ 
+function callbackFunc() {
+  for (var i = 0; i < items.length; i++) {
+    if (isElementInViewport(items[i])) {
+      items[i].classList.add("in-view");
+    }
+  }
+}
+ 
+window.addEventListener("load", callbackFunc);
+window.addEventListener("scroll", callbackFunc);
+        
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o)
+            , m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-84600651-1', 'auto');
+    ga('send', 'pageview');
+</script>
 
 </body>
 
