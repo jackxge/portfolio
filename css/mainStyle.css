@@ -617,7 +617,7 @@ a.button:hover {
 }
 
 
-@media (max-width:350px){
+@media (max-width:490px){
 #carframe {
 
     margin-top: -60px;
