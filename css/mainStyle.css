@@ -1,6 +1,7 @@
 body {
     font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     overflow-x: hidden;
+    color: #111;
 }
 
 p {
@@ -57,17 +58,17 @@ hr.star-light {
 }
 
 hr.star-light:after {
-    background-color: #232B2B;
+    background-color: #111;
     color: white;
 }
 
 hr.star-primary {
-    border-color: #232B2B;
+    border-color: #111;
 }
 
 hr.star-primary:after {
     background-color: white;
-    color: #232B2B;
+    color: #111;
 }
 
 .img-centered {
@@ -76,7 +77,7 @@ hr.star-primary:after {
 
 header {
     text-align: center;
-    background: #232B2B;
+    background: #111;
     color: white;
     padding-top: 60px;
 }
@@ -139,7 +140,7 @@ header .intro-text .skills {
 }
 
 .navbar-custom {
-    height: 60px;
+    height: 50px;
     background: #fff;
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
@@ -152,14 +153,35 @@ header .intro-text .skills {
 }
 
 .navbar-custom .navbar-brand {
-    color: #232B2B;
+    color: #111;
 }
+
+.navbar-brand img {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    top:0;
+}
+
+.navbar-brand .navbar-text {
+    color: #111;
+    display: block;
+    position: relative;
+    float: left;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    padding-left: 70px;
+    margin: 0;
+}
+
+
 
 .navbar-custom .navbar-brand:hover,
 .navbar-custom .navbar-brand:focus,
 .navbar-custom .navbar-brand:active,
 .navbar-custom .navbar-brand.active {
-    color: #232B2B;
+    color: #111;
 }
 
 .navbar-custom .navbar-nav {
@@ -167,43 +189,43 @@ header .intro-text .skills {
 }
 
 .navbar-custom .navbar-nav li a {
-    color: #232B2B;
+    color: #111;
 }
 
 .navbar-custom .navbar-nav li a:hover {
-    color: #232B2B;
+    color: #111;
     outline: none;
 }
 
 .navbar-custom .navbar-nav li a:focus,
 .navbar-custom .navbar-nav li a:active {
-    color: #232B2B;
+    color: #111;
 }
 
 .navbar-custom .navbar-nav li.active a {
     color: white;
-    background: #232B2B;
+    background: #111;
 }
 
 .navbar-custom .navbar-nav li.active a:hover,
 .navbar-custom .navbar-nav li.active a:focus,
 .navbar-custom .navbar-nav li.active a:active {
     color: white;
-    background: #232B2B;
+    background: #111;
 }
 
 .navbar-custom .navbar-toggle {
-    color: #232B2B;
+    color: #111;
     text-transform: uppercase;
     font-size: 10px;
-    border-color: #232B2B;
+    border-color: #111;
 }
 
 .navbar-custom .navbar-toggle:hover,
 .navbar-custom .navbar-toggle:focus {
-    background-color: #232B2B;
-    color: #232B2B;
-    border-color: #232B2B;
+    background-color: #111;
+    color: #111;
+    border-color: #111;
 }
 
 section {
@@ -216,7 +238,7 @@ section h2 {
 }
 
 section.success {
-    background: #232B2B;
+    background: #111;
     color: white;
 }
 
@@ -330,7 +352,7 @@ section.success {
 }
 
 .floating-label-form-group-with-focus label {
-    color: #232B2B;
+    color: #111;
 }
 
 form .row:first-child .floating-label-form-group {
@@ -347,7 +369,7 @@ footer h3 {
 
 footer .footer-above {
     padding-top: 50px;
-    background-color: #232B2B;
+    background-color: #111;
 }
 
 footer .footer-col {
@@ -356,7 +378,7 @@ footer .footer-col {
 
 footer .footer-below {
     padding: 25px 0;
-    background-color: #232B2B;
+    background-color: #111;
 }
 
 .btn-outline {
@@ -365,22 +387,20 @@ footer .footer-below {
     border: solid 2px white;
     background: transparent;
     transition: all 0.3s ease-in-out;
-    margin-top: 15px;
 }
 
 .btn-outline:hover,
 .btn-outline:focus,
 .btn-outline:active,
 .btn-outline.active {
-    color: #232B2B;
+    color: #111;
     background: white;
-    border: solid 2px white;
 }
 
 .btn-primary {
     color: white;
-    background-color: #232B2B;
-    border-color: #232B2B;
+    background-color: #111;
+    border-color: #111;
     font-weight: 700;
 }
 
@@ -415,19 +435,19 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-    background-color: #232B2B;
-    border-color: #232B2B;
+    background-color: #111;
+    border-color: #111;
 }
 
 .btn-primary .badge {
-    color: #232B2B;
+    color: #111;
     background-color: white;
 }
 
 .btn-success {
     color: white;
-    background-color: #232B2B;
-    border-color: #232B2B;
+    background-color: #111;
+    border-color: #111;
     font-weight: 700;
 }
 
@@ -437,8 +457,8 @@ fieldset[disabled] .btn-primary.active {
 .btn-success.active,
 .open .dropdown-toggle.btn-success {
     color: white;
-    background-color: #232B2B;
-    border-color: #232B2B;
+    background-color: #111;
+    border-color: #111;
 }
 
 .btn-success:active,
@@ -462,12 +482,12 @@ fieldset[disabled] .btn-success:active,
 .btn-success.disabled.active,
 .btn-success[disabled].active,
 fieldset[disabled] .btn-success.active {
-    background-color: #232B2B;
-    border-color: #232B2B;
+    background-color: #111;
+    border-color: #111;
 }
 
 .btn-success .badge {
-    color: #232B2B;
+    color: #111;
     background-color: white;
 }
 
@@ -475,8 +495,7 @@ fieldset[disabled] .btn-success.active {
     display: inline-block;
     height: 50px;
     width: 50px;
-    border: 2px solid white;
-    border-radius: 100%;
+    border: 2px solid transparent;
     text-align: center;
     font-size: 20px;
     line-height: 45px;
@@ -551,7 +570,7 @@ fieldset[disabled] .btn-success.active {
     height: 75px;
     width: 1px;
     margin-left: 35px;
-    background-color: #232B2B;
+    background-color: #111;
     transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     /* IE 9 */
@@ -563,7 +582,7 @@ fieldset[disabled] .btn-success.active {
 .portfolio-modal .close-modal .lr .rl {
     height: 75px;
     width: 1px;
-    background-color: #232B2B;
+    background-color: #111;
     transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     /* IE 9 */
@@ -606,7 +625,7 @@ fieldset[disabled] .btn-success.active {
 
 a.button {
     border-radius: 5px;
-    border: 1px solid #232B2B;
+    border: 1px solid #111;
     color: black;
     margin-top: 20px;
     padding: 7px 15px;
@@ -619,7 +638,7 @@ a:hover {
 }
 
 a.button:hover {
-    background-color: #232B2B;
+    background-color: #111;
     color: white;
 }
 
@@ -637,7 +656,7 @@ a.button:hover {
 
 @media (min-width: 768px) {
     .navbar-custom {
-        padding: 5px 0;
+/*        padding: 5px 0;*/
         -webkit-transition: padding 0.3s;
         -moz-transition: padding 0.3s;
         transition: padding 0.3s;
@@ -649,7 +668,7 @@ a.button:hover {
         transition: all 0.3s;
     }
     .navbar-custom.affix {
-        padding: 10px 0;
+/*        padding: 10px 0;*/
     }
     .navbar-custom.affix .navbar-brand {
         font-size: 1.5em;
@@ -670,3 +689,4 @@ a.button:hover {
         margin: 0 0 30px;
     }
 }
+

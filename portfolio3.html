@@ -15,7 +15,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="css/mainStyle.min.css" rel="stylesheet">
+    <link href="css/mainStyle.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -41,7 +41,9 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="index.html">Jack's Beanstalk</a>
+                <a class="navbar-brand" href="index.html"> <img src="img/portfolio/jab.svg" />
+                    <div class="navbar-text">Jack's Beanstalk</div>
+                </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -77,32 +79,51 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Smart Taxi</h2>
-                            <hr class="star-primary">
+                            <h2>AquanautViz</h2>
                             <ul class="list-inline item-details">
                                 <li>Client:
-                                    <strong>NYC Taxi Trip Information Predict Web
+                                    <strong>Houston Mechatronics, Inc.
                                     </strong>
                                 </li>
                                 <li>Date:
-                                    <strong>Feburary 2016
+                                    <strong>February 2018
                                     </strong>
                                 </li>
                                 <li>Service:
-                                    <strong>Web Design and Development
+                                    <strong>3D Game Design and Development
                                     </strong>
                                 </li>
                                 <li>Tools:
-                                <strong>HTML, CSS, Javascript, Polymer, Mapbox
+                                    <strong>Unreal Engine, C++, Maya, Adobe CC, HTC Vive
                                     </strong>
                                 </li>
                             </ul>
-                            <img src="img/portfolio/taxipage.png" class="img-responsive img-centered" alt="">
-                            <h3>A Data Science Project</h3>
-                            <p>We designed this <a target="_blank" href="https://traveladvisor.firebaseapp.com">NYC Taxi Trip Information Predict Web</a> for a data science project of my colleague. I took part in developing the site navigation method and graphics, layouts, interactive components and visual style. Front-end pages are mainly coded in Polymer, Html and CSS and the data is visualized in Javascript library - MapBox.js. </p>
-                            <p>This web application analyzes one billion taxi trip data in New York City and takes the advantage of machine learning technology to predict trip information based on user input such as date, time of day, pick-up and drop-off locations. There are other useful statistics that can be referred to.</p>
-                            <h3>The Design</h3>
-                            <p>The design of interface is focused on simplicity and intuitiveness. It needs to be self-explained and fast responsive. Another requirement is to provide as much as visual data on the screen as possible. Therefore we used drop-down menu even its a large screen web application. We tried not to distract users from other information. But they can also easily switch to any part of the functions easily by as less as only one or two clicks. We minimized the number of text information on the screen and tried hard to use as many as visual information to present data. We knew people using this web mostly want to have a broad view of the time and get the relative information. Thus this information is visualized in almost all pages to save the time of users. There are more functions in this web application that can be explored.</p>
+                            <h3>A 3D Game Development Project</h3>
+                            <p>AquanautViz was originally a research project aiming for the revolutionary user interface for controlling the subsea robot of Houston Mechatronics, Inc (HMI). It is totally developed in one of the widely used game engines - Unreal Engine. The 3D models are built using Maya and Solidworks. The project was deployed in iOS platform and first presented as a interactive demonstration of our robot in 2018 Offshore Technology Conference (OTC). The app was so successful and gained high praises from our clients, therefore, we extended it into virtual reality environment in HTC Vive in later 2018 as marketing material.</p>
+                            <p>First comes the demonstration video of the application.(Noted that the video is recorded in Mac OS, the application works on other platforms as well such as iOS, PC, HTC Vive.)</p>
+                            <div class="videoemb">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/HGTfuV2oSQ0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <h3>3D Modeling</h3>
+                            <p>The 3D models of the whole robot are built in Solidworks by mechanical and electrical team. The good news is Solidworks is able to export 3D models in a format Maya uses such as STL, STEP, fbx(fbx is better because it also includes material and UV mapping). But the bad news is all the polygon surfaces in these exported files are composed of too many triangles which causes millions of vertices and small surfaces. Even worse, the number accumulates greatly when you have a complete 3D robot to aseemble. The solution is simple enough. I used two weeks to remodel everything in Maya. This process is not purely remodeling, but logically and natually simplify large surfaces using much less trangles while maintaining the same level smoothness. These 3D assets are used in other projects and marketing materials as well in the future.</p>
+                            <h3>The Interface Design</h3>
+                            <p>The design of interface is focused on simplicity and intuitiveness. It needs to be self-explained and fast responsive. The interface experience is mainly focusing on the interaction between the user and devices. These interaction will be pan, zoom, rotate and tap. The function is kept to be simple and easy.</p>
+                            <p>The main menu is located on the top on the screen for users to tap choose from a set of main systems of the robot. </p>
+                            <img src="img/portfolio/000002002.png" class="img-responsive img-centered" alt="">
+                            <p>Once a main system is chosen, the subsystems are popping up from the bottom. Users can then tap to choose the one they are interested in. The visualized 3D robot will response based on the system users choose. The system chosen is rendered in color while the unchosen ones are rendered as holographic. </p>
+                            <img src="img/portfolio/000002005.png" class="img-responsive img-centered" alt="">
+                            <img src="img/portfolio/000002006.png" class="img-responsive img-centered" alt="">
+                            <p>Users can also use the slider on the screen to tranform the robot or pan onthe screen to rotate the model. The manipulation is so simple and intuitive that any one can used it natrually.</p>
+                            <img src="img/portfolio/000002007.png" class="img-responsive img-centered" alt="">
+
+                            <hr class="star-primary">
+                            <p>As a disclosure, this is the promotional animation created in unreal engine that was used in conferences. Enjoy! </p>
+                            <div class="videoemb">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/JNmxGqXOIZE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <div class="videoemb">
+                                    <small>(If you are intested in the making of this video, feel free to contact me. )</small>
+                                </div>
+                            </div>
                             <a href="index.html#portfolio" class="button"><i class="fa fa-times"></i>Close</a>
                         </div>
                     </div>
@@ -110,7 +131,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
@@ -126,15 +147,23 @@
 
     <!-- Theme JavaScript -->
     <script src="js/themeFile.min.js"></script>
-    
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-84600651-1', 'auto');
-      ga('send', 'pageview');
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-84600651-1', 'auto');
+        ga('send', 'pageview');
+
     </script>
 
 </body>
