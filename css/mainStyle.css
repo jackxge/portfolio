@@ -615,13 +615,12 @@ fieldset[disabled] .btn-success.active {
 }
 
 a.button {
-    border-radius: 5px;
     border: 1px solid #111;
     color: black;
     margin-top: 20px;
-    padding: 7px 15px;
+    padding: 10px 50px;
     width: 150px;
-    height: 10px;
+    height: auto;
 }
 
 a:hover {
