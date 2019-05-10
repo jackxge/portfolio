@@ -79,35 +79,70 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Design 4 Autodesk</h2>
+                            <h2>Snake Robot Control Interface</h2>
                             <ul class="list-inline item-details">
                                 <li>Client:
-                                    <strong>Autodesk
+                                    <strong>HMI
                                     </strong>
                                 </li>
                                 <li>Date:
-                                    <strong>September 2015
+                                    <strong>February 2017 -
                                     </strong>
                                 </li>
                                 <li>Service:
-                                    <strong>Industrial Design
+                                    <strong>User Experience, User Interface
                                     </strong>
                                 </li>
                                 <li>Tools:
-                                    <strong>Fusion 360, Photoshop, Illustrator
+                                    <strong>Photoshop, Illustrator, HTML, CSS, Javascript, Nodejs
                                     </strong>
                                 </li>
                             </ul>
                             <img src="img/portfolio/pageweb.jpg" class="img-responsive img-centered" alt="">
-                            <h3>Fan of Robots</h3>
-                            <p>I’ve always been a fan of robots. This website interface is designed for the presentation of <a href="https://gallery.autodesk.com/fusion360/projects/transforming-robot">my robot concept</a> in Design 4 Autodesk Contest. It is modeled with Autodesk Fusion 360 and rendered by Keyshot. The general idea is to design a robot that can transform from a regular geometry into a functional machine. In certain situations, it shrinks into a sphere to roll at a faster speed to reach to the designated position and expands to a robot afterward.</p>
-                            <p>This robot won me a prize from Autodesk and further brought me a promotion to be entitled to an Autodesk Education Expert since November 2015. The Autodesk® Education Expert Network (now moved to Autodesk Design Academy) is to enable students, educators, alumni, and partners to showcase their portfolios, support design, testing and connect with the larger design community and industry.</p>
-                            <h3>Second Member</h3>
-                            <p>This is the 2nd team member in this series, an airborne early warning and control system.</p>
-                            <img src="img/portfolio/helifront.jpg" class="img-responsive img-centered" alt="">
-                            <p>In real combat, it transforms into a helicopter with two blade propeller on the top and two small propellers on the tail. The role for the airborne early warning is to take control of the whole battle and provide tactical guidance to the other team members, e.g. the map of the terrain, location of enemies, best path and prediction.</p>
-                            <img src="img/portfolio/helitop.jpg" class="img-responsive img-centered" alt="">
-                            <img src="img/portfolio/helileft.jpg" class="img-responsive img-centered" alt="">
+                            <h3>Brief Concept of Snake Robot</h3>
+                            <p>The birth of the snake robot is to finish the task of pipe inspection automatically. Once it's deployed into the oil pipe, the wireless robot moves forward and scans the inner walls for any cracks or residues. Once the imperfection is found, the field technicians will replace the corresponding pipe sections. The control and communication of the robot from operators are all dependent on the web interface.</p>
+                            <h3>Interface Design Requirements and First Concept</h3>
+                            <p>The highlights of our robot are wireless and automatic which is a big difference from the other similar kinds. These also increase the difficulty of interface design and its development. The following is the initial mockups of the interface design based on the requirements.</p>
+                            <img src="img/portfolio/IMG_5079.JPG" class="img-responsive img-centered" alt="">
+                            <small class="col-lg-12 text-center" style="color:#aaa;margin-bottom: 50px;">(First mockup of the web interface.)</small>
+                            <p>This is a very quick and rough mockup. The function of the design is to build the foundation and make some basic UX decisions, e.g. the number of pages, the arrangement of pages, what are the contents in each page, whether the requirements are fully met, what information are redundant and do we want to have those redundancies. The main requirements at this stage are video streaming (which is very hard due to the wireless feature), the analysis of the inner wall condition, the robot movement control, the health and condition of the robot. These requirements were made by team discussion and market research of similar products.</p>
+                            <img src="img/portfolio/IMG_7667.JPG" class="img-responsive img-centered" alt="">
+                            <small class="col-lg-12 text-center" style="color:#aaa;margin-bottom: 50px;">(A note of timeline, technical key points, some requirements.)</small>
+                            
+                            <h3>The Iteration Starts and First Version of Interface</h3>
+                            <p>After the basic mockup was roughly done, we started to think sbout the details of each page and element.</p>
+                            <p>First comes the layout.</p>
+                            <img src="img/portfolio/IMG_3815.JPG" class="img-responsive img-centered" alt="">
+                            <small class="col-lg-12 text-center" style="color:#aaa;margin-bottom: 50px;">(Some of the layout concepts.)</small>
+                            <p>The image above showed the different layout concepts. We want to decide where to locate the main menu, submenu, videos, data, control panels. And analyze the good and bad of different layouts in terms of usability, accessibility, safety and consistency.</p>
+                            <p>One of the decisions we made in this step was not to make the menu pop up too much. It should be easy to see when you need it, but "hide" itself when you were doing real operations. The menu should also not take much of the screen space. The valuable space in such a robotic system is going to left for robot data. Because the menu items are very few, thus we decided to locate the menu vertically on left. As for elements in each page, because they are in different functions, we used a cardboard style in order to allow users to find some consistency in the interface. Therefore we came up with the following control page.</p>
+                            <img src="img/portfolio/IMG_0095.JPG" class="img-responsive img-centered" alt="">
+                            <small class="col-lg-12 text-center" style="color:#aaa;margin-bottom: 50px;">(Layout of the control page.)</small>
+                            <p>Based on these decisions, we made a first high-fidelity mockup in order to move on to the next stage.</p>
+                            <img src="img/portfolio/sn1.png" class="img-responsive img-centered" alt="">
+                            <small class="col-lg-12 text-center" style="color:#aaa;margin-bottom: 50px;">(First simple version of interface.)</small>
+                            <p>You may notice this is a very simple and rough version. This is because for this agile team, twe need a minimum viable product to integrate the backend code and control algorithms into the web interface in order to make our demo of the robot in one month. This interface iteration happened in less than three weeks from a initial idea to the final peototype in the code level (HTML, CSS, Javascript).</p>
+                            
+                            
+                            <h3>Think about Details and Update the Interface</h3>
+                            <p>This is actually the fun part. Although some of the materials for this part are missing, I can still give you a good understanding of that happened in these four months.</p>
+                            <p>After the successful demo in March in a pipe inspection robot presentation, we finally were able to sit down and rethink the design decisions we made and sculpted the details of the interface.</p>
+                            <p>1. First was the color.</p>
+                            <p>The theme we used to use is dark and vague mainly because we want to keep our branding which is dark grey and orange. But our hardware product is a white happy snake, who deserved a companion which shared the same style and attitude as his. In other words, the software and hardware should be somewhat shared consistency. And this happened from changing the color of the UI.</p>
+                            <p>We rethought about our company brand and decided to emphasize the brand by orange and dark grey (similar to black) for the main elements. And used normal red, green, yellow for another status to allow users to easily move from traditional control system into ours.</p>
+                            <p>We also found the dark theme is hard to observe under strong sunlight, where this kind of operations mostly happens. Therefore we switch the interface into a light theme, using large spaces of white. This would benefit the data plotted on the screen as well.</p>
+                            
+                            <p>2. Second is the layout.</p>
+                            <p>We changed the layout and page arrangement based on observation, interviews and screen size calculation. The control page and data plotting page are combined into one page because users tended to switch between control and data before. They are equally important and frequently used in a real inspection process. Another change is the cardboard sizes. They were decided by precise calculation. We used a heat map to present the inner pipe wall condition because it could present an intuitive visual image of the inner wall thickness. While the heat map cannot be too small or big, and to leave enough space for the control panel and videos, we decide to have the heat map to visualize 10 inches of the inner wall in front of the robot camera. Thus we use 15 dots in a column and 360 dots in a row to show an unwrapped map of inner wall thickness data. We also take consideration of the mobile and pc web screen sizes and adjust a based on them. The size of the data plot box is designed in this method. It's not meant to be perfect, but to improve usability.</p>
+                            
+                            <p>3. Third is robot health.</p>
+                            <p>This time we added the 2d sketch of the robot on to the status bar. When the robot is stated, the corresponding component of the hardware icon would either blink or change color. They indicated the health condition and status of each component. You can also click on them to see the detailed real-time battery chart. There are motor speed, current, and sensor rotation as well. </p>
+                            <img src="img/portfolio/with_camera.png" class="img-responsive img-centered" alt="">
+                            <small class="col-lg-12 text-center" style="color:#aaa;margin-bottom: 50px;">(The new and final interface design.)</small>
+                            <img src="img/portfolio/response.png" class="img-responsive img-centered" alt="">
+                            <small class="col-lg-12 text-center" style="color:#aaa;margin-bottom: 50px;">(Interaface in phone, tablet and PC web. )</small>
+                            
+                            
                             <a href="index.html#portfolio" class="button">CLOSE</a>
                         </div>
                     </div>
