@@ -130,7 +130,7 @@
     left: 9px;
     width: 305px;
     height: 220px;
-    background-image: url(/img/portfolio/taxi-2.png);
+    background-image: url(/img/portfolio/aq-2.png);
     background-size: 100%;
     background-repeat: no-repeat;
     -webkit-transform: translateZ(70px);
@@ -144,7 +144,7 @@
     left: 9px;
     width: 305px;
     height: 220px;
-    background-image: url(/img/portfolio/taxi-1.png);
+    background-image: url(/img/portfolio/aq-1.png);
     background-size: 100%;
     background-repeat: no-repeat;
     -webkit-transform: translateZ(100px);
@@ -220,7 +220,7 @@
 
 .card-6 .perspective-card__layer1 {
     height: 100%;
-    background-image: url(/img/portfolio/3d-2.png);
+    background-image: url(/img/portfolio/taxi-1.png);
     background-size: 100%;
     background-repeat: no-repeat;
     -webkit-transform: translateZ(60px);
@@ -234,11 +234,25 @@
     left: 9px;
     width: 305px;
     height: 220px;
-    background-image: url(/img/portfolio/3d-1.png);
+    background-image: url(/img/portfolio/taxi-2.png);
     background-size: 100%;
     background-repeat: no-repeat;
-    -webkit-transform: translateZ(80px);
-    transform: translateZ(80px);
+    -webkit-transform: translateZ(90px);
+    transform: translateZ(90px);
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.card-6 .perspective-card__layer3 {
+    position: absolute;
+    top:9px;
+    left: 9px;
+    width: 305px;
+    height: 220px;
+    background-image: url(/img/portfolio/taxi-3.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    -webkit-transform: translateZ(50px);
+    transform: translateZ(50px);
     -moz-osx-font-smoothing: grayscale;
 }
 
@@ -283,7 +297,7 @@
 }
 
 .card-3 {
-    background-image: url(/img/portfolio/taxi-3.png);
+    background-image: url(/img/portfolio/aq-3.png);
     background-size: 100%;
     background-repeat: no-repeat;
 }
