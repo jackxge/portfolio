@@ -279,14 +279,17 @@
 .card-4 {
     background-image: url(/img/portfolio/iq_4.png);
     background-size: 100%;
-    background-repeat: no-repeat;}
+    background-repeat: no-repeat;
+}
 
 .card-5 {
     background-image:linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0.85));
 }
 
 .card-6 {
-    background-color: #7c7da5;
+    background-image: url(/img/portfolio/taxi-4.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 
