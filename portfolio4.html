@@ -120,7 +120,7 @@
                             
                             <h3>3. Readability and usability</h3>
                             <p>To improve the readability, we conduct the onsite survey and decide the intuitive visual feedback that is easy to recognize, such as warning colors, notification, indication for safety, areas of caution. </p>
-                            <p>We collected data from 20 technical and 10 none-technical participants, varying from 20 to 50 years of age. We utilize quantitative analysis method to analyze the survey and the outcome of the analysis is shown in figure 2.</p>
+                            <p>We collected data from 26 technical and 4 none-technical participants, varying from 20 to 50 years of age. We utilize quantitative analysis method to analyze the survey and the outcome of the analysis is shown in figure 2.</p>
                             <img src="img/portfolio/results.png" class="img-responsive img-centered" alt="">
                             <small class="col-lg-12 text-center" style="color:#aaa;margin-bottom:20px;">Figure 2. Visual indicator design.</small>
                             <p>Figure 2 shows that the color chosen should be consistent with industry convention, e.g. green for ON, red for OFF. The correct color can decrease the time for digesting the information, thus keeps a consistent workflow. To increase the accessibility, the color blindness test was conducted as well. It also implies that operators prefer text explanation over icons for indicating complex working task.  Because unconventional icons mostly cause confusion rather than simplifying a problem. It is also true that to locate menus in the bottom of the screen is better because the top bar usually serves as a collection of indicators or quick access. Operators can quickly glance over the screen, of which the eye flow generally happens from top to bottom, to find or solve problems at once.</p>
@@ -144,7 +144,7 @@
                             <small class="col-lg-12 text-center" style="color:#aaa;margin-bottom:20px;">Figure 4. Testing time page.</small>
                             
                             <h3>5. Simulate physical environment</h3>
-                            <p>In order to design an intuitive interface to decrease the learning curve and to create a friendly working environment. we take consideration of the physical facilities and simulate as much as we can in the software interface. </p>
+                            <p>In order to design an intuitive interface to decrease the learning curve and to create a friendly working environment, we take consideration of the physical facilities and their layouts to simulate real environment as much as we can in the software interface. The layout is important to improve human computer interaction that is predictable and satisfies user expectation. [8]</p>
                             <p>One example is button push. In real life physical world, when a rigid button is pushed, the button size becomes smaller from the angle of users observation. This is the same in our interface.</p>
                             <p>Another example is the layout of the pipe grid. The grid of pipes in our interface is the same layout and dimensions as in the work site. Because the grid in different working site could have different settings, we applied a dynamic layout method to load the setting on a work site before constructing the virtual grid on the interface. This keeps the layout to be the same as in the current work site.</p>
                             <p>Figure 5 is an example of the grid page.</p>
@@ -154,22 +154,28 @@
                             <h3>6. Consistency in different environmental conditions</h3>
                             <p>This is an interesting theory stating that a good interface design should have consistent readability and accessibility under different environmental conditions and devices, e.g. bright sunlight, dim lighting, rainy days, or on highly reflective screens. One problem is that if the interface screen is reflecting the surrounding images, how can we design a layout and correct contrast to reduce the effect or even take advantage of that reflection? The research on this topic was created recently and the problem is complex. We are gradually collecting data to analyze. The method is based on the investigation of workspace. We take measurement of some physical objects and surroundings, the screen sizes, office sizes, locations, environment lights, etc. The goal is to extract information leading to the adjustment of color, layout, UI element locations.</p>
                             
-                            <h3>7. Conclusion</h3>
+                            <h3>7. Conclusions</h3>
                             <p>Our software has succesfully increased the workspace safety by the following.</p>
                             <p>1. Decreases the total steps and time to finish a task.</p>
                             <p>2. Requires less people to finish a task. </p>
                             <p>3. Observably decrease number of people appearing in dangerous areas (our computer vision system collects data and shows less number and time per person spent in the dangerous areas.)</p>
                             <p>Our software system increases efficiency by 20% with room to improve.</p>
                             
+                            <h3>8. Further Works</h3>
+                            <p>Upon user testing and worksite research, there are two major areas to investage to improve user experience.</p>
+                            <p>First, warning and alert bahaviours can be further improved based on the specific operation tasks and processes. One can collect personnel data on different types and levels of warning zones. The data will be analyzed quantitatively to prioritize the warning zones in a worksite. It is important to improve the interface to avoid persons stepping into the highly dangerous zones.</p>
+                            <p>Further studies on finishing operation tasks in a worksite is also conducted. In a practical situation, operation workflows might be changed depending on the solution of specific problems, which in some cases judged by the instinct and experience ofo operators. The priority of tasks in the interface will be tested and improved for the convenence reason, e.g. frequency of operations, alternative operation for problem solving.</p>
+                            
                             
                             <h3>References</h3>
-                            <p>1. "Oil and Gas Extraction Worker Fatalities 2014". CDC. 2017.</p>
-                            <p>2. NIOSH Fatalities in Oil and Gas Extraction (FOG) Database. 2016.</p>
-                            <p>3. L. Rosenfeld, P. Morville, J Arango, "Information Architecture: For the Web and Beyond 4th Edition". O'Reilly Media, 2015.</p>
-                            <p>4. Hick WE. "On the rate of gain of information". Quarterly Journal of Experimental Psychology. 1952;4:11-26.</p>
-                            <p>5. M. Johnson, et al: The Fundamental Principle of Coactive Design: Interdependence Must Shape Autonomy, In: COIN 2010 International Workshops, LNAI 6541, pp. 172–191, 2011.</p>
-                            <p>6. N. Moray, ed. "Mental workload: Its theory and measurement. Vol. 8". Springer Science & Business Media, 2013.</p>
-                            <p>7. J.J. Ramirez. "Designed Redundancies: UX Patterns To Unblock Frustration…And Save Lives". 2017.</p>
+                            <p>[1]. "Oil and Gas Extraction Worker Fatalities 2014". CDC. 2017.</p>
+                            <p>[2]. NIOSH Fatalities in Oil and Gas Extraction (FOG) Database. 2016.</p>
+                            <p>[3]. L. Rosenfeld, P. Morville, J Arango, "Information Architecture: For the Web and Beyond 4th Edition". O'Reilly Media, 2015.</p>
+                            <p>[4]. Hick WE. "On the rate of gain of information". Quarterly Journal of Experimental Psychology. 1952;4:11-26.</p>
+                            <p>[5]. M. Johnson, et al: The Fundamental Principle of Coactive Design: Interdependence Must Shape Autonomy, In: COIN 2010 International Workshops, LNAI 6541, pp. 172–191, 2011.</p>
+                            <p>[6]. N. Moray, ed. "Mental workload: Its theory and measurement. Vol. 8". Springer Science & Business Media, 2013.</p>
+                            <p>[7]. J.J. Ramirez. "Designed Redundancies: UX Patterns To Unblock Frustration…And Save Lives". 2017.</p>
+                            <p>[8]. Norman, Kent L., Linda J. Weldon, and Ben Shneiderman. "Cognitive layouts of windows and multiple screens for user interfaces." International journal of man-machine studies 25.2 (1986): 229-248.</p>
                             <p style="margin-bottom:50px;"></p>
                             <a href="index.html#portfolio" class="button">CLOSE</a>
                         </div>
