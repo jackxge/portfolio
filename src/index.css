@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Japanese-inspired warm neutral palette */
+    --background: 30 15% 97%;
+    --foreground: 30 10% 12%;
+
+    --card: 30 12% 94%;
+    --card-foreground: 30 10% 12%;
+
+    --popover: 30 12% 94%;
+    --popover-foreground: 30 10% 12%;
+
+    /* Subtle indigo accent - inspired by Ai-iro (Japanese indigo) */
+    --primary: 230 35% 45%;
+    --primary-foreground: 30 15% 97%;
+
+    --secondary: 30 10% 90%;
+    --secondary-foreground: 30 10% 25%;
+
+    --muted: 30 8% 88%;
+    --muted-foreground: 30 8% 45%;
+
+    /* Sumi ink-like accent */
+    --accent: 30 5% 18%;
+    --accent-foreground: 30 15% 97%;
+
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 30 15% 97%;
+
+    --border: 30 10% 85%;
+    --input: 30 10% 85%;
+    --ring: 230 35% 45%;
+
+    --radius: 0.125rem;
+
+    /* Typography */
+    --font-display: 'Noto Serif JP', serif;
+    --font-body: 'Outfit', system-ui, sans-serif;
+
+    /* Transitions - slower, more deliberate */
+    --transition-slow: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-medium: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-fast: 0.25s ease-out;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 500;
+  }
+
+  ::selection {
+    @apply bg-primary text-primary-foreground;
+  }
+}
+
+@layer components {
+  .text-display {
+    font-family: var(--font-display);
+  }
+
+  .text-body {
+    font-family: var(--font-body);
+  }
+
+  /* Atmospheric gradient overlays */
+  .gradient-fade-up {
+    background: linear-gradient(to top, hsl(var(--background)) 0%, transparent 100%);
+  }
+
+  .gradient-fade-down {
+    background: linear-gradient(to bottom, hsl(var(--background)) 0%, transparent 100%);
+  }
+
+  /* Hover reveal line animation */
+  .hover-line {
+    @apply relative;
+  }
+
+  .hover-line::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-px bg-primary scale-x-0 origin-right;
+    transition: transform var(--transition-medium);
+  }
+
+  .hover-line:hover::after {
+    @apply scale-x-100 origin-left;
+  }
+
+  /* Image reveal animation */
+  .image-reveal {
+    @apply overflow-hidden;
+  }
+
+  .image-reveal img {
+    transition: transform var(--transition-slow);
+  }
+
+  .image-reveal:hover img {
+    @apply scale-105;
+  }
+
+  /* Fade in animation */
+  .fade-in-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+  }
+
+  .fade-in-up-delay-1 {
+    animation-delay: 0.1s;
+  }
+
+  .fade-in-up-delay-2 {
+    animation-delay: 0.2s;
+  }
+
+  .fade-in-up-delay-3 {
+    animation-delay: 0.3s;
+  }
+
+  .fade-in-up-delay-4 {
+    animation-delay: 0.4s;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .writing-vertical {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+}
+
+/* Custom cursor - hide default on desktop */
+@media (min-width: 768px) {
+  * {
+    cursor: none !important;
+  }
+  
+  a, button, [role="button"], input, textarea, select {
+    cursor: none !important;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
