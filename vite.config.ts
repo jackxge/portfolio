@@ -5,6 +5,10 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  // GitHub Pages serves your site under /<repo>/ for project pages.
+  // For https://jackxge.github.io/portfolio/ the base must be "/portfolio/".
+  base: "/portfolio/",
+
   server: {
     host: "::",
     port: 8080,
