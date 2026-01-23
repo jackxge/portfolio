@@ -151,10 +151,12 @@ const ProjectCard = ({ project, isHovered, onHover, onLeave }: ProjectCardProps)
           <motion.img
             src={project.image}
             alt={project.title}
-            className={`w-full h-full object-cover ${project.blur ? 'blur-[1px]' : ''}`}
+            className="w-full h-full object-cover"
             animate={{ 
               scale: isHovered ? 1.02 : 1,
-              filter: isHovered ? 'brightness(1.1)' : 'brightness(1)',
+              filter: project.blur 
+                ? (isHovered ? 'blur(1px) brightness(1.1)' : 'blur(1px) brightness(1)')
+                : (isHovered ? 'brightness(1.1)' : 'brightness(1)'),
             }}
             transition={{ duration: 0.5, ease: [0.33, 1, 0.68, 1] }}
           />
