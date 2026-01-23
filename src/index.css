@@ -154,16 +154,6 @@
   }
 }
 
-/* Custom cursor - hide default on desktop */
-@media (min-width: 768px) {
-  * {
-    cursor: none !important;
-  }
-  
-  a, button, [role="button"], input, textarea, select {
-    cursor: none !important;
-  }
-}
 
 @keyframes fadeInUp {
   from {
