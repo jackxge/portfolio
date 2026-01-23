@@ -155,7 +155,7 @@ const ProjectCard = ({ project, isHovered, onHover, onLeave }: ProjectCardProps)
             animate={{ 
               scale: isHovered ? 1.02 : 1,
               filter: project.blur 
-                ? (isHovered ? 'blur(1px) brightness(1.1)' : 'blur(1px) brightness(1)')
+                ? (isHovered ? 'blur(0.5px) brightness(1.1)' : 'blur(0.5px) brightness(1)')
                 : (isHovered ? 'brightness(1.1)' : 'brightness(1)'),
             }}
             transition={{ duration: 0.5, ease: [0.33, 1, 0.68, 1] }}
