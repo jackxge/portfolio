@@ -34,6 +34,13 @@ import snakerobotHero from '@/assets/snakerobot-hero.png';
 
 // Data Platform images
 import dataplatformHero from '@/assets/dataplatform-hero.png';
+
+// AskEDP images
+import askedpHero from '@/assets/askedp-hero.png';
+import askedp01 from '@/assets/askedp-01.png';
+import askedp02 from '@/assets/askedp-02.png';
+import askedp03 from '@/assets/askedp-03.png';
+import askedp04 from '@/assets/askedp-04.png';
 import dataplatformFinal01 from '@/assets/dataplatform-final-01.png';
 import dataplatformFinal02 from '@/assets/dataplatform-final-02.png';
 import dataplatformFinal03 from '@/assets/dataplatform-final-03.png';
@@ -266,11 +273,11 @@ const caseStudies: Record<string, CaseStudyData> = {
       { label: '', value: 'Deployed a responsive control interface across mobile, tablet, and desktop' },
       { label: '', value: 'Approved for field deployment following validation testing' },
     ],
-    nextProject: { id: 'data-platform', title: 'Enterprise Data Platform' },
+    nextProject: { id: 'data-platform', title: 'Unified Enterprise Data Platform' },
   },
   'data-platform': {
     id: 'data-platform',
-    title: 'Enterprise Data Platform',
+    title: 'Unified Enterprise Data Platform',
     subtitle: 'Design Leadership · Experience Strategy · Enterprise UX',
     year: '2023',
     client: 'Enterprise (Confidential)',
@@ -315,6 +322,51 @@ const caseStudies: Record<string, CaseStudyData> = {
       { label: '', value: 'Positioned design as a strategic function influencing product direction' },
     ],
     protectedImages: [dataplatformFinal05, dataplatformFinal06, dataplatformFinal07, dataplatformFinal01],
+    nextProject: { id: 'askedp', title: 'An AI Application for Enterprise Data Exploration' },
+  },
+  'askedp': {
+    id: 'askedp',
+    title: 'An AI Application for Enterprise Data Exploration',
+    subtitle: 'AI Product Design · Enterprise UX · Conversational AI',
+    year: '2024',
+    client: 'JLL',
+    role: 'Lead Product Designer',
+    tools: ['Figma', 'AI/LLM Integration', 'Enterprise Systems', 'Conversational Design'],
+    heroImage: askedpHero,
+    heroBlur: true,
+    overview: 'AskEDP is an AI assistant built to help teams understand, operate, and analyze data within JLL\'s enterprise data platform (EDP).\n\nEDP serves a wide spectrum of users—from engineers who need fast, precise signals to debug systems, to business users who simply want to understand data behavior without learning complex tools. AskEDP provides a single conversational interface that adapts to different levels of expertise, enabling both rapid problem-solving and lightweight data exploration with no prior data experience required.',
+    challenge: 'EDP needed to serve fundamentally different interaction needs using the same underlying data.\n\nEngineers and data scientists required speed, precision, and the ability to quickly identify anomalies, failures, or root causes. Other users—analysts, product partners, and business stakeholders—often wanted only a high-level view of data health or trends, and were either unfamiliar with, or resistant to, traditional data tooling.\n\nHistorically, these needs were addressed through separate tools: advanced dashboards and observability systems for experts, and static reports or ad hoc support for everyone else. This split increased complexity, slowed onboarding, and excluded users who didn\'t have the time or skill to use sophisticated data software.\n\nThe challenge was to enable expert-level efficiency without forcing non-experts into expert workflows.',
+    solution: 'I designed AskEDP as an adaptive AI interface that supports multiple interaction modes over the same data foundation.\n\nFor engineers, AskEDP prioritizes speed and precision—allowing them to quickly surface relevant metrics, metadata, and known failure patterns without navigating multiple systems. For non-technical users, it emphasizes explanation, summarization, and safe exploration—making it possible to understand general data behavior or run basic analysis without writing queries or learning specialized tools.\n\nThe assistant uses conversation as a control layer: users can stop at a high-level answer or progressively drill down into technical detail. This makes AskEDP usable by people with no data background, while still supporting deep, targeted workflows for experienced users. Role- and user-based access controls ensure that increased ease of use does not compromise governance or data security.',
+    process: [
+      {
+        title: 'Distinguishing Speed vs. Depth Needs',
+        description: 'I separated user needs not by job title, but by interaction intent. Engineers often needed immediate, high-confidence answers to narrow questions ("Why did this pipeline fail?"), while other users wanted broad understanding ("Is this data generally healthy?" or "What does this trend look like?").\n\nDesigning around intent avoided creating parallel products.'
+      },
+      {
+        title: 'Designing for Zero-Friction Entry',
+        description: 'A core requirement was that users with no experience in data tools could get value immediately. I designed AskEDP so that meaningful answers could be obtained through natural language alone, without prior knowledge of schemas, metrics, or query languages.\n\nThis removed the learning curve that traditionally blocks adoption.'
+      },
+      {
+        title: 'Enabling Fast Expert Workflows',
+        description: 'For advanced users, I focused on minimizing time-to-signal. AskEDP was designed to surface the most relevant metrics, metadata, or known issues first, and allow rapid follow-up questions to narrow scope.\n\nThis supported debugging and decision-making without forcing engineers to context-switch across tools.'
+      },
+      {
+        title: 'Progressive Depth Over a Shared System',
+        description: 'Rather than splitting experiences, I designed a progressive disclosure model where the same interaction could evolve from a simple summary to detailed technical insight.\n\nThis allowed non-expert users to explore safely, while giving experts full depth when needed—without fragmenting the platform.'
+      },
+      {
+        title: 'Governance Embedded in the Interaction Model',
+        description: 'Ease of use was balanced with strict access control. Role- and user-based permissions were integrated directly into how the assistant responded, ensuring that users could only see data and diagnostics appropriate to their role, even as the interface simplified access.'
+      }
+    ],
+    results: [
+      { label: '', value: 'Compressed time-to-signal for engineers enabling fast, precise issue identification without context-switching' },
+      { label: '', value: 'Lowered the barrier to data usage to near zero through natural language interaction' },
+      { label: '', value: 'Reconciled expert depth with novice simplicity via progressive disclosure' },
+      { label: '', value: 'Shifted support from human-dependent to self-serve, creating a scalable AI support layer' },
+      { label: '', value: 'Established AI as a platform interaction layer between user intent and enterprise data systems' },
+    ],
+    protectedImages: [askedp01, askedp02, askedp03, askedp04],
     nextProject: { id: 'aquanautviz', title: 'AquanautViz' },
   },
 };

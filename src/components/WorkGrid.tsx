@@ -6,6 +6,7 @@ import spiral05 from '@/assets/spiral-05.png';
 import aquanautHero from '@/assets/aquanaut-hero.png';
 import motiongen01 from '@/assets/motiongen-01.png';
 import dataplatformHero from '@/assets/dataplatform-hero.png';
+import askedpHero from '@/assets/askedp-hero.png';
 
 interface Project {
   id: number;
@@ -23,7 +24,7 @@ const projects: Project[] = [
   {
     id: 1,
     slug: "data-platform",
-    title: "Enterprise Data Platform",
+    title: "Unified Enterprise Data Platform",
     category: "Enterprise UX",
     year: "2025",
     image: dataplatformHero,
@@ -33,42 +34,53 @@ const projects: Project[] = [
   },
   {
     id: 2,
+    slug: "askedp",
+    title: "An AI Application for Enterprise Data Exploration",
+    category: "AI / Conversational",
+    year: "2024",
+    image: askedpHero,
+    number: "02",
+    size: 'large',
+    blur: true
+  },
+  {
+    id: 3,
     slug: "aquanautviz",
     title: "AquanautViz",
     category: "3D / VR",
     year: "2018",
     image: aquanautHero,
-    number: "02",
+    number: "03",
     size: 'large'
   },
   {
-    id: 3,
+    id: 4,
     slug: "automated-control",
     title: "Automated Control",
     category: "Web Application",
     year: "2018",
     image: spiral05,
-    number: "03",
-    size: 'medium'
-  },
-  {
-    id: 4,
-    slug: "snake-robot",
-    title: "Snake Robot",
-    category: "UX Design",
-    year: "2017",
-    image: snakerobotHero,
     number: "04",
     size: 'medium'
   },
   {
     id: 5,
+    slug: "snake-robot",
+    title: "Snake Robot",
+    category: "UX Design",
+    year: "2017",
+    image: snakerobotHero,
+    number: "05",
+    size: 'medium'
+  },
+  {
+    id: 6,
     slug: "motiongen",
     title: "MotionGen",
     category: "Mobile App",
     year: "2014",
     image: motiongen01,
-    number: "05",
+    number: "06",
     size: 'large'
   },
 ];
@@ -77,8 +89,8 @@ const WorkGrid = () => {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
 
   return (
-    <section id="work" className="py-32 md:py-40 bg-foreground text-background">
-      <div className="container max-w-7xl">
+    <section id="work" className="py-24 md:py-32 lg:py-40 bg-foreground text-background">
+      <div className="container max-w-[1400px] px-6 md:px-8 lg:px-12">
         {/* Section Header */}
         <motion.div 
           className="mb-16 md:mb-24"
@@ -96,7 +108,7 @@ const WorkGrid = () => {
         </motion.div>
 
         {/* Equal Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 lg:gap-6">
           {projects.map((project, index) => (
             <motion.div 
               key={project.id}
@@ -135,47 +147,66 @@ const ProjectCard = ({ project, isHovered, onHover, onLeave }: ProjectCardProps)
         onMouseLeave={onLeave}
       >
         {/* Image Container */}
-        <div className="relative aspect-[16/9] overflow-hidden bg-background/5 mb-5">
+        <div className="relative aspect-[16/9] overflow-hidden bg-background/5 mb-3 rounded-sm">
           <motion.img
             src={project.image}
             alt={project.title}
             className={`w-full h-full object-cover ${project.blur ? 'blur-[1px]' : ''}`}
             animate={{ 
-              scale: isHovered ? 1.03 : 1,
+              scale: isHovered ? 1.02 : 1,
+              filter: isHovered ? 'brightness(1.1)' : 'brightness(1)',
             }}
-            transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+            transition={{ duration: 0.5, ease: [0.33, 1, 0.68, 1] }}
           />
           
-          {/* Subtle overlay */}
+          {/* Subtle vignette overlay */}
           <motion.div 
-            className="absolute inset-0 bg-foreground"
-            animate={{ opacity: isHovered ? 0 : 0.15 }}
-            transition={{ duration: 0.4 }}
+            className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent"
+            animate={{ opacity: isHovered ? 0.2 : 0.4 }}
+            transition={{ duration: 0.5 }}
           />
 
-          {/* Project number - corner badge */}
-          <div className="absolute top-4 left-4">
-            <span className="text-background/60 text-[11px] font-display tracking-wider">
-              {project.number}
-            </span>
-          </div>
+          {/* Elegant border reveal */}
+          <motion.div 
+            className="absolute inset-0 border border-background/0 rounded-sm"
+            animate={{ 
+              borderColor: isHovered ? 'rgba(255,255,255,0.15)' : 'rgba(255,255,255,0)',
+            }}
+            transition={{ duration: 0.4 }}
+          />
         </div>
 
         {/* Info */}
-        <div className="flex items-baseline justify-between gap-4">
-          <div className="flex items-baseline gap-4">
-            <motion.h3 
-              className="font-display text-lg md:text-xl tracking-tight text-background/80 group-hover:text-background transition-colors duration-400"
+        <div className="flex flex-col gap-1">
+          <motion.h3 
+            className="font-display text-base lg:text-lg tracking-tight text-background/70 line-clamp-2"
+            animate={{ 
+              color: isHovered ? 'rgba(255,255,255,1)' : 'rgba(255,255,255,0.7)',
+            }}
+            transition={{ duration: 0.15 }}
+          >
+            {project.title}
+          </motion.h3>
+          <div className="flex items-center justify-between gap-2">
+            <motion.span 
+              className="text-[10px] lg:text-[11px] tracking-wide truncate"
+              animate={{ 
+                color: isHovered ? 'rgba(255,255,255,0.6)' : 'rgba(255,255,255,0.4)',
+              }}
+              transition={{ duration: 0.15 }}
             >
-              {project.title}
-            </motion.h3>
-            <span className="text-background/30 text-[11px] tracking-wide">
               {project.category}
-            </span>
+            </motion.span>
+            <motion.span 
+              className="text-[10px] lg:text-[11px] font-display flex-shrink-0"
+              animate={{ 
+                color: isHovered ? 'rgba(255,255,255,0.6)' : 'rgba(255,255,255,0.4)',
+              }}
+              transition={{ duration: 0.15 }}
+            >
+              {project.year}
+            </motion.span>
           </div>
-          <span className="text-background/25 text-[11px] font-display">
-            {project.year}
-          </span>
         </div>
       </motion.article>
     </Link>
