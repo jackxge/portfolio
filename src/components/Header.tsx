@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import logoSvg from '@/assets/logo.svg';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -57,12 +58,13 @@ const Header = () => {
               to="/" 
               className="relative group flex items-center gap-3"
             >
-              {/* Monogram */}
-              <span className="flex items-center justify-center w-8 h-8 border border-foreground/30 text-foreground text-xs font-display tracking-wide transition-all duration-300 group-hover:bg-foreground group-hover:text-background">
-                JG
-              </span>
+              <img 
+                src={logoSvg} 
+                alt="Jack Ge logo" 
+                className="w-8 h-8 transition-all duration-300 group-hover:opacity-70"
+              />
               {/* Full name - hidden on mobile */}
-              <span className="hidden sm:block font-display text-sm tracking-wide text-foreground">
+              <span className="hidden sm:block text-sm tracking-wide text-foreground font-sans">
                 Jack Ge
               </span>
             </Link>

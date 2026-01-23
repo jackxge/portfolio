@@ -5,6 +5,7 @@ import snakerobotHero from '@/assets/snakerobot-hero.png';
 import spiral05 from '@/assets/spiral-05.png';
 import aquanautHero from '@/assets/aquanaut-hero.png';
 import motiongen01 from '@/assets/motiongen-01.png';
+import dataplatformHero from '@/assets/dataplatform-hero.png';
 
 interface Project {
   id: number;
@@ -15,47 +16,59 @@ interface Project {
   image: string;
   number: string;
   size: 'large' | 'medium';
+  blur?: boolean;
 }
 
 const projects: Project[] = [
   {
     id: 1,
+    slug: "data-platform",
+    title: "Enterprise Data Platform",
+    category: "Enterprise UX",
+    year: "2025",
+    image: dataplatformHero,
+    number: "01",
+    size: 'large',
+    blur: true
+  },
+  {
+    id: 2,
     slug: "aquanautviz",
     title: "AquanautViz",
     category: "3D / VR",
     year: "2018",
     image: aquanautHero,
-    number: "01",
+    number: "02",
     size: 'large'
   },
   {
-    id: 2,
+    id: 3,
     slug: "automated-control",
     title: "Automated Control",
     category: "Web Application",
     year: "2018",
     image: spiral05,
-    number: "02",
-    size: 'medium'
-  },
-  {
-    id: 3,
-    slug: "snake-robot",
-    title: "Snake Robot",
-    category: "UX Design",
-    year: "2017",
-    image: snakerobotHero,
     number: "03",
     size: 'medium'
   },
   {
     id: 4,
+    slug: "snake-robot",
+    title: "Snake Robot",
+    category: "UX Design",
+    year: "2017",
+    image: snakerobotHero,
+    number: "04",
+    size: 'medium'
+  },
+  {
+    id: 5,
     slug: "motiongen",
     title: "MotionGen",
     category: "Mobile App",
     year: "2014",
     image: motiongen01,
-    number: "04",
+    number: "05",
     size: 'large'
   },
 ];
@@ -126,7 +139,7 @@ const ProjectCard = ({ project, isHovered, onHover, onLeave }: ProjectCardProps)
           <motion.img
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-cover"
+            className={`w-full h-full object-cover ${project.blur ? 'blur-[1px]' : ''}`}
             animate={{ 
               scale: isHovered ? 1.03 : 1,
             }}

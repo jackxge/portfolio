@@ -32,6 +32,16 @@ import snakerobotLayouts from '@/assets/snakerobot-layouts.jpg';
 import snakerobotControl from '@/assets/snakerobot-control.png';
 import snakerobotHero from '@/assets/snakerobot-hero.png';
 
+// Data Platform images
+import dataplatformHero from '@/assets/dataplatform-hero.png';
+import dataplatformFinal01 from '@/assets/dataplatform-final-01.png';
+import dataplatformFinal02 from '@/assets/dataplatform-final-02.png';
+import dataplatformFinal03 from '@/assets/dataplatform-final-03.png';
+import dataplatformFinal04 from '@/assets/dataplatform-final-04.png';
+import dataplatformFinal05 from '@/assets/dataplatform-final-05.png';
+import dataplatformFinal06 from '@/assets/dataplatform-final-06.png';
+import dataplatformFinal07 from '@/assets/dataplatform-final-07.png';
+
 interface TimelineItem {
   date: string;
   event: string;
@@ -43,6 +53,11 @@ interface DemoVideo {
   url: string;
 }
 
+interface DesignArtifact {
+  title: string;
+  description: string;
+}
+
 interface CaseStudyData {
   id: string;
   title: string;
@@ -52,13 +67,16 @@ interface CaseStudyData {
   role: string;
   tools: string[];
   heroImage: string;
+  heroBlur?: boolean;
   overview: string;
   challenge: string;
   solution: string;
+  artifacts?: DesignArtifact[];
   process?: { title: string; description: string; videoUrls?: string[]; images?: string[] }[];
   demoVideos?: DemoVideo[];
   timeline?: TimelineItem[];
   images?: string[];
+  protectedImages?: string[];
   results: { label: string; value: string }[];
   nextProject: { id: string; title: string };
 }
@@ -248,6 +266,55 @@ const caseStudies: Record<string, CaseStudyData> = {
       { label: '', value: 'Deployed a responsive control interface across mobile, tablet, and desktop' },
       { label: '', value: 'Approved for field deployment following validation testing' },
     ],
+    nextProject: { id: 'data-platform', title: 'Enterprise Data Platform' },
+  },
+  'data-platform': {
+    id: 'data-platform',
+    title: 'Enterprise Data Platform',
+    subtitle: 'Design Leadership · Experience Strategy · Enterprise UX',
+    year: '2023',
+    client: 'Enterprise (Confidential)',
+    role: 'Lead Product Designer (Sole Designer)',
+    tools: ['Figma', 'Design Systems', 'Information Architecture', 'Prototyping'],
+    heroImage: dataplatformHero,
+    heroBlur: true,
+    overview: 'I led the design of a unified web experience for a large enterprise data platform used across multiple business units.\n\nThe platform had grown organically over time and supported a wide range of capabilities—including data discovery, access management, quality, observability, governance, and analytics—but the user experience was fragmented across multiple tools and entry points.\n\nAs the sole designer, I was responsible for defining the experience strategy and designing a single, scalable product surface that supports the full lifecycle of platform usage—from evaluation and onboarding to day-to-day operations.',
+    challenge: 'As the platform expanded, its experience layer did not keep pace with its technical complexity.\n\nUsers had to move between disconnected portals to understand platform capabilities, onboard new data and users, monitor pipelines and service reliability, manage access, governance, and quality, and stay informed about new features and changes.\n\nThis fragmentation created high friction for new teams evaluating the platform, slow onboarding and delayed time to value, inconsistent mental models across services, and no central place for platform communication.\n\nThe risk was systemic: the experience layer was becoming a constraint on platform adoption and scale.',
+    solution: 'This was not a marketing site or documentation refresh. A content-first solution would have improved discoverability but failed to support onboarding, operations, or long-term extensibility.\n\nI reframed the effort as creating a unified experience layer—a single product surface that orchestrates the end-to-end platform journey: Discover → Enable → Operate → Communicate.\n\nThis framing aligned stakeholders around durable platform value rather than short-term UI consolidation.',
+    artifacts: [
+      { title: 'Problem / Fragmentation', description: 'Mapped the existing ecosystem to expose experience fragmentation and identify where the platform UX became a scaling constraint.' },
+      { title: 'Vision / Experience Layer', description: 'Defined a unified experience layer that consolidates discovery, onboarding, and daily operations into a single platform surface.' },
+      { title: 'IA from Future State', description: 'Designed the information architecture from the future state backward to support phased delivery without rework.' },
+      { title: 'Hub-and-Orchestration Model', description: 'Designed a hub-and-orchestration pattern to unify existing systems without forcing a full rebuild.' },
+      { title: 'MVP Trade-off', description: 'Intentionally scoped the MVP to validate core mental models while preserving long-term extensibility.' },
+      { title: 'Impact / Platform Shift', description: 'Established a single, scalable entry point that repositioned the platform from a collection of tools to a cohesive product.' },
+    ],
+    process: [
+      {
+        title: 'Experience Strategy',
+        description: 'The platform served business leaders evaluating platform fit, technical leads assessing governance and scalability, and engineers and analysts operating pipelines and consuming data.\n\nRather than creating persona-specific experiences, I designed a layered experience model: Discovery layer for platform overview and capabilities, Enablement layer for getting started and onboarding, and Operational layer for day-to-day platform usage.\n\nThis approach supported different user intents while maintaining a consistent mental model.'
+      },
+      {
+        title: 'Hub-and-Orchestration Model',
+        description: 'Most platform capabilities already existed in internal systems and third-party tools. Rebuilding them would have introduced unnecessary risk.\n\nI led the design toward a hub-and-orchestration approach: a single entry point and system of record, clear ownership boundaries between the unified UI and underlying systems, and progressive integration as services evolved.\n\nThis enabled cohesion without sacrificing flexibility or delivery speed.'
+      },
+      {
+        title: 'Designing for a Multi-Phase Roadmap',
+        description: 'The platform roadmap included future capabilities such as advanced analytics, expanded governance, and AI-driven insights.\n\nI designed the information architecture from the future state backward, ensuring that early launches would not constrain later phases, navigation and naming could remain stable over time, and new capabilities could be added without retraining users.\n\nThis directly influenced MVP scope and release sequencing.'
+      },
+      {
+        title: 'MVP & Launch',
+        description: 'The initial launch focused on establishing the experience foundation while minimizing delivery risk: unified homepage, core discovery and navigation framework, and initial operational surface for key services.\n\nThis MVP validated the core mental model and created a stable base for future expansion.'
+      }
+    ],
+    results: [
+      { label: '', value: 'Established a single, intuitive entry point for platform users' },
+      { label: '', value: 'Reduced experience fragmentation across services' },
+      { label: '', value: 'Improved evaluation and onboarding for new teams' },
+      { label: '', value: 'Created a scalable UX foundation for long-term platform growth' },
+      { label: '', value: 'Positioned design as a strategic function influencing product direction' },
+    ],
+    protectedImages: [dataplatformFinal05, dataplatformFinal06, dataplatformFinal07, dataplatformFinal01],
     nextProject: { id: 'aquanautviz', title: 'AquanautViz' },
   },
 };
@@ -274,6 +341,31 @@ const CaseStudy = () => {
   const [processLightboxOpen, setProcessLightboxOpen] = useState(false);
   const [processLightboxImages, setProcessLightboxImages] = useState<string[]>([]);
   const [processLightboxIndex, setProcessLightboxIndex] = useState(0);
+
+  // Password protection state for protected images
+  const [protectedPassword, setProtectedPassword] = useState('');
+  const [isProtectedUnlocked, setIsProtectedUnlocked] = useState(false);
+  const [protectedError, setProtectedError] = useState(false);
+  const PROTECTED_PASSWORD = 'case-study';
+
+  // Lightbox state for protected images
+  const [protectedLightboxOpen, setProtectedLightboxOpen] = useState(false);
+  const [protectedLightboxIndex, setProtectedLightboxIndex] = useState(0);
+
+  const handleProtectedSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (protectedPassword === PROTECTED_PASSWORD) {
+      setIsProtectedUnlocked(true);
+      setProtectedError(false);
+    } else {
+      setProtectedError(true);
+    }
+  };
+
+  const openProtectedLightbox = useCallback((index: number) => {
+    setProtectedLightboxIndex(index);
+    setProtectedLightboxOpen(true);
+  }, []);
 
   const openLightbox = useCallback((index: number) => {
     setLightboxIndex(index);
@@ -332,7 +424,7 @@ const CaseStudy = () => {
           <img 
             src={study.heroImage} 
             alt={study.title}
-            className="w-full h-full object-cover"
+            className={`w-full h-full object-cover ${study.heroBlur ? 'blur-[3px]' : ''}`}
           />
           <div className="absolute inset-0 bg-foreground/60" />
         </motion.div>
@@ -422,6 +514,49 @@ const CaseStudy = () => {
           </div>
         </div>
       </section>
+
+      {/* Design Artifacts Section - Only show if artifacts exist */}
+      {study.artifacts && study.artifacts.length > 0 && (
+        <section className="py-24 md:py-32 border-t border-border">
+          <div className="container">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="mb-16"
+            >
+              <p className="text-xs text-muted-foreground tracking-[0.3em] uppercase mb-6">
+                Design Artifacts
+              </p>
+              <h2 className="text-display-md font-display">Key Design Decisions</h2>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {study.artifacts.map((artifact, index) => (
+                <motion.div
+                  key={index}
+                  className="border border-border p-6 rounded-lg"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.05 }}
+                  viewport={{ once: true }}
+                >
+                  <span className="text-muted-foreground text-xs font-display tracking-wider mb-3 block">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                  <h3 className="font-display text-lg text-foreground mb-3">
+                    {artifact.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {artifact.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Process Section - Only show if process exists */}
       {study.process && study.process.length > 0 && (
@@ -686,6 +821,111 @@ const CaseStudy = () => {
         onPrev={prevProcessImage}
         title={study.title}
       />
+
+      {/* Protected Final Product Images */}
+      {study.protectedImages && study.protectedImages.length > 0 && (
+        <section className="py-16 md:py-24 bg-muted/30">
+          <div className="container">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <p className="text-muted-foreground text-xs tracking-[0.3em] uppercase mb-4">
+                Final Product
+              </p>
+              <h2 className="text-display-md font-display">Design Outcomes</h2>
+            </motion.div>
+
+            {!isProtectedUnlocked ? (
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="max-w-md mx-auto"
+              >
+                <div className="bg-background border border-border rounded-xl p-8 text-center">
+                  <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center mx-auto mb-6">
+                    <svg className="w-6 h-6 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    </svg>
+                  </div>
+                  <h3 className="font-display text-lg mb-2">Protected Content</h3>
+                  <p className="text-muted-foreground text-sm mb-6">
+                    Enter the password to view final product screenshots.
+                  </p>
+                  <form onSubmit={handleProtectedSubmit} className="space-y-4">
+                    <input
+                      type="password"
+                      value={protectedPassword}
+                      onChange={(e) => {
+                        setProtectedPassword(e.target.value);
+                        setProtectedError(false);
+                      }}
+                      placeholder="Enter password"
+                      className={`w-full px-4 py-3 rounded-lg border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all ${
+                        protectedError ? 'border-red-500' : 'border-border'
+                      }`}
+                    />
+                    {protectedError && (
+                      <p className="text-red-500 text-sm">Incorrect password. Please try again.</p>
+                    )}
+                    <button
+                      type="submit"
+                      className="w-full px-6 py-3 bg-foreground text-background rounded-lg font-medium hover:bg-foreground/90 transition-colors"
+                    >
+                      Unlock
+                    </button>
+                  </form>
+                </div>
+              </motion.div>
+            ) : (
+              <>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  {study.protectedImages.map((image, index) => (
+                    <motion.div
+                      key={index}
+                      className="relative overflow-hidden rounded-lg border border-border bg-background cursor-pointer group"
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.08 }}
+                      viewport={{ once: true, margin: "-50px" }}
+                      onClick={() => openProtectedLightbox(index)}
+                    >
+                      <img
+                        src={image}
+                        alt={`${study.title} - Final Product ${index + 1}`}
+                        className="w-full h-auto aspect-video object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/10 transition-colors duration-300 flex items-center justify-center">
+                        <svg 
+                          className="w-8 h-8 text-background opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg" 
+                          fill="none" 
+                          viewBox="0 0 24 24" 
+                          stroke="currentColor"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                        </svg>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+                <Lightbox
+                  images={study.protectedImages}
+                  isOpen={protectedLightboxOpen}
+                  onClose={() => setProtectedLightboxOpen(false)}
+                  currentIndex={protectedLightboxIndex}
+                  onNext={() => setProtectedLightboxIndex((prev) => (prev + 1) % study.protectedImages!.length)}
+                  onPrev={() => setProtectedLightboxIndex((prev) => (prev - 1 + study.protectedImages!.length) % study.protectedImages!.length)}
+                />
+              </>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* Results */}
       <section className="py-24 md:py-32 bg-foreground text-background overflow-hidden">

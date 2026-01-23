@@ -25,10 +25,10 @@ const createClusterOptions = (particleCount: number): ISourceOptions => ({
     },
   },
   particles: {
-    color: { value: 'hsl(30, 8%, 65%)' },
+    color: { value: 'hsl(30, 8%, 80%)' },
     links: {
       enable: true,
-      color: 'hsl(30, 8%, 65%)',
+      color: 'hsl(30, 8%, 80%)',
       distance: 250,
       opacity: 0.6,
       width: 1.2,
