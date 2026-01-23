@@ -1,10 +1,4 @@
 const About = () => {
-  const stats = [
-    { value: "10+", label: "Years Experience" },
-    { value: "20+", label: "Products Shipped" },
-    { value: "B2B", label: "Enterprise Focus" },
-  ];
-
   return (
     <section id="about" className="py-32 md:py-40 border-t border-border">
       <div className="container">
@@ -18,16 +12,6 @@ const About = () => {
               <br />
               scale
             </h2>
-            
-            {/* Stats */}
-            <div className="flex gap-8 mt-12">
-              {stats.map((stat) => (
-                <div key={stat.label}>
-                  <p className="text-2xl font-display text-foreground">{stat.value}</p>
-                  <p className="text-xs text-muted-foreground tracking-wide">{stat.label}</p>
-                </div>
-              ))}
-            </div>
           </div>
 
           <div className="md:col-span-7 md:col-start-6">

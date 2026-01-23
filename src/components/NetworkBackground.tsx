@@ -72,7 +72,7 @@ const NetworkBackground = () => {
   if (!init) return null;
 
   return (
-    <div className="absolute inset-0 overflow-hidden">
+    <div className="absolute inset-0 overflow-hidden hidden md:block">
       {/* 3 tightly-linked clusters positioned asymmetrically */}
       
       {/* Cluster 1: Top-right - largest */}
