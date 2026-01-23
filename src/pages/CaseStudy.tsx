@@ -398,7 +398,7 @@ const CaseStudy = () => {
   const [protectedPassword, setProtectedPassword] = useState('');
   const [isProtectedUnlocked, setIsProtectedUnlocked] = useState(false);
   const [protectedError, setProtectedError] = useState(false);
-  const PROTECTED_PASSWORD = 'case-study';
+  const PROTECTED_PASSWORD = 'casestudy';
 
   // Lightbox state for protected images
   const [protectedLightboxOpen, setProtectedLightboxOpen] = useState(false);
