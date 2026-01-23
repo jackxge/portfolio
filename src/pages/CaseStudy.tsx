@@ -322,11 +322,11 @@ const caseStudies: Record<string, CaseStudyData> = {
       { label: '', value: 'Positioned design as a strategic function influencing product direction' },
     ],
     protectedImages: [dataplatformFinal05, dataplatformFinal06, dataplatformFinal07, dataplatformFinal01],
-    nextProject: { id: 'askedp', title: 'An AI Application for Enterprise Data Exploration' },
+    nextProject: { id: 'askedp', title: 'AI Application for Enterprise Data Exploration' },
   },
   'askedp': {
     id: 'askedp',
-    title: 'An AI Application for Enterprise Data Exploration',
+    title: 'AI Application for Enterprise Data Exploration',
     subtitle: 'AI Product Design · Enterprise UX · Conversational AI',
     year: '2024',
     client: 'JLL',
@@ -495,7 +495,7 @@ const CaseStudy = () => {
               <p className="text-background/60 text-xs tracking-[0.4em] uppercase mb-6">
                 {study.subtitle}
               </p>
-              <h1 className="text-background text-display-xl font-display leading-[0.85] mb-8">
+              <h1 className="text-background text-display-xl font-display leading-[1.1] mb-8">
                 {study.title}
               </h1>
               <div className="flex items-center gap-8 text-background/60 text-sm">
