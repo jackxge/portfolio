@@ -4,6 +4,7 @@ import { useRef, useState, useCallback } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Lightbox from '@/components/Lightbox';
+import { trackEvent } from '@/lib/analytics';
 
 // Automated Control images
 import spiral04 from '@/assets/spiral-04.png';
@@ -409,20 +410,36 @@ const CaseStudy = () => {
     if (protectedPassword === PROTECTED_PASSWORD) {
       setIsProtectedUnlocked(true);
       setProtectedError(false);
+      trackEvent('case_study_protected_unlock', {
+        case_study: study?.id ?? 'unknown',
+        success: true,
+      });
     } else {
       setProtectedError(true);
+      trackEvent('case_study_protected_unlock', {
+        case_study: study?.id ?? 'unknown',
+        success: false,
+      });
     }
   };
 
   const openProtectedLightbox = useCallback((index: number) => {
     setProtectedLightboxIndex(index);
     setProtectedLightboxOpen(true);
-  }, []);
+    trackEvent('case_study_protected_image_open', {
+      case_study: study?.id ?? 'unknown',
+      image_index: index,
+    });
+  }, [study?.id]);
 
   const openLightbox = useCallback((index: number) => {
     setLightboxIndex(index);
     setLightboxOpen(true);
-  }, []);
+    trackEvent('case_study_gallery_open', {
+      case_study: study?.id ?? 'unknown',
+      image_index: index,
+    });
+  }, [study?.id]);
 
   const closeLightbox = useCallback(() => {
     setLightboxOpen(false);
@@ -445,7 +462,11 @@ const CaseStudy = () => {
     setProcessLightboxImages(images);
     setProcessLightboxIndex(index);
     setProcessLightboxOpen(true);
-  }, []);
+    trackEvent('case_study_process_image_open', {
+      case_study: study?.id ?? 'unknown',
+      image_index: index,
+    });
+  }, [study?.id]);
 
   const closeProcessLightbox = useCallback(() => {
     setProcessLightboxOpen(false);
@@ -1036,6 +1057,10 @@ const CaseStudy = () => {
             </p>
             <Link 
               to={`/work/${study.nextProject.id}`}
+              onClick={() => trackEvent('next_project_click', {
+                from: study.id,
+                to: study.nextProject.id,
+              })}
               className="group inline-block"
             >
               <h2 className="text-display-lg font-display group-hover:text-muted-foreground transition-colors duration-500">

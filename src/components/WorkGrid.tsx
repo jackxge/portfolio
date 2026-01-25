@@ -7,6 +7,7 @@ import aquanautHero from '@/assets/aquanaut-hero.png';
 import motiongen01 from '@/assets/motiongen-01.png';
 import dataplatformHero from '@/assets/dataplatform-hero.png';
 import askedpHero from '@/assets/askedp-hero.png';
+import { trackEvent } from '@/lib/analytics';
 
 interface Project {
   id: number;
@@ -140,7 +141,15 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ project, isHovered, onHover, onLeave }: ProjectCardProps) => {
   return (
-    <Link to={`/work/${project.slug}`}>
+    <Link 
+      to={`/work/${project.slug}`}
+      onClick={() => trackEvent('select_project', {
+        section: 'work_grid',
+        project_slug: project.slug,
+        project_title: project.title,
+        project_year: project.year,
+      })}
+    >
       <motion.article
         className="group cursor-pointer"
         onMouseEnter={onHover}

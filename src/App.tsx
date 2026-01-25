@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import CaseStudy from "./pages/CaseStudy";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
+import Analytics from "./components/Analytics";
 
 const queryClient = new QueryClient();
 
@@ -16,6 +17,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <HashRouter>
+        <Analytics />
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />

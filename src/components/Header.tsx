@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import logoSvg from '@/assets/logo.svg';
+import { trackEvent } from '@/lib/analytics';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,6 +26,11 @@ const Header = () => {
   }, [location]);
 
   const scrollToSection = useCallback((sectionId: string) => {
+    trackEvent('nav_click', {
+      destination: sectionId,
+      context: isHomePage ? 'home' : 'internal',
+    });
+
     if (!isHomePage) {
       // Navigate to home first, then scroll after a short delay
       navigate('/');

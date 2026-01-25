@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { trackEvent } from '@/lib/analytics';
 import NetworkBackground from './NetworkBackground';
 
 const Hero = () => {
@@ -95,6 +96,7 @@ const Hero = () => {
             </div>
             <motion.a
               href="#work"
+              onClick={() => trackEvent('cta_click', { section: 'hero', target: 'work' })}
               className="group inline-flex items-center gap-4 text-foreground"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
