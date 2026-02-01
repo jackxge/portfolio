@@ -38,7 +38,7 @@ const projects: Project[] = [
     slug: "askedp",
     title: "AI Application for Enterprise Data Exploration",
     category: "AI / Conversational",
-    year: "2024",
+    year: "2025",
     image: askedpHero,
     number: "02",
     size: 'large',

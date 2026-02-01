@@ -329,7 +329,7 @@ const caseStudies: Record<string, CaseStudyData> = {
     id: 'askedp',
     title: 'AI Application for Enterprise Data Exploration',
     subtitle: 'AI Product Design · Enterprise UX · Conversational AI',
-    year: '2024',
+    year: '2025',
     client: 'JLL',
     role: 'Lead Product Designer',
     tools: ['Figma', 'AI/LLM Integration', 'Enterprise Systems', 'Conversational Design'],
