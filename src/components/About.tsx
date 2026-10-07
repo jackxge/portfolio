@@ -23,16 +23,14 @@ const About = () => {
             
             <p className="text-muted-foreground leading-relaxed mb-6">
               I specialize in translating complex technical systems into intuitive 
-              experiences that drive measurable business outcomes. From defining 
-              product vision to establishing design governance frameworks, I've 
-              led design strategy for products used by millions of users and 
-              generating hundreds of millions in revenue.
+              experiences that drive measurable business outcomes from defining 
+              product vision to establishing design frameworks.
             </p>
 
             <p className="text-muted-foreground leading-relaxed">
               Background in engineering and applied AI enables me to work at the 
-              intersection of technical feasibility and user experience—building 
-              trust in AI systems through transparency, correctness, and human-centered 
+              intersection of technical domain and user experience and build 
+              trust in AI systems through accurate and human-centered 
               design principles.
             </p>
           </div>
