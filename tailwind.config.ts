@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
   darkMode: ["class"],
@@ -52,8 +53,8 @@ export default {
         },
       },
       fontFamily: {
-        display: ['Noto Serif JP', 'serif'],
-        body: ['Outfit', 'system-ui', 'sans-serif'],
+        display: ['DM Sans', 'Arial', 'sans-serif'],
+        body: ['Inter', 'Arial', 'sans-serif'],
       },
       fontSize: {
         'display-xl': ['clamp(2.5rem, 8vw, 6rem)', { lineHeight: '1.05', letterSpacing: '-0.01em' }],
@@ -81,5 +82,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindcssAnimate],
 } satisfies Config;

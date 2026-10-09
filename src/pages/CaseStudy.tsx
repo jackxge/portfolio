@@ -485,7 +485,7 @@ const CaseStudy = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="case-study-editorial min-h-screen bg-background">
       <Header />
       
       {/* Full-bleed Hero */}
