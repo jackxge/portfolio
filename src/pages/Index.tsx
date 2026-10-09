@@ -1,135 +1,122 @@
 import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { trackEvent } from '@/lib/analytics';
-import dataHero from '@/assets/dataplatform-final-01.png';
-import dataDetail from '@/assets/dataplatform-final-05.png';
-import openingProcess from '@/assets/snakerobot-notes.jpg';
-import aboutProcess from '@/assets/snakerobot-sketches.jpg';
-import askedpMain from '@/assets/askedp-02.png';
-import askedpDetail from '@/assets/askedp-03.png';
-import aquanautMain from '@/assets/aquanaut-hero.png';
+import data01 from '@/assets/dataplatform-final-01.png';
+import data04 from '@/assets/dataplatform-final-04.png';
+import askedp01 from '@/assets/askedp-01.png';
+import askedp03 from '@/assets/askedp-03.png';
+import aquanaut from '@/assets/aquanaut-hero.png';
 import aquanautDetail from '@/assets/aquanaut-02.png';
-import controlMain from '@/assets/spiral-04.png';
-import controlDetail from '@/assets/spiral-ia-compare.jpeg';
-import snakeMain from '@/assets/snakerobot-hero.png';
-import motiongenMain from '@/assets/motiongen-01.png';
+import control from '@/assets/spiral-05.png';
+import snake from '@/assets/snakerobot-hero.png';
+import motiongen from '@/assets/motiongen-01.png';
 import '../zen-home.css';
 
-function ProjectLink({ slug, children = 'View project' }: { slug: string; children?: ReactNode }) {
-  return (
-    <Link className="zen-project-link" to={`/work/${slug}`} onClick={() => trackEvent('select_project', { section: 'reference_home', project_slug: slug })}>
-      {children}<span aria-hidden="true">→</span>
-    </Link>
-  );
-}
+const archive = [
+  { number: '04', title: 'Automated Control', category: 'Web application', year: '2018', slug: 'automated-control', image: control },
+  { number: '05', title: 'Snake Robot', category: 'UX design', year: '2017', slug: 'snake-robot', image: snake },
+  { number: '06', title: 'MotionGen', category: 'Mobile app', year: '2014', slug: 'motiongen', image: motiongen },
+];
 
+function ProjectLink({ slug, children }: { slug: string; children: ReactNode }) {
+  return <Link className="zen-project-link" to={`/work/${slug}`} onClick={() => trackEvent('select_project', { section: 'zen_home', project_slug: slug })}>{children}<span aria-hidden="true">↗</span></Link>;
+}
 function SectionLink({ id, children }: { id: string; children: ReactNode }) {
   return <a href={`#${id}`} onClick={(event) => {
     event.preventDefault();
     document.getElementById(id)?.scrollIntoView();
   }}>{children}</a>;
 }
-
-function ProjectIntro({ number, title, meta, description, slug }: {
-  number: string;
-  title: ReactNode;
-  meta: string;
-  description: string;
-  slug: string;
-}) {
-  return (
-    <div className="zen-project-intro">
-      <span className="zen-number">{number}</span>
-      <span className="zen-rule" aria-hidden="true" />
-      <h2>{title}</h2>
-      <p className="zen-meta">{meta}</p>
-      <p className="zen-description">{description}</p>
-      <ProjectLink slug={slug} />
-    </div>
-  );
-}
-
 export default function Index() {
   return (
     <div className="zen-page">
-      <header className="zen-header zen-shell">
+      <header className="zen-header zen-wrap">
         <Link to="/" className="zen-name" aria-label="Jack Ge homepage">JACK GE</Link>
+        <span className="zen-role">Product Designer<br />Data Platforms / AI / Complex Systems</span>
         <nav aria-label="Main navigation">
           <SectionLink id="work">Work</SectionLink>
           <SectionLink id="about">About</SectionLink>
-          <a href="https://intuitivemachinelearning.com" target="_blank" rel="noreferrer">Thinking</a>
           <SectionLink id="contact">Contact</SectionLink>
         </nav>
-        <p className="zen-role">Product Designer<br />Data Platforms / AI / Complex Systems</p>
       </header>
-
       <main>
-        <section className="zen-opening zen-shell" aria-labelledby="intro-heading">
-          <div className="zen-opening-copy">
-            <h1 id="intro-heading">I design<br />interfaces for<br />complex systems.</h1>
-            <span className="zen-rule" aria-hidden="true" />
-            <p>Turning powerful data and AI<br />capabilities into clear, intuitive<br />experiences at enterprise scale.</p>
+        <section className="zen-intro zen-wrap" aria-labelledby="intro-heading">
+          <div className="zen-intro-copy">
+            <span className="zen-folio">Selected works, 2014—2025</span>
+            <h1 id="intro-heading">I design interfaces<br />for complex systems.</h1>
+            <p className="zen-intro-summary">Turning powerful data and AI capabilities into clear, intuitive experiences at enterprise scale.</p>
+            <p className="zen-intro-background">A product designer with a background in mechanical engineering and research, working across systems, data, and emerging technologies.</p>
           </div>
-          <figure className="zen-opening-image"><img src={openingProcess} alt="Design process notes" /></figure>
-          <p className="zen-scroll">SCROLL<br />TO EXPLORE</p>
+          <figure className="zen-intro-image">
+            <img src={data04} alt="Detail from the Enterprise Data Platform project" />
+            <figcaption>Fig. 01 — Detail / Enterprise Data Platform</figcaption>
+          </figure>
+          <span className="zen-scroll-note">Scroll to explore &darr;</span>
         </section>
 
-        <div id="work">
-          <section className="zen-project zen-data zen-shell" aria-label="Enterprise Data Platform">
-            <ProjectIntro number="01" title={<>Enterprise<br />Data Platform</>} meta="Data integration / Governance / AI" description="A unified platform for data integration, governance, and AI-ready infrastructure at enterprise scale." slug="data-platform" />
-            <figure className="zen-data-main"><img src={dataHero} alt="Enterprise Data Platform home interface" /></figure>
-            <figure className="zen-data-detail"><img src={dataDetail} alt="Enterprise Data Platform catalog detail" /></figure>
-            <div className="zen-data-note"><h3>From fragmented tools<br />to a unified experience.</h3><p>I led the design of a unified data platform that brings together discovery, catalog, quality, observability, and access.</p><span className="zen-rule" aria-hidden="true" /></div>
+        <div id="work" className="zen-work" aria-label="Selected work">
+          <section className="zen-feature zen-feature-one zen-wrap" aria-labelledby="platform-heading">
+            <div className="zen-feature-copy">
+              <span className="zen-index">01 / 06</span>
+              <h2 id="platform-heading">Unified Enterprise<br />Data Platform</h2>
+              <p className="zen-category">Enterprise UX / Data infrastructure / 2025</p>
+              <p className="zen-description">A unified experience for data discovery, governance, quality, observability, and access.</p>
+              <ProjectLink slug="data-platform">Explore the project</ProjectLink>
+            </div>
+            <figure className="zen-plate zen-platform-main"><img loading="lazy" src={data01} alt="Original Enterprise Data Platform interface" /><figcaption>01 — Interface study</figcaption></figure>
+            <figure className="zen-plate zen-platform-detail"><img loading="lazy" src={data04} alt="Additional interface from the data platform case study" /><figcaption>Detail — Platform experience</figcaption></figure>
+            <p className="zen-aside">Designing a shared language<br />for complex enterprise data.</p>
           </section>
 
-          <section className="zen-project zen-askedp zen-shell" aria-labelledby="askedp-heading">
-            <ProjectIntro number="02" title={<span id="askedp-heading">AskEDP</span>} meta="AI assistant / Natural language / Data exploration" description="An AI assistant that helps enterprise users find, understand, and work with data." slug="askedp" />
-            <figure className="zen-askedp-main"><img src={askedpMain} alt="AskEDP conversational data assistant" /></figure>
-            <figure className="zen-askedp-detail"><img src={askedpDetail} alt="AskEDP data relationship view" /></figure>
+          <section className="zen-pause zen-wrap" aria-label="Design approach">
+            <span className="zen-pause-kicker">A thought between projects / 01</span>
+            <p>Making complexity understandable<br />is not the same as making it disappear.</p>
+            <span className="zen-pause-note">Clarity begins with understanding the system.</span>
           </section>
 
-          <section className="zen-project zen-aquanaut zen-shell" aria-labelledby="aquanaut-heading">
-            <ProjectIntro number="03" title={<span id="aquanaut-heading">AquanautViz</span>} meta="3D visualization / Underwater robotics" description="Visualization system for underwater robots and offshore operations." slug="aquanautviz" />
-            <figure className="zen-aquanaut-main"><img src={aquanautMain} alt="Aquanaut underwater robot visualization" /></figure>
-            <figure className="zen-aquanaut-detail"><img src={aquanautDetail} alt="Aquanaut system interface" /></figure>
+          <section className="zen-feature zen-feature-two zen-wrap" aria-labelledby="askedp-heading">
+            <figure className="zen-plate zen-askedp-main"><img loading="lazy" src={askedp01} alt="Original AskEDP AI assistant interface" /><figcaption>02 — Conversational exploration</figcaption></figure>
+            <div className="zen-feature-copy">
+              <span className="zen-index">02 / 06</span>
+              <h2 id="askedp-heading">AskEDP</h2>
+              <p className="zen-category">AI / Conversational interface / 2025</p>
+              <p className="zen-description">An AI application for enterprise data exploration, helping users find answers and understand complex data systems.</p>
+              <ProjectLink slug="askedp">Explore the project</ProjectLink>
+            </div>
+            <figure className="zen-plate zen-askedp-detail"><img loading="lazy" src={askedp03} alt="Additional original AskEDP interface view" /><figcaption>Detail — AI-assisted exploration</figcaption></figure>
           </section>
 
-          <section className="zen-project zen-control zen-shell" aria-labelledby="control-heading">
-            <ProjectIntro number="04" title={<span id="control-heading">Automated Control</span>} meta="System design / Offshore safety" description="Autonomous control system for safety-critical offshore operations." slug="automated-control" />
-            <figure className="zen-control-main"><img src={controlMain} alt="Automated pipe handling control interface" /></figure>
-            <figure className="zen-control-detail"><img src={controlDetail} alt="Automated control workflow interface" /></figure>
+          <section className="zen-aquanaut zen-wrap" aria-labelledby="aquanaut-heading">
+            <div className="zen-aquanaut-intro">
+              <span className="zen-index">03 / 06</span>
+              <h2 id="aquanaut-heading">AquanautViz</h2>
+              <p className="zen-category">3D visualization / Underwater robotics / 2018</p>
+              <p className="zen-description">Visualizing underwater robotics and offshore operations through immersive interfaces.</p>
+              <ProjectLink slug="aquanautviz">Explore the project</ProjectLink>
+            </div>
+            <figure className="zen-aquanaut-image"><img loading="lazy" src={aquanaut} alt="Original AquanautViz underwater robotics visualization" /><figcaption>03 — An environment beyond the interface</figcaption></figure>
+            <figure className="zen-aquanaut-small"><img loading="lazy" src={aquanautDetail} alt="Additional AquanautViz visualization" /><figcaption>Detail / Visualization study</figcaption></figure>
           </section>
 
-          <section className="zen-project zen-pair zen-shell" aria-label="Additional work">
-            <article className="zen-pair-project zen-pair-left">
-              <ProjectIntro number="05" title="Snake Robot" meta="Product design / Robotics" description="Responsive control and inspection tools for an autonomous pipe robot." slug="snake-robot" />
-              <figure><img src={snakeMain} alt="Snake Robot product" /></figure>
-            </article>
-            <article className="zen-pair-project zen-pair-right">
-              <ProjectIntro number="06" title="MotionGen" meta="Research / Visualization" description="Motion generation and simulation for mechanical linkage systems." slug="motiongen" />
-              <figure><img src={motiongenMain} alt="MotionGen linkage visualization" /></figure>
-            </article>
+          <section className="zen-archive zen-wrap" aria-labelledby="archive-heading">
+            <div className="zen-archive-intro"><span className="zen-index">04—06 / 06</span><h2 id="archive-heading">Research archive</h2><p>Earlier investigations in engineering, robotics, and the design of tools.</p></div>
+            <div className="zen-archive-items">
+              {archive.map(project => <article className="zen-archive-item" key={project.slug}>
+                <Link to={`/work/${project.slug}`} onClick={() => trackEvent('select_project', { section: 'zen_archive', project_slug: project.slug })} aria-label={`View ${project.title}`}>
+                  <figure><img loading="lazy" src={project.image} alt={`${project.title} project artwork`} /><figcaption>{project.number} / {project.year}</figcaption></figure>
+                  <h3>{project.title}<span aria-hidden="true">↗</span></h3>
+                </Link><p>{project.category}</p>
+              </article>)}
+            </div>
           </section>
         </div>
 
-        <section id="about" className="zen-about zen-shell" aria-labelledby="about-heading">
-          <figure><img src={aboutProcess} alt="Early interface sketches from the design process" /></figure>
-          <div className="zen-about-copy">
-            <h2 id="about-heading">About</h2>
-            <span className="zen-rule" aria-hidden="true" />
-            <p>I'm Jack, a product designer with a background in mechanical engineering and a PhD in robotics. I’m interested in how complex systems can be made more understandable, accessible, and human.</p>
-            <SectionLink id="contact">More about me <span aria-hidden="true">→</span></SectionLink>
-          </div>
-          <address id="contact" className="zen-contact">
-            <a href="mailto:jack@jackge.com">jack@jackge.com</a>
-            <a href="https://linkedin.com/in/jackge" target="_blank" rel="noreferrer">/in/jackge</a>
-            <a href="https://intuitivemachinelearning.com" target="_blank" rel="noreferrer">/IntuitiveMachineLearning</a>
-            <a href="https://instagram.com/machinelearning" target="_blank" rel="noreferrer">@machinelearning</a>
-          </address>
+        <section id="about" className="zen-about zen-wrap" aria-labelledby="about-heading">
+          <span className="zen-index">A note from the designer</span>
+          <div><h2 id="about-heading">About</h2><p>Lead Product Designer with expertise in system-level design for large-scale data platforms, machine learning infrastructure, and enterprise AI products.</p><p>I translate complex technical systems into intuitive, trustworthy experiences by connecting product thinking with engineering depth.</p></div>
         </section>
+        <footer id="contact" className="zen-footer zen-wrap"><span>Jack Ge © {new Date().getFullYear()}</span><span>Los Angeles, California</span><a href="mailto:jack@jackge.com">Get in touch ↗</a></footer>
       </main>
-
-      <footer className="zen-footer zen-shell"><span>© {new Date().getFullYear()} JACK GE</span><span>Toronto → Los Angeles</span></footer>
     </div>
   );
 }
