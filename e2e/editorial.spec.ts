@@ -8,7 +8,7 @@ test("zen homepage keeps all six projects and case-study navigation", async ({ p
   await expect(page.getByRole("heading", { name: /I design interfaces for complex systems/i })).toBeVisible();
   await expect(page.locator('.zen-page a[href^="#/work/"]')).toHaveCount(6);
 
-  await page.getByRole("link", { name: /Explore the project/i }).first().click();
+  await page.getByRole("link", { name: /View project/i }).first().click();
   await expect(page).toHaveURL(/#\/work\/data-platform$/);
   await expect(page.getByRole("heading", { name: "Unified Enterprise Data Platform", exact: true })).toBeVisible();
 });
