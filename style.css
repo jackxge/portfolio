@@ -1524,3 +1524,35 @@ html,body{max-width:100%;overflow-x:clip}
     grid-column:2!important;grid-row:auto!important;
   }
 }
+
+/* Process: paragraphs remain in one normal-flow block instead of separate grid rows. */
+.case-page #process.edp-process>.case-process>h3{
+  display:block!important;
+  grid-column:2!important;grid-row:1!important;
+  margin:0!important;max-width:18ch;
+  font:400 clamp(24px,2.4vw,32px)/1.35 'Lora',Georgia,serif;
+  letter-spacing:-.012em;
+}
+.case-page #process.edp-process>.case-process>.case-process-copy{
+  display:block!important;
+  grid-column:3!important;grid-row:1!important;
+  min-width:0;
+}
+.case-page #process.edp-process>.case-process>.case-process-copy p,
+.case-page #process.edp-process>.case-process>.case-process-copy p:first-of-type{
+  display:block!important;
+  margin:0 0 4px!important;
+  grid-column:auto!important;grid-row:auto!important;
+}
+.case-page #process.edp-process>.case-process>.case-process-copy p:last-child{
+  margin-bottom:0!important;
+}
+@media(max-width:820px){
+  .case-page #process.edp-process>.case-process>h3{
+    grid-column:2!important;grid-row:1!important;
+    max-width:none;font-size:26px;
+  }
+  .case-page #process.edp-process>.case-process>.case-process-copy{
+    grid-column:2!important;grid-row:2!important;
+  }
+}
