@@ -470,3 +470,22 @@ html,body{max-width:100%;overflow-x:clip}
   .ma-page .ma-archive-intro{margin-left:0;}
   .ma-page .ma-archive-entry-06{grid-column:10/span 3;}
 }
+
+/* Research archive: consistent twelve-column anchors, varied vertical rhythm. */
+@media(min-width:901px){
+  .ma-page .ma-archive-gallery{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:20px}
+  .ma-page .ma-archive-entry-04{
+    grid-column:6/span 4;
+    transform:none;
+  }
+  .ma-page .ma-archive-entry-05{grid-column:1/span 3}
+  .ma-page .ma-archive-entry-06{grid-column:10/span 3}
+  .ma-page .ma-archive-entry figure,
+  .ma-page .ma-archive-entry figcaption,
+  .ma-page .ma-archive-entry h3,
+  .ma-page .ma-archive-entry>p{
+    margin-left:0;
+    padding-left:0;
+    text-align:left;
+  }
+}
