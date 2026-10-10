@@ -346,3 +346,18 @@ html,body{max-width:100%;overflow-x:clip}
 
 /* Lora's native letter spacing avoids compressed display letterforms. */
 .ma-page .ma-hero h1,.ma-page .ma-statement>p,.ma-page .ma-about-lead{letter-spacing:0}
+
+/* Design philosophy: exactly two intentional lines on desktop. */
+@media(min-width:901px){
+ .ma-page .ma-statement .ma-statement-lines{
+   font-size:clamp(38px,4.7vw,72px);
+   line-height:1.25;
+   max-width:none;
+   width:100%;
+ }
+ .ma-page .ma-statement-lines span{display:block;white-space:nowrap}
+}
+@media(max-width:900px){
+ .ma-page .ma-statement-lines span{display:block;white-space:normal}
+ .ma-page .ma-statement .ma-statement-lines{font-size:clamp(30px,5.5vw,49px);line-height:1.3}
+}
