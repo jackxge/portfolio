@@ -26,6 +26,17 @@
     track('case_study_protected_unlock', { case_study: location.pathname.split('/').pop().replace('.html',''), success: valid });
   });
 
+  // A long screenshot uses a top-aligned preview, never a squeezed full-page thumbnail.
+  document.querySelectorAll('.edp-examples .protected-gallery img').forEach(img => {
+    const updatePreview = () => {
+      if (img.naturalWidth && img.naturalHeight) {
+        img.classList.toggle('is-tall-preview', img.naturalHeight / img.naturalWidth > 1.2);
+      }
+    };
+    if (img.complete) updatePreview();
+    else img.addEventListener('load', updatePreview, { once: true });
+  });
+
   const dialog = document.querySelector('.lightbox');
   if (dialog) {
     let images = [], active = 0;
@@ -39,10 +50,13 @@
       if (!button) return;
       images = [...document.querySelectorAll(`[data-lightbox="${button.dataset.lightbox}"]`)].filter(item => !item.closest('[hidden]'));
       active = images.indexOf(button);
+      const examples = Boolean(button.closest('.edp-examples'));
+      dialog.classList.toggle('examples-full-image', examples);
       display(); dialog.showModal();
+      if (examples) dialog.scrollTop = 0;
       track('case_study_image_open', { case_study: location.pathname.split('/').pop().replace('.html','') });
     });
-    const move = delta => { active = (active + delta + images.length) % images.length; display(); };
+    const move = delta => { active = (active + delta + images.length) % images.length; display(); if (dialog.classList.contains('examples-full-image')) dialog.scrollTop = 0; };
     dialog.querySelector('[data-close]').addEventListener('click', () => dialog.close());
     dialog.querySelector('[data-prev]').addEventListener('click', () => move(-1));
     dialog.querySelector('[data-next]').addEventListener('click', () => move(1));
