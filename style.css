@@ -244,3 +244,9 @@
  .ma-page .ma-aquanaut-detail-group{display:flex;flex-direction:column;gap:34px}
  .ma-page .ma-aquanaut-detail-group .ma-aquanaut-secondary{width:72%}
 }
+
+/* Align the detail caption with the visible screenshot content, not its outer canvas. */
+.ma-page .ma-aquanaut-detail-group .ma-aquanaut-secondary figcaption{
+  padding-left:2.5%;
+  text-align:left;
+}
