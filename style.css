@@ -505,5 +505,5 @@ html,body{max-width:100%;overflow-x:clip}
 
 /* Restore the staggered research rhythm: MotionGen deliberately follows Snake Robot. */
 @media(min-width:901px){
-  .ma-page .ma-archive-entry-06{margin-top:clamp(505px,38vw,555px);}
+  .ma-page .ma-archive-entry-06{margin-top:clamp(450px,34vw,495px);}
 }
