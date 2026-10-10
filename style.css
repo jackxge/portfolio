@@ -1360,3 +1360,25 @@ html,body{max-width:100%;overflow-x:clip}
   border-top:0;
   border-bottom:0;
 }
+
+/* No decorative divider lines on project detail pages.
+   Keep only image outlines and functional form-control borders. */
+.case-page .case-header,
+.case-page .case-chapter-nav,
+.case-page .case-chapter-nav a,
+.case-page .case-hero dl,
+.case-page .case-details,
+.case-page .case-dual,
+.case-page .case-artifacts>.case-section-label,
+.case-page .case-process-list>.case-section-label,
+.case-page .case-demos>.case-section-label,
+.case-page .case-gallery>.case-section-label,
+.case-page .case-process,
+.case-page .artifact-grid,
+.case-page .artifact-grid article,
+.case-page .case-results article,
+.case-page .edp-impact .case-shell>div,
+.case-page .edp-impact article,
+.case-page .case-next {
+  border:0;
+}
