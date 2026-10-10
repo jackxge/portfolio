@@ -1556,3 +1556,6 @@ html,body{max-width:100%;overflow-x:clip}
     grid-column:2!important;grid-row:2!important;
   }
 }
+
+/* EDP: omit decorative section dividers; spacing alone separates chapters. */
+.case-page.edp-case main > section ~ section::before{content:none!important}
