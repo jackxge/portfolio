@@ -40,7 +40,7 @@
   min-height:0;height:auto;align-content:start;
   padding-top:clamp(78px,9vw,126px);
   padding-bottom:clamp(72px,8vw,110px);
-  row-gap:clamp(24px,2.8vw,38px);
+  row-gap:clamp(52px,5.2vw,78px);
 }
 .ma-page .ma-editorial-cover .ma-hero-copy{
   grid-column:1/12;grid-row:1;align-self:start;
@@ -64,7 +64,7 @@
   .ma-page .ma-editorial-cover.ma-hero{
     min-height:0;height:auto;
     padding-top:clamp(70px,10vw,104px);
-    padding-bottom:80px;row-gap:29px;
+    padding-bottom:80px;row-gap:50px;
   }
   .ma-page .ma-editorial-cover .ma-hero-copy{grid-column:1/-1}
   .ma-page .ma-editorial-cover h1{font-size:clamp(42px,7.3vw,68px)}
@@ -76,7 +76,7 @@
   .ma-page .ma-header .ma-name{font-size:12px}
   .ma-page .ma-header nav{gap:18px;font-size:12px}
   .ma-page .ma-editorial-cover.ma-hero{
-    min-height:0;padding-top:62px;padding-bottom:68px;row-gap:25px;
+    min-height:0;padding-top:62px;padding-bottom:68px;row-gap:36px;
   }
   .ma-page .ma-editorial-cover h1{font-size:clamp(36px,8.7vw,52px);line-height:1.19}
   .ma-page .ma-editorial-cover .ma-cover-aside{grid-column:3/13}
