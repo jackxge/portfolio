@@ -401,7 +401,9 @@ html,body{max-width:100%;overflow-x:clip}
  }
 }
 
-/* AquanautViz: title left edge mirrors the right-aligned main image's right inset. */
+/* AquanautViz: retain the original 9% title inset, mirror it at image right. */
 @media(min-width:901px){
-  .ma-page .ma-aquanaut-heading{margin-left:0;}
+  .ma-page .ma-aquanaut-heading{margin-left:9%;}
+  .ma-page .ma-aquanaut-primary{margin:85px 9% 0 auto!important;}
+  .ma-page .ma-aquanaut-detail-group{margin-right:9%;margin-left:auto;}
 }
