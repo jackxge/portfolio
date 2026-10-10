@@ -193,7 +193,7 @@
  }
  .ma-page .ma-askedp-sequence .ma-askedp-note{
    grid-column:4/7;grid-row:3;
-   max-width:290px;margin:clamp(135px,10vw,175px) 0 0!important;
+   max-width:290px;margin:115px 0 0!important;
    justify-self:start;align-self:start;
  }
 }
