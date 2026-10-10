@@ -138,3 +138,9 @@
   }
   .ma-page .ma-editorial-cover .ma-hero-bottom{font-size:11px}
 }
+
+/* Single header: site navigation is the only masthead. */
+.ma-page .ma-editorial-cover { grid-template-rows:1fr auto auto; }
+.ma-page .ma-editorial-cover .ma-hero-copy { grid-row:1; }
+.ma-page .ma-editorial-cover .ma-hero-lead { grid-row:2; }
+.ma-page .ma-editorial-cover .ma-hero-bottom { grid-row:3; }
