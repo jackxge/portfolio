@@ -334,3 +334,12 @@ html,body{margin:0;min-height:100%;background:#ffffff}
 html,body{max-width:100%;overflow-x:clip}
 .ma-page{width:100%;max-width:100%;overflow-x:clip}
 .ma-page .ma-wrap{min-width:0;position:relative}
+
+/* Delineate only light-on-white project imagery; no card framing or shadows. */
+.ma-page .ma-edp-primary img,
+.ma-page .ma-edp-secondary img,
+.ma-page .ma-archive-entry-05 img,
+.ma-page .ma-archive-entry-06 img{
+  border:1px solid #e5e5e5;
+  box-sizing:border-box;
+}
