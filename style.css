@@ -1817,3 +1817,8 @@ html,body{max-width:100%;overflow-x:clip}
 
 /* EDP Process: softer emphasis for needs labels. */
 .case-page.edp-case #process.edp-process .case-process-copy strong{font-weight:600}
+
+/* Indent the two user groups as subordinate detail under Initial Adoption. */
+.case-page.edp-case #process.edp-process .edp-adoption-groups{padding-left:18px;margin:0 0 8px}
+.case-page.edp-case #process.edp-process .edp-adoption-groups p{margin-bottom:5px!important}
+.case-page.edp-case #process.edp-process .edp-adoption-groups p:last-child{margin-bottom:0!important}
