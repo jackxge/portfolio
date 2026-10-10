@@ -729,3 +729,35 @@ html,body{max-width:100%;overflow-x:clip}
  .case-page .case-process .case-kicker{margin-bottom:0}
  .case-page .case-results{padding-block:85px}
 }
+
+/* EDP overview / editorial hierarchy with a clear reading column and facts rail. */
+@media(min-width:901px){
+ .case-page .case-intro:has(.case-prose-lead){
+   grid-template-columns:minmax(150px,2fr) minmax(0,8fr);
+   column-gap:clamp(65px,8vw,140px);
+   row-gap:0;
+   padding-top:clamp(115px,12vw,180px);
+   padding-bottom:clamp(100px,11vw,155px);
+ }
+ .case-page .case-intro .case-prose-lead{max-width:760px}
+ .case-page .case-intro .case-prose-lead p:first-child{
+   max-width:740px;font-size:clamp(29px,2.65vw,39px);line-height:1.5;
+   margin-bottom:clamp(48px,5.5vw,78px);
+ }
+ .case-page .case-intro .case-prose-lead p:not(:first-child){
+   max-width:600px;line-height:2;font-size:15px;
+   margin-bottom:26px;
+ }
+ .case-page .case-intro .case-details{
+   grid-column:2;max-width:760px;
+   grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);
+   gap:clamp(28px,4vw,65px);
+   margin-top:clamp(58px,7vw,105px);
+   padding-top:27px;border-top:1px solid #d6d5d0;
+ }
+ .case-page .case-intro .case-details dd{font-size:13px;line-height:1.8}
+}
+@media(max-width:900px){
+ .case-page .case-intro .case-prose-lead p:first-child{line-height:1.47}
+ .case-page .case-intro .case-details{max-width:100%}
+}
