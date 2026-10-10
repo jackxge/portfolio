@@ -458,3 +458,8 @@ html,body{max-width:100%;overflow-x:clip}
     justify-self:end;
   }
 }
+
+/* Give AquanautViz spatial-context copy a wider reading measure. */
+@media(min-width:901px){
+  .ma-page .ma-aquanaut-detail-group .ma-aquanaut-note{max-width:390px;}
+}
