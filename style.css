@@ -1671,3 +1671,6 @@ html,body{max-width:100%;overflow-x:clip}
   }
   .case-page.edp-case .edp-examples .protected-lock{padding-block:36px}
 }
+
+/* EDP chapter navigation arrow icons: solid black. */
+.case-page.edp-case .case-chapter-nav a span{color:#000}
