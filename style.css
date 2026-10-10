@@ -230,3 +230,47 @@
 @media(max-width:600px){
  .ma-page .ma-visual-cover .ma-cover-detail{min-height:150px;aspect-ratio:1.65/1}
 }
+
+/* Compact opening: let the actual first case study enter the viewport. */
+.ma-page .ma-visual-cover{
+  min-height:0;
+  height:auto;
+  display:grid;
+  grid-template-columns:repeat(12,minmax(0,1fr));
+  grid-template-rows:auto auto;
+  padding-top:112px;
+  padding-bottom:84px;
+  row-gap:40px;
+}
+.ma-page .ma-visual-cover .ma-hero-copy{
+  grid-column:1/12;grid-row:1;
+  align-self:start;transform:none;
+}
+.ma-page .ma-visual-cover h1{
+  font-size:clamp(60px,6.2vw,91px);
+  line-height:1.15;
+}
+.ma-page .ma-visual-cover .ma-cover-aside{
+  grid-column:8/13;grid-row:2;
+  align-self:start;display:block;
+  margin-left:0;max-width:none;
+}
+.ma-page .ma-visual-cover .ma-cover-aside .ma-hero-lead{
+  max-width:390px;margin:0!important;
+  font-size:15px;line-height:1.8;
+}
+.ma-page .ma-edp{padding-top:62px}
+@media(max-width:900px){
+  .ma-page .ma-visual-cover{min-height:0;padding-top:85px;padding-bottom:70px;row-gap:36px}
+  .ma-page .ma-visual-cover .ma-hero-copy{grid-column:1/-1}
+  .ma-page .ma-visual-cover h1{font-size:clamp(48px,7.6vw,73px)}
+  .ma-page .ma-visual-cover .ma-cover-aside{grid-column:6/13}
+  .ma-page .ma-edp{padding-top:45px}
+}
+@media(max-width:600px){
+  .ma-page .ma-visual-cover{min-height:0;padding-top:70px;padding-bottom:52px;row-gap:30px}
+  .ma-page .ma-visual-cover h1{font-size:clamp(37px,9vw,53px)}
+  .ma-page .ma-visual-cover .ma-cover-aside{grid-column:3/13}
+  .ma-page .ma-visual-cover .ma-cover-aside .ma-hero-lead{font-size:14px}
+  .ma-page .ma-edp{padding-top:34px}
+}
