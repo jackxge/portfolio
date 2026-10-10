@@ -1298,3 +1298,36 @@ html,body{max-width:100%;overflow-x:clip}
  .case-page .edp-impact article p{font-size:13px;line-height:1.8}
  .case-page .edp-impact .edp-impact-savings .edp-impact-metric small{display:block;margin:4px 0 0}
 }
+
+/* Case studies: one consistent outer page gutter, matching the top navigation.
+   Inner editorial grids remain free to use asymmetric alignments. */
+.case-page{
+  --case-page-width:1312px;
+  --case-page-gutter:5vw;
+}
+.case-page .case-header,
+.case-page .case-hero,
+.case-page .case-shell,
+.case-page .edp-impact .case-shell{
+  width:min(var(--case-page-width),calc(100% - 2 * var(--case-page-gutter)));
+  max-width:none;
+  margin-left:auto;
+  margin-right:auto;
+}
+.case-page .case-footer{
+  padding-left:max(var(--case-page-gutter),calc((100% - var(--case-page-width))/2));
+  padding-right:max(var(--case-page-gutter),calc((100% - var(--case-page-width))/2));
+}
+.case-page .case-next{
+  padding-left:max(var(--case-page-gutter),calc((100% - var(--case-page-width))/2));
+  padding-right:max(var(--case-page-gutter),calc((100% - var(--case-page-width))/2));
+}
+@media(max-width:700px){
+  .case-page{--case-page-gutter:18px}
+  .case-page .case-header,
+  .case-page .case-hero,
+  .case-page .case-shell,
+  .case-page .edp-impact .case-shell{
+    width:calc(100% - 36px);
+  }
+}
