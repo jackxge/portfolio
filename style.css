@@ -1833,3 +1833,22 @@ html,body{max-width:100%;overflow-x:clip}
 /* EDP Process: modest spacing within each step. */
 .case-page.edp-case #process.edp-process>.case-process>.case-process-copy>p:not(:last-child){margin-bottom:24px!important}
 .case-page.edp-case #process.edp-process .edp-adoption-groups p:not(:last-child){margin-bottom:11px!important}
+
+/* EDP editorial rhythm: repeat the Process step spacing between major
+   content groups inside other chapters, without changing chapter padding. */
+.case-page.edp-case{
+  --edp-major-group-gap:clamp(72px,7vw,100px);
+}
+.case-page.edp-case #overview .case-details{
+  margin-top:var(--edp-major-group-gap);
+}
+.case-page.edp-case #challenge.case-dual .case-prose p:not(:last-child){
+  margin-bottom:24px;
+}
+.case-page.edp-case #outcome.edp-impact .case-shell>div{
+  row-gap:var(--edp-major-group-gap);
+}
+.case-page.edp-case #outcome.edp-impact article,
+.case-page.edp-case #outcome.edp-impact article:nth-child(n){
+  padding-block:0;
+}
