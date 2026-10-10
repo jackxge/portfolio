@@ -11,7 +11,7 @@ html,body{margin:0;min-height:100%;background:#ffffff}
 /* EDP: independent but accountable alignments, 24px rhythm */
 .ma-edp{min-height:1050px;display:grid;grid-template-columns:32% 39% 29%;grid-template-rows:440px 1fr;padding-top:150px;position:relative}.ma-edp-heading{grid-column:1;grid-row:1;max-width:355px;padding-left:8%;padding-top:24px}.ma-edp-primary{grid-column:2/4;grid-row:1;margin:24px 4% 0 3%!important;width:81%}.ma-edp-primary img{filter:contrast(1.06)}.ma-edp-secondary{grid-column:2;grid-row:2;margin:48px 0 0 3%!important;width:61%}.ma-edp-secondary img{filter:contrast(1.09)}.ma-edp-note{grid-column:3;grid-row:2;align-self:start;margin:144px 0 0 0!important}
 /* Interlude: all italic, no mixed roman/italic within a statement */
-.ma-statement{min-height:710px;display:flex;flex-direction:column;justify-content:center;padding:24px 0 70px 17%}.ma-statement .ma-micro{margin-bottom:45px}.ma-statement>p{font:italic 400 clamp(52px,6.2vw,91px)/1.04 var(--italic);letter-spacing:-.027em;max-width:1050px}.ma-statement>small{font:400 15px/1.8 var(--sans);display:block;max-width:355px;margin-top:75px;margin-left:43%;color:var(--body)}
+.ma-statement{min-height:710px;display:flex;flex-direction:column;justify-content:center;padding:24px 0 70px 17%}.ma-statement .ma-micro{margin-bottom:45px}.ma-statement>p{font:italic 400 clamp(52px,6.2vw,91px)/1.12 var(--italic);letter-spacing:.012em;max-width:1050px}.ma-statement>small{font:400 15px/1.8 var(--sans);display:block;max-width:355px;margin-top:75px;margin-left:43%;color:var(--body)}
 /* AskEDP: small factual annotation balances secondary image */
 .ma-askedp{min-height:930px;display:grid;grid-template-columns:44% 36% 20%;grid-template-rows:420px 1fr;padding-top:110px}.ma-askedp-primary{grid-column:1;grid-row:1;width:88%;margin:48px 0 0 4%!important}.ma-askedp-heading{grid-column:2/4;grid-row:1;margin:24px 0 0 15%;max-width:400px}.ma-askedp-note{grid-column:1;grid-row:2;align-self:start;margin:115px 0 0 18%!important;max-width:340px}.ma-askedp-secondary{grid-column:3;grid-row:2;width:140%;margin:90px 0 0 -107%!important}
 /* Aquanaut: larger image, local alignment, offset secondary image */
@@ -340,3 +340,6 @@ html,body{max-width:100%;overflow-x:clip}
   border:1px solid #d2d2d2;
   box-sizing:border-box;
 }
+
+/* Avoid compressed italic glyphs in the philosophy statement. */
+.ma-page .ma-statement>p{letter-spacing:.012em;line-height:1.12;font-kerning:normal}
