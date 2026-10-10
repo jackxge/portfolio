@@ -155,3 +155,9 @@
 }
 @media(max-width:900px){.ma-page .ma-editorial-cover h1{font-size:clamp(48px,8.2vw,75px)}}
 @media(max-width:500px){.ma-page .ma-editorial-cover h1{font-size:clamp(39px,9.2vw,51px);line-height:1.17}}
+
+/* Single-line masthead: identity left, navigation right. */
+.ma-page .ma-header{align-items:center;min-height:100px;padding-top:0;gap:24px}
+.ma-page .ma-header .ma-name{font:500 13px/1.5 var(--sans);letter-spacing:.105em}
+.ma-page .ma-header nav{align-items:center;margin-left:auto;gap:42px;line-height:1.5}
+@media(max-width:500px){.ma-page .ma-header{min-height:76px;gap:16px}.ma-page .ma-header nav{gap:18px;font-size:12px}.ma-page .ma-header .ma-name{font-size:12px}}
