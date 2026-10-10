@@ -463,3 +463,10 @@ html,body{max-width:100%;overflow-x:clip}
 @media(min-width:901px){
   .ma-page .ma-aquanaut-detail-group .ma-aquanaut-note{max-width:390px;}
 }
+
+/* Research Archive: match About's symmetric outer content boundaries.
+   Preserve the staggered interior positions and sizes. */
+@media(min-width:901px){
+  .ma-page .ma-archive-intro{margin-left:0;}
+  .ma-page .ma-archive-entry-06{grid-column:10/span 3;}
+}
