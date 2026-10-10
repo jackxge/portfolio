@@ -425,3 +425,11 @@ html,body{max-width:100%;overflow-x:clip}
 @media(min-width:901px){
   .ma-page .ma-archive-entry-06{grid-column:9/span 3;}
 }
+
+/* Automated Control: let the original screenshot define the image bounds. */
+.ma-page .ma-archive-entry-04 .ma-image img{
+  width:100%;
+  height:auto;
+  aspect-ratio:auto;
+  object-fit:initial;
+}
