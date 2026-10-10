@@ -420,3 +420,8 @@ html,body{max-width:100%;overflow-x:clip}
 .ma-page .ma-aquanaut-detail-group .ma-aquanaut-secondary figcaption{
   padding-left:0;
 }
+
+/* Research Archive: MotionGen right inset mirrors the heading's one-column left inset. */
+@media(min-width:901px){
+  .ma-page .ma-archive-entry-06{grid-column:9/span 3;}
+}
