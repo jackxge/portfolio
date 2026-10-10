@@ -144,3 +144,17 @@
   .ma-page .ma-edp-secondary{width:88%;margin-top:64px!important}
   .ma-page .ma-edp-note{margin-top:44px!important}
 }
+
+/* AskEDP: align the image top and heading top on the same row. */
+@media(min-width:901px){
+  .ma-page .ma-askedp{align-items:start}
+  .ma-page .ma-askedp-primary{
+    align-self:start;
+    margin:0 0 0 4%!important;
+  }
+  .ma-page .ma-askedp-heading{
+    align-self:start;
+    margin:0 0 0 15%!important;
+    padding-top:0;
+  }
+}
