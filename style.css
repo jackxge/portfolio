@@ -1409,11 +1409,12 @@ html,body{max-width:100%;overflow-x:clip}
 .case-page main > section.protected::before,
 .case-page main > section.protected + section::before{content:none}
 
-/* EDP Examples — orderly compact thumbnails; existing lightbox opens full images. */
+/* EDP Examples: consistent 16:10 editorial previews, two columns.
+   Tall screenshots show their top; full images remain intact in the lightbox. */
 .case-page .edp-examples .protected-gallery{
   display:grid;
-  grid-template-columns:repeat(4,minmax(0,1fr));
-  gap:clamp(12px,1.6vw,22px);
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:clamp(18px,2vw,30px);
   align-items:start;
   margin-top:28px;
 }
@@ -1430,21 +1431,43 @@ html,body{max-width:100%;overflow-x:clip}
   display:block;
   width:100%;
   height:auto;
-  aspect-ratio:4/3;
+  aspect-ratio:16/10;
   object-fit:contain;
+  object-position:center;
   border:1px solid #d2d2d2;
   transition:opacity .2s ease;
 }
+.case-page .edp-examples .protected-gallery .image-button img.is-tall-preview{
+  object-fit:cover;
+  object-position:top center;
+}
+.case-page .edp-examples .protected-gallery[hidden]{display:none!important}
 @media(hover:hover){
-  .case-page .edp-examples .protected-gallery .image-button:hover img{opacity:.78}
+  .case-page .edp-examples .protected-gallery .image-button:hover img{opacity:.8}
 }
 .case-page .edp-examples .protected-gallery .image-button:focus-visible{
   outline:2px solid #171717;
   outline-offset:4px;
 }
-@media(max-width:900px){
-  .case-page .edp-examples .protected-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+/* Scroll the original long screenshot instead of shrinking it to viewport height. */
+.case-page .lightbox.examples-full-image{
+  overflow-x:hidden;
+  overflow-y:auto;
+  padding:clamp(56px,5vw,80px) clamp(20px,5vw,80px);
+  text-align:center;
 }
-@media(max-width:480px){
-  .case-page .edp-examples .protected-gallery{gap:12px}
+.case-page .lightbox.examples-full-image img{
+  display:block;
+  width:auto;
+  max-width:100%;
+  height:auto;
+  max-height:none;
+  object-fit:contain;
+  margin:0 auto;
+}
+@media(max-width:600px){
+  .case-page .edp-examples .protected-gallery{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
 }
