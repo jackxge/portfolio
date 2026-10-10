@@ -1692,7 +1692,7 @@ html,body{max-width:100%;overflow-x:clip}
   align-items:start!important;
   width:100%;max-width:none;
   margin:0;
-  padding:0 0 clamp(52px,6vw,90px);
+  padding:0 0 clamp(20px,2.5vw,38px);
 }
 .case-page.edp-case .case-hero-copy>p{
   grid-column:1/-1!important;
@@ -1727,8 +1727,10 @@ html,body{max-width:100%;overflow-x:clip}
   order:1!important;
   display:block!important;
   position:static!important;
-  width:100%;
+  width:84%;
   height:auto;
+  margin:0 0 0 auto;
+  object-fit:contain;
 }
 @media(max-width:850px){
   .case-page.edp-case .case-hero-copy{
@@ -1747,4 +1749,8 @@ html,body{max-width:100%;overflow-x:clip}
     margin-top:28px!important;
     padding:0!important;
   }
+}
+
+@media(max-width:850px){
+  .case-page.edp-case .case-hero>img{width:100%;margin:0}
 }
