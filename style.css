@@ -1251,84 +1251,60 @@ html,body{max-width:100%;overflow-x:clip}
   display:none!important;
 }
 
-/* EDP outcomes — impact feature followed by a calm two-column editorial grid.
-   Deliberately distinct from the numbered Process rows. */
-.case-page .edp-impact{
-  background:#f7f7f4;
-  padding:clamp(95px,11vw,155px) 0 clamp(110px,12vw,170px);
-}
-.case-page .edp-impact .case-shell{width:min(1080px,calc(100% - 10vw))}
-.case-page .edp-impact .case-section-label{
-  margin:0 0 19px;color:#77766f;letter-spacing:.09em;
-}
+/* EDP outcomes / Japanese minimal: one quiet vertical reading field.
+   Distinct from Process: no numbers, no three-column rows, no featured card. */
+.case-page .edp-impact{background:#fff;padding:clamp(105px,12vw,170px) 0 clamp(120px,14vw,190px)}
+.case-page .edp-impact .case-shell{width:min(1000px,calc(100% - 10vw))}
+.case-page .edp-impact .case-section-label{margin:0 0 23px;color:#77766f;letter-spacing:.08em}
 .case-page .edp-impact h2{
-  margin:0 0 clamp(60px,7vw,100px);
-  font:400 clamp(49px,5.6vw,78px)/1.18 'Lora',Georgia,serif;
-  letter-spacing:-.025em;color:#34342f;
+  margin:0 0 clamp(70px,9vw,120px);
+  font:400 clamp(49px,5vw,70px)/1.25 'Lora',Georgia,serif;
+  letter-spacing:-.022em;color:#353530;
 }
 .case-page .edp-impact .case-shell>div{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  column-gap:clamp(55px,9vw,140px);
-  row-gap:0;
+  display:grid;grid-template-columns:minmax(0,1fr);
+  gap:0;border-top:1px solid #ddddd8;
 }
 .case-page .edp-impact article,
 .case-page .edp-impact article:nth-child(n){
-  display:block;min-width:0;width:auto;
-  grid-column:auto;grid-row:auto;
-  margin:0;padding:38px 0 48px;
-  border:0;border-top:1px solid #d7d7d1;
-  transform:none!important;background:transparent;
+  display:block;grid-column:auto;grid-row:auto;order:initial;
+  width:100%;min-width:0;transform:none!important;
+  margin:0;padding:clamp(42px,5vw,66px) 0;
+  background:transparent;border:0;border-bottom:1px solid #ddddd8;
 }
-.case-page .edp-impact article span{
-  display:none;
-}
+.case-page .edp-impact article span{display:none}
 .case-page .edp-impact article h3{
-  margin:0 0 19px;
-  font:400 clamp(24px,2.35vw,32px)/1.38 'Lora',Georgia,serif;
-  letter-spacing:-.015em;color:#34342f;text-transform:none;
+  display:block;margin:0 0 18px;
+  font:400 clamp(25px,2.55vw,35px)/1.4 'Lora',Georgia,serif;
+  text-transform:none;letter-spacing:-.012em;color:#33332e;
 }
 .case-page .edp-impact article p{
-  display:block;max-width:48ch;margin:0;
-  font:400 14px/1.95 'Noto Sans JP',Arial,sans-serif;
-  color:#5d5d56;
+  display:block;max-width:61ch;margin:0;
+  font:400 15px/2 'Noto Sans JP',Arial,sans-serif;color:#63615b;
 }
-/* A single editorial focal point, then four equally weighted outcomes. */
-.case-page .edp-impact article:nth-child(2){
-  order:-1;grid-column:1/-1;
-  display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);
-  column-gap:clamp(65px,8vw,115px);
-  padding:clamp(45px,5vw,70px) 0 clamp(65px,8vw,105px);
-  border-top:1px solid #aaa9a2;
-}
-.case-page .edp-impact article:nth-child(2) h3{grid-column:1;grid-row:1;margin:3px 0 0}
 .case-page .edp-impact .edp-impact-savings .edp-impact-metric{
-  grid-column:2;grid-row:1;max-width:none;
-  margin:0 0 23px;
-  font:400 clamp(37px,4.45vw,61px)/1.19 'Lora',Georgia,serif;
-  letter-spacing:-.025em;color:#34342f;
+  display:block;max-width:61ch;margin:0 0 14px;
+  font:400 clamp(27px,2.9vw,39px)/1.4 'Lora',Georgia,serif;
+  letter-spacing:-.015em;color:#44443e;
 }
 .case-page .edp-impact .edp-impact-savings .edp-impact-metric small{
-  display:block;margin-top:15px;
+  display:inline;margin:0 0 0 8px;
   font:400 12px/1.5 'Noto Sans JP',Arial,sans-serif;
-  color:#77766f;letter-spacing:.035em;
+  color:#8a8882;letter-spacing:0;
 }
-.case-page .edp-impact article:nth-child(2)>p:last-child{
-  grid-column:2;grid-row:2;
+.case-page .edp-impact .edp-impact-savings>p:last-child{display:block;margin:0}
+@media(min-width:901px){
+ .case-page .edp-impact .case-shell>div{
+   width:78%;margin-left:auto;
+ }
 }
 @media(max-width:700px){
- .case-page .edp-impact{padding:84px 0 105px}
+ .case-page .edp-impact{padding:85px 0 110px}
  .case-page .edp-impact .case-shell{width:calc(100% - 36px)}
- .case-page .edp-impact h2{font-size:clamp(47px,10vw,64px);margin-bottom:58px}
- .case-page .edp-impact .case-shell>div{display:block}
- .case-page .edp-impact article,
- .case-page .edp-impact article:nth-child(n){
-   display:block;grid-column:auto;grid-row:auto;
-   padding:33px 0 43px;margin:0;
- }
- .case-page .edp-impact article:nth-child(2){padding:44px 0 62px}
+ .case-page .edp-impact h2{font-size:clamp(45px,10vw,62px);margin-bottom:55px}
+ .case-page .edp-impact article,.case-page .edp-impact article:nth-child(n){padding:36px 0 42px}
  .case-page .edp-impact article h3{font-size:27px}
- .case-page .edp-impact .edp-impact-savings .edp-impact-metric{
-   font-size:clamp(38px,8.5vw,53px);margin:20px 0 24px;
- }
+ .case-page .edp-impact article p{font-size:14px;line-height:1.95}
+ .case-page .edp-impact .edp-impact-savings .edp-impact-metric{font-size:30px}
+ .case-page .edp-impact .edp-impact-savings .edp-impact-metric small{display:block;margin:8px 0 0}
 }
