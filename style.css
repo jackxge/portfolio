@@ -211,31 +211,36 @@
  .ma-page .ma-askedp-sequence .ma-askedp-note{margin:35px 0 0!important}
 }
 
-/* AquanautViz: place spatial observation and detail beneath the hero, sharing its left edge. */
+/* AquanautViz: move the ORIGINAL left-text/right-image pair as one unit below the main image. */
 @media(min-width:901px){
  .ma-page .ma-aquanaut{min-height:0;display:flex;flex-direction:column;padding-bottom:150px}
  .ma-page .ma-aquanaut-primary{width:76%;margin:85px 0 0 auto!important}
- .ma-page .ma-aquanaut-note{
-   position:static;left:auto;bottom:auto;
-   width:76%;max-width:none;margin:64px 0 0 auto!important;
-   padding:0;align-self:auto;
+ .ma-page .ma-aquanaut-detail-group{
+   width:76%;margin:70px 0 0 auto;
+   display:grid;grid-template-columns:minmax(0,45%) minmax(0,45%);
+   column-gap:10%;align-items:start;
  }
- .ma-page .ma-aquanaut-note span{display:block}
- .ma-page .ma-aquanaut-note{font-size:15px;line-height:1.8}
- .ma-page .ma-aquanaut-secondary{
-   width:34%;max-width:none;
-   margin:50px 0 0 24%!important;
+ .ma-page .ma-aquanaut-detail-group .ma-aquanaut-note{
+   position:static;left:auto;bottom:auto;
+   width:auto;max-width:265px;margin:0!important;padding:0;
+ }
+ .ma-page .ma-aquanaut-detail-group .ma-aquanaut-secondary{
+   width:100%;max-width:none;margin:0!important;
  }
 }
 @media(max-width:900px){
- .ma-page .ma-aquanaut-note{
-   position:static;width:100%;max-width:440px;
-   margin:56px 0 0!important;
+ .ma-page .ma-aquanaut-detail-group{
+   display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+   gap:32px;width:100%;margin-top:65px;align-items:start;
  }
- .ma-page .ma-aquanaut-secondary{
-   width:48%;margin:48px 0 0 0!important;
+ .ma-page .ma-aquanaut-detail-group .ma-aquanaut-note{
+   position:static;max-width:300px;margin:0!important;
+ }
+ .ma-page .ma-aquanaut-detail-group .ma-aquanaut-secondary{
+   width:100%;margin:0!important;
  }
 }
 @media(max-width:600px){
- .ma-page .ma-aquanaut-secondary{width:72%}
+ .ma-page .ma-aquanaut-detail-group{display:flex;flex-direction:column;gap:34px}
+ .ma-page .ma-aquanaut-detail-group .ma-aquanaut-secondary{width:72%}
 }
