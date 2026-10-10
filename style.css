@@ -1383,14 +1383,14 @@ html,body{max-width:100%;overflow-x:clip}
   border:0;
 }
 
-/* One black divider between top-level case study sections, never within them. */
-.case-page main > section ~ section{
-  position:relative;
-}
+/* Editorial section separators: one 1px black rule between major sections.
+   Center within the section gap; align with the shared page content gutter.
+   No internal dividers. */
+.case-page main > section ~ section{position:relative}
 .case-page main > section ~ section::before{
   content:"";
   position:absolute;
-  top:0;
+  top:clamp(-30px,-2.5vw,-16px);
   left:50%;
   transform:translateX(-50%);
   width:min(var(--case-page-width,1312px),calc(100% - 2 * var(--case-page-gutter,5vw)));
