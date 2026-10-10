@@ -1790,3 +1790,27 @@ html,body{max-width:100%;overflow-x:clip}
 @media(max-width:700px){
   .case-page.edp-case .case-chapter-nav{margin-top:48px;padding-block:22px}
 }
+
+/* EDP case study: monochrome typography, including muted labels and metadata.
+   Keep lightbox controls legible against its dark surface. */
+.case-page.edp-case{
+  --case-ink:#000;
+  --case-muted:#000;
+  --reading-ink:#000;
+  --reading-muted:#000;
+  color:#000;
+}
+.case-page.edp-case main :is(h1,h2,h3,h4,p,span,dt,dd,li,strong,small,a,label,.case-kicker,.case-section-label),
+.case-page.edp-case .case-header :is(a,span),
+.case-page.edp-case .case-footer :is(a,span),
+.case-page.edp-case .case-next :is(span,strong,i),
+.case-page.edp-case .protected-lock :is(input,button),
+.case-page.edp-case .case-password-help,
+.case-page.edp-case .case-prose,
+.case-page.edp-case .case-prose-lead,
+.case-page.edp-case .edp-impact .edp-impact-metric small{
+  color:#000!important;
+  opacity:1;
+}
+.case-page.edp-case .lightbox button{color:#fff!important}
+.case-page.edp-case .protected-lock input::placeholder{color:#000;opacity:1}
