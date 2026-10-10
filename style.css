@@ -1829,3 +1829,7 @@ html,body{max-width:100%;overflow-x:clip}
 
 /* EDP Process: spacing between the four steps, not within each step. */
 .case-page.edp-case #process.edp-process>.case-process:not(:last-child){margin-bottom:clamp(72px,7vw,100px)!important}
+
+/* EDP Process: modest spacing within each step. */
+.case-page.edp-case #process.edp-process>.case-process>.case-process-copy>p:not(:last-child){margin-bottom:12px!important}
+.case-page.edp-case #process.edp-process .edp-adoption-groups p:not(:last-child){margin-bottom:8px!important}
