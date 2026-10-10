@@ -1597,3 +1597,6 @@ html,body{max-width:100%;overflow-x:clip}
   .case-page.edp-case .case-chapter-nav{padding-block:32px}
   .case-page.edp-case .edp-examples .protected-lock{padding-block:38px}
 }
+
+/* EDP Overview: no rule above the Role / Tools metadata. */
+.case-page.edp-case .case-intro .case-details{border-top:0}
