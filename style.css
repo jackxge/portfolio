@@ -296,3 +296,34 @@ html,body{margin:0;min-height:100%;background:#ffffff}
  .ma-page .ma-about-content{margin:48px 0 0 0}
  .ma-page .ma-about-lead{font-size:clamp(29px,7.3vw,39px)}
 }
+
+/* One centered page frame for every homepage section.
+   Asymmetric positioning belongs INSIDE the frame, never to its outer margins. */
+.ma-page{
+  --page-max:1312px;
+  --page-gutter:max(18px,5vw);
+}
+.ma-page .ma-wrap{
+  box-sizing:border-box;
+  width:calc(100% - 2 * var(--page-gutter));
+  max-width:var(--page-max);
+  margin-left:auto;
+  margin-right:auto;
+}
+@media(max-width:900px){
+  .ma-page{--page-gutter:22px}
+}
+@media(max-width:500px){
+  .ma-page{--page-gutter:18px}
+}
+/* Section padding does not alter the symmetric outer page frame. */
+.ma-page .ma-wrap.ma-hero,
+.ma-page .ma-wrap.ma-edp,
+.ma-page .ma-wrap.ma-statement,
+.ma-page .ma-wrap.ma-askedp,
+.ma-page .ma-wrap.ma-aquanaut,
+.ma-page .ma-wrap.ma-archive,
+.ma-page .ma-wrap.ma-about{
+  margin-left:auto;
+  margin-right:auto;
+}
