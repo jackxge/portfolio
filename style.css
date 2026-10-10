@@ -489,3 +489,16 @@ html,body{max-width:100%;overflow-x:clip}
     text-align:left;
   }
 }
+
+/* Research archive: shared vertical guides across staggered project imagery.
+   Snake right = Automated Control left; Automated Control right = MotionGen left.
+   Snake left and MotionGen right use the same symmetric section edges. */
+@media(min-width:901px){
+  .ma-page .ma-archive-gallery{
+    grid-template-columns:repeat(12,minmax(0,1fr));
+    column-gap:0;
+  }
+  .ma-page .ma-archive-entry-05{grid-column:1/4;}
+  .ma-page .ma-archive-entry-04{grid-column:4/9;transform:none;}
+  .ma-page .ma-archive-entry-06{grid-column:9/13;}
+}
