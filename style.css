@@ -376,6 +376,12 @@ html,body{max-width:100%;overflow-x:clip}
    Its internal two-column typography and project imagery stay unchanged. */
 @media(min-width:901px){
  .ma-page .ma-askedp-sequence .ma-askedp-heading{
-   transform:translateX(clamp(24px,4.15vw,85px));
+   grid-column:1/13;
+   transform:none;
+ }
+ .ma-page .ma-askedp-sequence .ma-askedp-heading .ma-body,
+ .ma-page .ma-askedp-sequence .ma-askedp-heading .ma-project-link{
+   justify-self:end;
+   width:100%;
  }
 }
