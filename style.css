@@ -1393,8 +1393,14 @@ html,body{max-width:100%;overflow-x:clip}
   top:clamp(-30px,-2.5vw,-16px);
   left:50%;
   transform:translateX(-50%);
-  width:min(var(--case-page-width,1312px),calc(100% - 2 * var(--case-page-gutter,5vw)));
+  width:min(var(--case-page-width,1312px),calc(100vw - 2 * var(--case-page-gutter,5vw)));
   height:1px;
   background:#171717;
   pointer-events:none;
+}
+
+/* Sections using .case-shell already have the correct outer content width.
+   Use that width directly rather than applying the page gutter twice. */
+.case-page main > section.case-shell ~ section.case-shell::before{
+  width:100%;
 }
