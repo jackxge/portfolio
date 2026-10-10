@@ -262,3 +262,36 @@
 .ma-page .ma-archive-entry>p{box-sizing:border-box;text-align:left}
 .ma-page .ma-archive-entry-05 img{filter:contrast(1.08) saturate(1.04)}
 .ma-page .ma-archive-entry-06 img{filter:contrast(1.14) saturate(1.06)}
+
+/* About: a quieter closing chapter with its own editorial rhythm. */
+@media(min-width:901px){
+ .ma-page .ma-about{
+   display:grid;grid-template-columns:29% minmax(0,1fr);
+   align-items:start;min-height:0;
+   padding-top:clamp(115px,12vw,170px);
+   padding-bottom:clamp(140px,14vw,195px);
+ }
+ .ma-page .ma-about>h2{grid-column:1;margin:0;font-size:clamp(42px,4.1vw,60px);line-height:1.2}
+ .ma-page .ma-about-content{
+   grid-column:2;max-width:720px;
+   padding-top:clamp(65px,6vw,90px);
+ }
+ .ma-page .ma-about-lead{
+   font-size:clamp(35px,3.3vw,47px);
+   line-height:1.31;max-width:690px;margin:0 0 48px!important;
+ }
+ .ma-page .ma-about-content>p:not(.ma-about-lead){
+   max-width:490px;font-size:16px;line-height:1.85;
+ }
+}
+@media(max-width:900px){
+ .ma-page .ma-about{display:block;min-height:0;padding:100px 0 130px}
+ .ma-page .ma-about>h2{margin:0;font-size:clamp(40px,6vw,56px)}
+ .ma-page .ma-about-content{max-width:680px;margin:75px 0 0 12%}
+ .ma-page .ma-about-lead{font-size:clamp(32px,5.1vw,45px);line-height:1.32}
+}
+@media(max-width:600px){
+ .ma-page .ma-about{padding:75px 0 100px}
+ .ma-page .ma-about-content{margin:48px 0 0 0}
+ .ma-page .ma-about-lead{font-size:clamp(29px,7.3vw,39px)}
+}
