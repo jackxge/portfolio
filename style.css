@@ -400,3 +400,8 @@ html,body{max-width:100%;overflow-x:clip}
    width:min(100%,370px);
  }
 }
+
+/* AquanautViz: title left edge mirrors the right-aligned main image's right inset. */
+@media(min-width:901px){
+  .ma-page .ma-aquanaut-heading{margin-left:0;}
+}
