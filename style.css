@@ -1826,3 +1826,8 @@ html,body{max-width:100%;overflow-x:clip}
 /* EDP initial adoption: understated editorial square markers. */
 .case-page.edp-case #process.edp-process .edp-adoption-groups p{position:relative;padding-left:14px}
 .case-page.edp-case #process.edp-process .edp-adoption-groups p::before{content:"";position:absolute;left:0;top:.72em;width:5px;height:5px;background:#000}
+
+/* EDP Process: more breathing room between content points, without widening step spacing. */
+.case-page.edp-case #process.edp-process>.case-process>.case-process-copy>p:not(:last-child){margin-bottom:18px!important}
+.case-page.edp-case #process.edp-process .edp-adoption-groups{margin-top:10px;margin-bottom:0}
+.case-page.edp-case #process.edp-process .edp-adoption-groups p:not(:last-child){margin-bottom:12px!important}
