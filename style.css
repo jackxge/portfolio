@@ -1408,3 +1408,43 @@ html,body{max-width:100%;overflow-x:clip}
 /* No separator above or below the confidential visuals section. */
 .case-page main > section.protected::before,
 .case-page main > section.protected + section::before{content:none}
+
+/* EDP Examples — orderly compact thumbnails; existing lightbox opens full images. */
+.case-page .edp-examples .protected-gallery{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:clamp(12px,1.6vw,22px);
+  align-items:start;
+  margin-top:28px;
+}
+.case-page .edp-examples .protected-gallery .image-button{
+  display:block;
+  width:100%;
+  min-width:0;
+  padding:0;
+  background:#f6f6f5;
+  cursor:zoom-in;
+  overflow:hidden;
+}
+.case-page .edp-examples .protected-gallery .image-button img{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:4/3;
+  object-fit:contain;
+  border:1px solid #d2d2d2;
+  transition:opacity .2s ease;
+}
+@media(hover:hover){
+  .case-page .edp-examples .protected-gallery .image-button:hover img{opacity:.78}
+}
+.case-page .edp-examples .protected-gallery .image-button:focus-visible{
+  outline:2px solid #171717;
+  outline-offset:4px;
+}
+@media(max-width:900px){
+  .case-page .edp-examples .protected-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:480px){
+  .case-page .edp-examples .protected-gallery{gap:12px}
+}
