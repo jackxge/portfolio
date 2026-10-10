@@ -433,3 +433,14 @@ html,body{max-width:100%;overflow-x:clip}
   aspect-ratio:auto;
   object-fit:initial;
 }
+
+/* All homepage project images follow their actual source aspect ratios.
+   Figure widths and grid positions remain controlled by each section. */
+.ma-page .ma-image img{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:none;
+  aspect-ratio:auto;
+  object-fit:fill;
+}
