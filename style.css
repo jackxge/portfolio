@@ -110,7 +110,7 @@
   }
   .ma-page .ma-edp-heading{
     grid-column:1/5;grid-row:1;
-    padding:24px 7% 0 7%;margin:0;max-width:400px;
+    padding:0 7%;margin:0;max-width:400px;
   }
   .ma-page .ma-edp-primary{
     grid-column:5/13;grid-row:1;
