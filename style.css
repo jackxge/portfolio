@@ -1130,3 +1130,87 @@ html,body{max-width:100%;overflow-x:clip}
  .case-page .case-results .case-shell>div{grid-template-columns:1fr;gap:42px}
  .case-page .case-results article:nth-child(even){transform:none}
 }
+
+/* Process: compact editorial spreads. No blank art columns for text-only steps. */
+.case-page .case-process-list{padding-bottom:clamp(95px,10vw,135px)}
+.case-page .case-process-list>.case-section-label{
+  padding-bottom:24px;
+}
+@media(min-width:901px){
+ .case-page .case-process-list .case-process{
+   padding:clamp(45px,5.2vw,75px) 0;
+   align-items:start;column-gap:clamp(26px,3vw,48px);
+ }
+ /* Text-only case studies: number / heading / prose as a single compact row. */
+ .case-page .case-process-list .case-process:not(:has(.case-process-images,.case-videos)){
+   display:grid;
+   grid-template-columns:55px minmax(210px,.8fr) minmax(0,1.2fr);
+   gap:clamp(22px,3.5vw,60px);
+ }
+ .case-page .case-process-list .case-process:not(:has(.case-process-images,.case-videos)) .case-kicker{
+   grid-column:1;grid-row:1;padding-top:7px;
+ }
+ .case-page .case-process-list .case-process:not(:has(.case-process-images,.case-videos)) .case-process-copy{
+   display:contents;
+ }
+ .case-page .case-process-list .case-process:not(:has(.case-process-images,.case-videos)) h3{
+   grid-column:2;grid-row:1;max-width:16ch;margin:0;
+ }
+ .case-page .case-process-list .case-process:not(:has(.case-process-images,.case-videos)) p{
+   grid-column:3;max-width:55ch;margin:0 0 16px;
+ }
+ .case-page .case-process-list .case-process:not(:has(.case-process-images,.case-videos)) p:first-of-type{grid-row:1}
+ .case-page .case-process-list .case-process:not(:has(.case-process-images,.case-videos)) p:not(:first-of-type){grid-column:3}
+ /* Illustrated steps use stable aligned text/visual pairs; no alternating empty space. */
+ .case-page .case-process-list .case-process:has(.case-process-images,.case-videos){
+   display:grid;
+   grid-template-columns:50px minmax(0,.85fr) minmax(0,1.15fr);
+   gap:clamp(22px,3.6vw,54px);
+ }
+ .case-page .case-process-list .case-process:has(.case-process-images,.case-videos) .case-kicker{
+   grid-column:1;grid-row:1;padding-top:7px;
+ }
+ .case-page .case-process-list .case-process:has(.case-process-images,.case-videos) .case-process-copy{
+   grid-column:2;grid-row:1;
+ }
+ .case-page .case-process-list .case-process:has(.case-process-images,.case-videos) .case-process-images,
+ .case-page .case-process-list .case-process:has(.case-process-images,.case-videos) .case-videos{
+   grid-column:3;grid-row:1;min-width:0;
+ }
+}
+.case-page .case-process-list .case-process-copy h3{
+  font-size:clamp(25px,2.2vw,33px);line-height:1.35;margin-bottom:22px;
+}
+.case-page .case-process-list .case-process-copy p{
+  font-size:14px;line-height:1.9;margin-bottom:15px;
+}
+.case-page .case-process-list .case-process-images{gap:12px}
+.case-page .case-process-list .case-videos{gap:12px}
+.case-page .case-process-list .case-kicker{font-size:12px}
+@media(min-width:901px){
+ .case-page .case-process-list .case-process:not(:has(.case-process-images,.case-videos)) h3{margin:0}
+ .case-page .case-process-list .case-process:not(:has(.case-process-images,.case-videos)) p{line-height:1.85}
+}
+@media(max-width:900px){
+ .case-page .case-process-list .case-process{
+   display:grid!important;grid-template-columns:44px minmax(0,1fr)!important;
+   gap:20px!important;padding:48px 0!important;
+ }
+ .case-page .case-process-list .case-process .case-kicker{
+   grid-column:1!important;grid-row:1!important;
+ }
+ .case-page .case-process-list .case-process .case-process-copy{
+   display:block!important;grid-column:2!important;grid-row:1!important;
+ }
+ .case-page .case-process-list .case-process .case-process-images,
+ .case-page .case-process-list .case-process .case-videos{
+   grid-column:2!important;grid-row:2!important;margin-top:4px;
+ }
+}
+@media(max-width:600px){
+ .case-page .case-process-list .case-process{
+   grid-template-columns:32px minmax(0,1fr)!important;gap:13px!important;
+   padding:40px 0!important;
+ }
+ .case-page .case-process-list .case-process-copy h3{font-size:25px}
+}
