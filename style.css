@@ -1404,3 +1404,7 @@ html,body{max-width:100%;overflow-x:clip}
 .case-page main > section.case-shell ~ section.case-shell::before{
   width:100%;
 }
+
+/* No separator above or below the confidential visuals section. */
+.case-page main > section.protected::before,
+.case-page main > section.protected + section::before{content:none}
