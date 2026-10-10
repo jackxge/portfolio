@@ -1251,60 +1251,50 @@ html,body{max-width:100%;overflow-x:clip}
   display:none!important;
 }
 
-/* EDP outcomes / Japanese minimal: one quiet vertical reading field.
-   Distinct from Process: no numbers, no three-column rows, no featured card. */
-.case-page .edp-impact{background:#fff;padding:clamp(105px,12vw,170px) 0 clamp(120px,14vw,190px)}
-.case-page .edp-impact .case-shell{width:min(1000px,calc(100% - 10vw))}
-.case-page .edp-impact .case-section-label{margin:0 0 23px;color:#77766f;letter-spacing:.08em}
+/* EDP outcomes / compact Japanese editorial summary. */
+.case-page .edp-impact{background:#fff;padding:clamp(65px,7vw,100px) 0 clamp(75px,8vw,110px)}
+.case-page .edp-impact .case-shell{width:min(1080px,calc(100% - 10vw))}
+.case-page .edp-impact .case-section-label{margin:0 0 12px;color:#77766f;letter-spacing:.08em}
 .case-page .edp-impact h2{
-  margin:0 0 clamp(70px,9vw,120px);
-  font:400 clamp(49px,5vw,70px)/1.25 'Lora',Georgia,serif;
-  letter-spacing:-.022em;color:#353530;
+  margin:0 0 clamp(38px,4vw,58px);
+  font:400 clamp(42px,4.2vw,60px)/1.2 'Lora',Georgia,serif;
+  letter-spacing:-.02em;color:#353530;
 }
 .case-page .edp-impact .case-shell>div{
-  display:grid;grid-template-columns:minmax(0,1fr);
-  gap:0;border-top:1px solid #ddddd8;
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  column-gap:clamp(38px,6vw,90px);border-top:1px solid #ddddd8;
 }
-.case-page .edp-impact article,
-.case-page .edp-impact article:nth-child(n){
+.case-page .edp-impact article,.case-page .edp-impact article:nth-child(n){
   display:block;grid-column:auto;grid-row:auto;order:initial;
   width:100%;min-width:0;transform:none!important;
-  margin:0;padding:clamp(42px,5vw,66px) 0;
-  background:transparent;border:0;border-bottom:1px solid #ddddd8;
+  margin:0;padding:23px 0 27px;background:none;
+  border:0;border-bottom:1px solid #ddddd8;
 }
 .case-page .edp-impact article span{display:none}
 .case-page .edp-impact article h3{
-  display:block;margin:0 0 18px;
-  font:400 clamp(25px,2.55vw,35px)/1.4 'Lora',Georgia,serif;
-  text-transform:none;letter-spacing:-.012em;color:#33332e;
+  display:block;margin:0 0 8px;
+  font:400 clamp(21px,2vw,27px)/1.4 'Lora',Georgia,serif;
+  letter-spacing:-.01em;text-transform:none;color:#353530;
 }
 .case-page .edp-impact article p{
-  display:block;max-width:61ch;margin:0;
-  font:400 15px/2 'Noto Sans JP',Arial,sans-serif;color:#63615b;
+  display:block;max-width:52ch;margin:0;
+  font:400 13px/1.75 'Noto Sans JP',Arial,sans-serif;color:#63615b;
 }
 .case-page .edp-impact .edp-impact-savings .edp-impact-metric{
-  display:block;max-width:61ch;margin:0 0 14px;
-  font:400 clamp(27px,2.9vw,39px)/1.4 'Lora',Georgia,serif;
-  letter-spacing:-.015em;color:#44443e;
+  margin:0 0 9px;max-width:unset;
+  font:400 clamp(22px,2.25vw,30px)/1.32 'Lora',Georgia,serif;color:#45453f;
 }
 .case-page .edp-impact .edp-impact-savings .edp-impact-metric small{
-  display:inline;margin:0 0 0 8px;
-  font:400 12px/1.5 'Noto Sans JP',Arial,sans-serif;
-  color:#8a8882;letter-spacing:0;
-}
-.case-page .edp-impact .edp-impact-savings>p:last-child{display:block;margin:0}
-@media(min-width:901px){
- .case-page .edp-impact .case-shell>div{
-   width:78%;margin-left:auto;
- }
+  display:inline;margin-left:6px;
+  font:400 11px/1.6 'Noto Sans JP',Arial,sans-serif;color:#8a8882;
 }
 @media(max-width:700px){
- .case-page .edp-impact{padding:85px 0 110px}
+ .case-page .edp-impact{padding:65px 0 85px}
  .case-page .edp-impact .case-shell{width:calc(100% - 36px)}
- .case-page .edp-impact h2{font-size:clamp(45px,10vw,62px);margin-bottom:55px}
- .case-page .edp-impact article,.case-page .edp-impact article:nth-child(n){padding:36px 0 42px}
- .case-page .edp-impact article h3{font-size:27px}
- .case-page .edp-impact article p{font-size:14px;line-height:1.95}
- .case-page .edp-impact .edp-impact-savings .edp-impact-metric{font-size:30px}
- .case-page .edp-impact .edp-impact-savings .edp-impact-metric small{display:block;margin:8px 0 0}
+ .case-page .edp-impact h2{font-size:45px;margin-bottom:35px}
+ .case-page .edp-impact .case-shell>div{grid-template-columns:1fr}
+ .case-page .edp-impact article,.case-page .edp-impact article:nth-child(n){padding:22px 0 25px}
+ .case-page .edp-impact article h3{font-size:24px}
+ .case-page .edp-impact article p{font-size:13px;line-height:1.8}
+ .case-page .edp-impact .edp-impact-savings .edp-impact-metric small{display:block;margin:4px 0 0}
 }
