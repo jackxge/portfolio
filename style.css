@@ -1331,3 +1331,9 @@ html,body{max-width:100%;overflow-x:clip}
     width:calc(100% - 36px);
   }
 }
+
+/* Process / no divider rules; spacing defines each editorial step. */
+.case-page .case-process-list>.case-section-label{border-bottom:0}
+.case-page .case-process-list .case-process,
+.case-page .case-process-list .case-process:nth-of-type(odd),
+.case-page .case-process-list .case-process:nth-of-type(even){border-top:0;border-bottom:0}
