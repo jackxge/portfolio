@@ -888,3 +888,76 @@ html,body{max-width:100%;overflow-x:clip}
  .case-page .case-process-copy p{line-height:1.9}
  .case-page .case-results .case-shell>div{gap:40px}
 }
+
+/* CASE STUDY — Japanese editorial composition, not a corporate template.
+   A recurring left reading axis, inset artwork, varied process spreads. */
+@media(min-width:901px){
+  .case-page{--editorial-gutter:max(5vw,calc((100vw - 1312px)/2))}
+  /* Title reads on the main axis; artwork shifts right like a magazine plate. */
+  .case-page .case-hero-copy{
+    grid-template-columns:minmax(0,1fr) 165px;
+    column-gap:8%;
+    align-items:end;
+    padding-bottom:clamp(72px,8vw,126px);
+  }
+  .case-page .case-hero h1{
+    max-width:800px;font-size:clamp(51px,5.15vw,76px);
+    line-height:1.22;letter-spacing:-.018em;
+  }
+  .case-page .case-hero>img{
+    width:84%;margin-left:auto;margin-right:0;
+  }
+  .case-page .case-intro,.case-page .case-intro:has(.case-prose-lead){
+    grid-template-columns:19% minmax(0,1fr);
+    column-gap:9%;
+  }
+  .case-page .case-intro .case-prose-lead p:first-child{
+    max-width:21em;letter-spacing:-.012em;
+  }
+  .case-page .case-intro .case-prose-lead p:not(:first-child){
+    max-width:59ch;
+  }
+  .case-page .case-intro .case-details{grid-column:2;max-width:650px}
+  /* Contrast in pacing: left observation first, indented counterpart second. */
+  .case-page .case-dual{grid-template-columns:minmax(0,5fr) minmax(0,4fr);gap:13%}
+  .case-page .case-dual article:nth-child(2){margin-top:clamp(160px,18vw,260px)}
+  /* Number is a margin annotation; copy and visual sit on an editorial grid. */
+  .case-page .case-process{
+    grid-template-columns:7% minmax(0,34%) minmax(0,1fr);
+    column-gap:5%;
+    padding-block:clamp(95px,11vw,160px);
+  }
+  .case-page .case-process:nth-of-type(even){
+    grid-template-columns:minmax(0,1fr) 7% minmax(0,37%);
+  }
+  .case-page .case-process:nth-of-type(even) .case-process-images{grid-column:1;grid-row:1/3}
+  .case-page .case-process:nth-of-type(even) .case-kicker{grid-column:2;grid-row:1}
+  .case-page .case-process:nth-of-type(even) .case-process-copy{grid-column:3;grid-row:1}
+  .case-page .case-process:nth-of-type(odd) .case-process-images{grid-column:3;grid-row:1/3}
+  .case-page .case-process-images{align-self:start}
+  .case-page .case-process-copy h3{max-width:12em}
+  .case-page .case-process-copy p{max-width:40ch}
+  /* Framework is a quiet typographic index, not a six-tile dashboard. */
+  .case-page .artifact-grid{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:9%}
+  .case-page .artifact-grid article{
+    border-right:0;min-height:0;
+    padding:42px 0 56px;
+  }
+  .case-page .artifact-grid article:nth-child(2n){margin-top:clamp(55px,7vw,95px)}
+  .case-page .case-results .case-shell>div{grid-template-columns:repeat(2,minmax(0,1fr));gap:70px 13%}
+  .case-page .case-results article:nth-child(even){transform:translateY(55px)}
+  .case-page .case-next{padding-block:clamp(105px,11vw,160px)}
+}
+@media(max-width:900px){
+  .case-page .case-hero>img{width:100%;margin-inline:0}
+  .case-page .case-process:nth-of-type(even) .case-process-images,
+  .case-page .case-process:nth-of-type(odd) .case-process-images{grid-column:2;grid-row:auto}
+  .case-page .case-process:nth-of-type(even) .case-kicker,
+  .case-page .case-process:nth-of-type(even) .case-process-copy{grid-column:auto;grid-row:auto}
+}
+@media(max-width:700px){
+  .case-page .case-process:nth-of-type(even) .case-process-images,
+  .case-page .case-process:nth-of-type(odd) .case-process-images{grid-column:1}
+  .case-page .case-process:nth-of-type(even) .case-process-copy,
+  .case-page .case-process:nth-of-type(even) .case-kicker{grid-column:1}
+}
