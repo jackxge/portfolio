@@ -84,10 +84,16 @@
   .ma-page .ma-edp{padding-top:50px}
 }
 
-/* The small editorial marker belongs to the headline, not the navigation. */
-.ma-page .ma-editorial-cover .ma-hero-eyebrow{
-  font:500 11px/1.6 var(--sans);letter-spacing:.105em;
-  color:#77736b;margin:0 0 31px;
+
+/* Final editorial rhythm: clear close to the intro; primary EDP image flush right. */
+.ma-page .ma-editorial-cover.ma-hero{padding-bottom:clamp(96px,10vw,140px)}
+.ma-page .ma-edp-primary{grid-column:2/4;justify-self:end;width:96%;max-width:none;margin:24px 0 0 auto!important}
+.ma-page .ma-edp-primary img{filter:contrast(1.16);object-fit:contain;object-position:right center}
+@media(max-width:900px){
+ .ma-page .ma-editorial-cover.ma-hero{padding-bottom:104px}
+ .ma-page .ma-edp-primary{width:94%;margin:75px 0 0 auto!important}
 }
-@media(max-width:900px){.ma-page .ma-editorial-cover .ma-hero-eyebrow{margin-bottom:25px}}
-@media(max-width:600px){.ma-page .ma-editorial-cover .ma-hero-eyebrow{font-size:10px;margin-bottom:22px}}
+@media(max-width:600px){
+ .ma-page .ma-editorial-cover.ma-hero{padding-bottom:82px}
+ .ma-page .ma-edp-primary{width:100%;margin:52px 0 0 auto!important}
+}
