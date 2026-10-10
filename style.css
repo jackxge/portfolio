@@ -161,3 +161,6 @@
 .ma-page .ma-header .ma-name{font:500 13px/1.5 var(--sans);letter-spacing:.105em}
 .ma-page .ma-header nav{align-items:center;margin-left:auto;gap:42px;line-height:1.5}
 @media(max-width:500px){.ma-page .ma-header{min-height:76px;gap:16px}.ma-page .ma-header nav{gap:18px;font-size:12px}.ma-page .ma-header .ma-name{font-size:12px}}
+
+/* Sole scroll affordance aligns to the right edge. */
+.ma-page .ma-editorial-cover .ma-hero-bottom{justify-content:flex-end}
