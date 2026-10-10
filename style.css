@@ -1754,3 +1754,24 @@ html,body{max-width:100%;overflow-x:clip}
 @media(max-width:850px){
   .case-page.edp-case .case-hero>img{width:100%;margin:0}
 }
+
+/* EDP hero metadata lives in the eyebrow; reserve the whole width for title. */
+.case-page.edp-case .case-hero-copy{
+  grid-template-columns:minmax(0,1fr)!important;
+  grid-template-rows:auto auto!important;
+}
+.case-page.edp-case .case-hero-copy>h1{
+  grid-column:1!important;
+  grid-row:2!important;
+  max-width:100%!important;
+}
+.case-page.edp-case .case-hero-copy>.edp-hero-eyebrow{
+  grid-column:1!important;
+  grid-row:1!important;
+  display:block;
+  max-width:none;
+}
+.case-page.edp-case .edp-meta-inline{white-space:nowrap}
+@media(max-width:850px){
+  .case-page.edp-case .edp-meta-inline{white-space:normal}
+}
