@@ -507,3 +507,20 @@ html,body{max-width:100%;overflow-x:clip}
 @media(min-width:901px){
   .ma-page .ma-archive-entry-06{margin-top:clamp(480px,36vw,525px);}
 }
+
+/* Hero supporting copy: left-aligned and visually closer to the headline. */
+@media(min-width:901px){
+ .ma-page .ma-editorial-cover .ma-cover-aside{
+   grid-column:6/11;
+   justify-self:start;
+   margin:0;
+ }
+ .ma-page .ma-editorial-cover .ma-cover-aside .ma-hero-lead{text-align:left}
+}
+@media(max-width:900px){
+ .ma-page .ma-editorial-cover .ma-cover-aside{
+   justify-self:start;
+   margin-left:0;
+ }
+ .ma-page .ma-editorial-cover .ma-cover-aside .ma-hero-lead{text-align:left}
+}
