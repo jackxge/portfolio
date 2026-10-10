@@ -1262,13 +1262,13 @@ html,body{max-width:100%;overflow-x:clip}
 }
 .case-page .edp-impact .case-shell>div{
   display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
-  column-gap:clamp(38px,6vw,90px);border-top:1px solid #ddddd8;
+  column-gap:clamp(38px,6vw,90px);row-gap:16px;border-top:0;
 }
 .case-page .edp-impact article,.case-page .edp-impact article:nth-child(n){
   display:block;grid-column:auto;grid-row:auto;order:initial;
   width:100%;min-width:0;transform:none!important;
   margin:0;padding:23px 0 27px;background:none;
-  border:0;border-bottom:1px solid #ddddd8;
+  border:0;
 }
 .case-page .edp-impact article span{display:none}
 .case-page .edp-impact article h3{
