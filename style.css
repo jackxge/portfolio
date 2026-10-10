@@ -444,3 +444,17 @@ html,body{max-width:100%;overflow-x:clip}
   aspect-ratio:auto;
   object-fit:fill;
 }
+
+/* Match AquanautViz's 9% inset on both sides of the AskEDP intro only. */
+@media(min-width:901px){
+  .ma-page .ma-askedp-sequence .ma-askedp-heading{
+    grid-column:1/-1;
+    width:82%;
+    margin:0 auto!important;
+    transform:none;
+  }
+  .ma-page .ma-askedp-sequence .ma-askedp-heading .ma-body,
+  .ma-page .ma-askedp-sequence .ma-askedp-heading .ma-project-link{
+    justify-self:end;
+  }
+}
