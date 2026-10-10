@@ -1,5 +1,5 @@
-html,body{margin:0;min-height:100%;background:#ffffff}
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Noto+Serif+JP:wght@400;500&family=Noto+Sans+JP:wght@400;500&display=swap');
+html,body{margin:0;min-height:100%;background:#ffffff}
 /* MA — Japanese editorial rhythm. Scoped to homepage only. */
 .ma-page{--paper:#ffffff;--ink:#292823;--body:#55534c;--muted:#6b685f;--serif:'Noto Serif JP',Georgia,serif;--italic:'Cormorant Garamond',Georgia,serif;--sans:'Noto Sans JP',Arial,sans-serif;background:var(--paper);color:var(--ink);font:400 16px/1.8 var(--sans);min-height:100vh}
 .ma-page *{box-sizing:border-box}.ma-page a{color:inherit;text-decoration:none}.ma-page img{display:block;width:100%;height:auto}.ma-page figure,.ma-page p,.ma-page h1,.ma-page h2,.ma-page h3{margin:0}.ma-wrap{width:min(1312px,calc(100% - 10vw));margin-inline:auto}.ma-page :focus-visible{outline:2px solid #504c43;outline-offset:6px}.ma-page a:hover{opacity:.67}
@@ -305,7 +305,7 @@ html,body{margin:0;min-height:100%;background:#ffffff}
 }
 .ma-page .ma-wrap{
   box-sizing:border-box;
-  width:calc(100% - 2 * var(--page-gutter));
+  width:calc(100% - (2 * var(--page-gutter)));
   max-width:var(--page-max);
   margin-left:auto;
   margin-right:auto;
@@ -328,3 +328,9 @@ html,body{margin:0;min-height:100%;background:#ffffff}
   margin-right:auto;
 }
 
+
+/* Keep overflowing inner artwork from enlarging the browser's horizontal canvas.
+   Section frames remain centered; child composition can still be asymmetric. */
+html,body{max-width:100%;overflow-x:clip}
+.ma-page{width:100%;max-width:100%;overflow-x:clip}
+.ma-page .ma-wrap{min-width:0;position:relative}
