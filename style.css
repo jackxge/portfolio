@@ -274,3 +274,16 @@
   .ma-page .ma-visual-cover .ma-cover-aside .ma-hero-lead{font-size:14px}
   .ma-page .ma-edp{padding-top:34px}
 }
+
+/* One controlled glimpse of the next chapter, not two competing hero sections. */
+@media(min-width:901px){
+  .ma-page .ma-visual-cover{
+    min-height:clamp(690px,calc(100svh - 190px),860px);
+    align-content:center;
+    padding-top:70px;
+    padding-bottom:95px;
+  }
+}
+@media(min-width:601px) and (max-width:900px){
+  .ma-page .ma-visual-cover{min-height:clamp(640px,calc(100svh - 170px),760px);align-content:center}
+}
