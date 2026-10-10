@@ -51,8 +51,8 @@
   letter-spacing:-.036em;max-width:1100px;
 }
 .ma-page .ma-editorial-cover .ma-cover-aside{
-  grid-column:7/12;grid-row:2;display:block;
-  position:static;width:auto;max-width:none;margin:0;align-self:start;
+  grid-column:8/13;grid-row:2;display:block;
+  position:static;width:100%;max-width:390px;margin:0 0 0 auto;align-self:start;justify-self:end;
 }
 .ma-page .ma-editorial-cover .ma-cover-aside .ma-hero-lead{
   display:block;grid-column:auto;grid-row:auto;
@@ -68,7 +68,7 @@
   }
   .ma-page .ma-editorial-cover .ma-hero-copy{grid-column:1/-1}
   .ma-page .ma-editorial-cover h1{font-size:clamp(42px,7.3vw,68px)}
-  .ma-page .ma-editorial-cover .ma-cover-aside{grid-column:6/13}
+  .ma-page .ma-editorial-cover .ma-cover-aside{grid-column:7/13}
   .ma-page .ma-edp{padding-top:64px}
 }
 @media(max-width:600px){
