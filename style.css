@@ -1471,3 +1471,83 @@ html,body{max-width:100%;overflow-x:clip}
     gap:16px;
   }
 }
+
+/* EDP / Process: a quiet editorial index, rather than repeating the Outcomes cards.
+   Number + large title left, narrative right; no separators within the chapter. */
+.case-page #process.edp-process{
+  padding-top:clamp(70px,8vw,110px);
+  padding-bottom:clamp(80px,9vw,125px);
+}
+.case-page #process.edp-process>.case-section-label{
+  margin:0 0 clamp(38px,4.5vw,62px);
+  padding:0;
+  border:0;
+}
+.case-page #process.edp-process>.case-process{
+  display:grid!important;
+  grid-template-columns:minmax(0,0.9fr) minmax(0,1.1fr)!important;
+  gap:clamp(32px,6vw,96px)!important;
+  align-items:start;
+  padding:0!important;
+  margin:0 0 clamp(42px,5vw,70px);
+  border:0!important;
+}
+.case-page #process.edp-process>.case-process:last-child{margin-bottom:0}
+.case-page #process.edp-process>.case-process>.case-kicker{
+  grid-column:1!important;
+  grid-row:1!important;
+  align-self:start;
+  margin:0 0 12px;
+  padding:0;
+  font:400 11px/1.6 'Noto Sans JP',Arial,sans-serif;
+  color:#8a8882;
+  letter-spacing:.09em;
+}
+.case-page #process.edp-process>.case-process>.case-process-copy{
+  display:contents!important;
+}
+.case-page #process.edp-process>.case-process .case-process-copy h3{
+  grid-column:1!important;
+  grid-row:1!important;
+  align-self:start;
+  max-width:18ch;
+  margin:30px 0 0!important;
+  font:400 clamp(24px,2.5vw,34px)/1.35 'Lora',Georgia,serif;
+  letter-spacing:-.015em;
+}
+.case-page #process.edp-process>.case-process .case-process-copy p{
+  grid-column:2!important;
+  grid-row:auto!important;
+  width:100%;
+  max-width:62ch;
+  margin:0 0 12px!important;
+  font:400 14px/1.85 'Noto Sans JP',Arial,sans-serif;
+  color:#66635f;
+}
+.case-page #process.edp-process>.case-process .case-process-copy p:first-of-type{grid-row:1!important}
+.case-page #process.edp-process>.case-process .case-process-copy p:last-child{margin-bottom:0!important}
+@media(max-width:750px){
+  .case-page #process.edp-process{padding-block:70px 85px}
+  .case-page #process.edp-process>.case-process{
+    grid-template-columns:minmax(0,1fr)!important;
+    gap:0!important;
+    margin-bottom:42px;
+  }
+  .case-page #process.edp-process>.case-process>.case-kicker{
+    grid-column:1!important;
+    grid-row:auto!important;
+    margin:0 0 8px;
+  }
+  .case-page #process.edp-process>.case-process .case-process-copy h3{
+    grid-column:1!important;
+    grid-row:auto!important;
+    margin:0 0 17px!important;
+    font-size:27px;
+  }
+  .case-page #process.edp-process>.case-process .case-process-copy p,
+  .case-page #process.edp-process>.case-process .case-process-copy p:first-of-type{
+    grid-column:1!important;
+    grid-row:auto!important;
+    font-size:14px;
+  }
+}
