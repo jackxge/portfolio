@@ -1472,68 +1472,76 @@ html,body{max-width:100%;overflow-x:clip}
   }
 }
 
-/* EDP Process — two-column editorial index, four self-contained steps. */
+/* EDP Process — a measured, offset editorial sequence rather than another two-column grid. */
 .case-page #process.edp-process{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  column-gap:clamp(56px,7vw,112px);
-  row-gap:clamp(44px,5.5vw,80px);
-  padding-top:clamp(70px,8vw,110px);
+  display:block;
+  padding-top:clamp(75px,8vw,110px);
   padding-bottom:clamp(85px,9vw,125px);
 }
 .case-page #process.edp-process>.case-section-label{
-  grid-column:1/-1;
-  margin:0 0 2px;
-  padding:0;
-  border:0;
+  margin:0 0 clamp(42px,5vw,68px);
+  padding:0;border:0;
 }
 .case-page #process.edp-process>.case-process{
-  display:block!important;
-  min-width:0;
+  display:grid!important;
+  grid-template-columns:40px minmax(0,1fr)!important;
+  column-gap:clamp(17px,2vw,30px)!important;
+  align-items:start;
+  width:min(880px,100%);
+  margin:0 0 clamp(48px,5vw,76px)!important;
   padding:0!important;
-  margin:0!important;
   border:0!important;
 }
+.case-page #process.edp-process>.case-process:nth-of-type(2){
+  margin-left:clamp(70px,14%,190px)!important;
+}
+.case-page #process.edp-process>.case-process:nth-of-type(3){
+  margin-left:clamp(15px,4%,55px)!important;
+}
+.case-page #process.edp-process>.case-process:nth-of-type(4){
+  margin-left:auto!important;
+  margin-right:0!important;
+}
+.case-page #process.edp-process>.case-process:last-child{margin-bottom:0!important}
 .case-page #process.edp-process>.case-process>.case-kicker{
+  grid-column:1!important;grid-row:1!important;
   display:block!important;
-  margin:0 0 13px!important;
-  padding:0;
+  margin:8px 0 0!important;padding:0;
   font:400 12px/1.5 'Noto Sans JP',Arial,sans-serif;
-  color:#8a8882;
-  letter-spacing:.08em;
+  letter-spacing:.08em;color:#8a8882;
 }
 .case-page #process.edp-process>.case-process>.case-process-copy{
-  display:block!important;
-  width:100%;
-  max-width:none;
+  grid-column:2!important;grid-row:1!important;
+  display:block!important;min-width:0;max-width:780px;
 }
 .case-page #process.edp-process>.case-process .case-process-copy h3{
   display:block!important;
+  margin:0 0 15px!important;
   max-width:none;
-  margin:0 0 17px!important;
-  font:400 clamp(25px,2.5vw,33px)/1.35 'Lora',Georgia,serif;
+  font:400 clamp(26px,2.6vw,35px)/1.32 'Lora',Georgia,serif;
   letter-spacing:-.015em;
 }
 .case-page #process.edp-process>.case-process .case-process-copy p,
 .case-page #process.edp-process>.case-process .case-process-copy p:first-of-type{
   display:block!important;
-  width:100%;
-  max-width:60ch;
-  margin:0 0 11px!important;
-  font:400 14px/1.8 'Noto Sans JP',Arial,sans-serif;
+  width:100%;max-width:75ch;
+  margin:0 0 10px!important;
+  font:400 14px/1.78 'Noto Sans JP',Arial,sans-serif;
   color:#66635f;
 }
-.case-page #process.edp-process>.case-process .case-process-copy p:last-child{
-  margin-bottom:0!important;
+.case-page #process.edp-process>.case-process .case-process-copy p:last-child{margin-bottom:0!important}
+@media(max-width:950px){
+  .case-page #process.edp-process>.case-process{width:min(780px,100%)}
+  .case-page #process.edp-process>.case-process:nth-of-type(n){
+    margin-left:0!important;margin-right:0!important;
+  }
 }
-@media(max-width:750px){
-  .case-page #process.edp-process{
-    grid-template-columns:minmax(0,1fr);
-    row-gap:42px;
-    padding-block:70px 85px;
+@media(max-width:700px){
+  .case-page #process.edp-process{padding-block:70px 85px}
+  .case-page #process.edp-process>.case-process{
+    grid-template-columns:28px minmax(0,1fr)!important;
+    column-gap:15px!important;
+    margin-bottom:42px!important;
   }
-  .case-page #process.edp-process>.case-process .case-process-copy h3{
-    font-size:27px;
-    margin-bottom:14px!important;
-  }
+  .case-page #process.edp-process>.case-process .case-process-copy h3{font-size:26px}
 }
