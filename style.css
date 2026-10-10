@@ -123,9 +123,9 @@
     margin:0!important;justify-self:start;
   }
   .ma-page .ma-edp-note{
-    grid-column:9/13;grid-row:2;
-    margin:0!important;padding:8px 0 0;
-    max-width:340px;justify-self:end;align-self:start;
+    grid-column:8/12;grid-row:2;
+    margin:0!important;padding:0;
+    max-width:340px;justify-self:start;align-self:start;
   }
   .ma-page .ma-edp-primary figcaption,
   .ma-page .ma-edp-secondary figcaption{
