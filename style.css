@@ -57,7 +57,7 @@
 .ma-page .ma-editorial-cover .ma-cover-aside .ma-hero-lead{
   display:block;grid-column:auto;grid-row:auto;
   width:auto;max-width:390px;justify-self:auto;
-  margin:0!important;font:400 15px/1.8 var(--sans);color:#514e48;
+  margin:0!important;font:400 15px/1.8 var(--sans);color:#514e48;text-align:right;
 }
 .ma-page .ma-edp{padding-top:clamp(72px,8vw,116px)}
 @media(max-width:900px){
