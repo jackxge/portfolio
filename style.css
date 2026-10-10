@@ -1775,3 +1775,8 @@ html,body{max-width:100%;overflow-x:clip}
 @media(max-width:850px){
   .case-page.edp-case .edp-meta-inline{white-space:normal}
 }
+
+/* EDP Overview: align Role and Tools at the same top edge. */
+.case-page.edp-case #overview .case-details{align-items:start}
+.case-page.edp-case #overview .case-details>div,
+.case-page.edp-case #overview .case-details>div+div{margin-top:0;align-self:start}
