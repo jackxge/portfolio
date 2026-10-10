@@ -212,3 +212,8 @@
  .ma-page .ma-visual-cover .ma-cover-detail{max-width:260px}
  .ma-page .ma-visual-cover .ma-hero-lead{font-size:14px;line-height:1.75}
 }
+
+/* Correct inherited editorial-cover grid placement inside the image module. */
+.ma-page .ma-visual-cover .ma-cover-aside{position:relative;z-index:2;grid-template-columns:minmax(0,1fr);grid-auto-rows:auto;align-self:end}
+.ma-page .ma-visual-cover .ma-cover-aside .ma-hero-lead{grid-column:1!important;grid-row:auto!important;justify-self:stretch;max-width:350px;margin:0!important}
+.ma-page .ma-visual-cover .ma-cover-aside .ma-cover-detail{grid-column:1;grid-row:auto;display:block;width:100%;min-height:172px}
