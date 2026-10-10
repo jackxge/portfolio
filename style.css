@@ -407,3 +407,16 @@ html,body{max-width:100%;overflow-x:clip}
   .ma-page .ma-aquanaut-primary{width:70%;margin:85px 9% 0 auto!important;}
   .ma-page .ma-aquanaut-detail-group{width:70%;margin-right:9%;margin-left:auto;}
 }
+
+/* Aquanaut detail screenshot: use its intrinsic aspect ratio, not a capped-height
+   contain box that creates blank bands on either side. */
+.ma-page .ma-aquanaut-detail-group .ma-aquanaut-secondary img{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:none;
+  object-fit:initial;
+}
+.ma-page .ma-aquanaut-detail-group .ma-aquanaut-secondary figcaption{
+  padding-left:0;
+}
