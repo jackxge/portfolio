@@ -1250,3 +1250,89 @@ html,body{max-width:100%;overflow-x:clip}
 .case-page .form-error[hidden]{
   display:none!important;
 }
+
+/* EDP / Impact finale: a feature spread followed by a structured outcomes index. */
+.case-page .edp-impact{
+  background:#f5f5f2;
+  padding:clamp(100px,12vw,170px) 0 clamp(115px,13vw,185px);
+}
+.case-page .edp-impact .case-shell{width:min(1180px,calc(100% - 10vw))}
+.case-page .edp-impact .case-section-label{
+  margin:0 0 20px;color:#65645e;letter-spacing:.13em;
+}
+.case-page .edp-impact h2{
+  max-width:none;margin:0 0 clamp(65px,8vw,120px);
+  font:400 clamp(55px,6.6vw,95px)/1.16 'Lora',Georgia,serif;
+  letter-spacing:-.035em;color:#2f302b;
+}
+.case-page .edp-impact .case-shell>div{
+  display:grid;grid-template-columns:repeat(12,minmax(0,1fr));
+  gap:0;align-items:start;
+}
+.case-page .edp-impact article{
+  min-width:0;transform:none!important;
+  padding:clamp(32px,4vw,55px) 0 clamp(40px,4vw,60px);
+  border-top:1px solid #cfcfca;
+  color:#363630;
+}
+.case-page .edp-impact article span{
+  display:block;margin:0 0 28px;font:400 11px/1.5 'Noto Sans JP',Arial,sans-serif;
+  letter-spacing:.08em;color:#77766f;
+}
+.case-page .edp-impact article h3{
+  margin:0 0 22px;
+  font:400 clamp(25px,2.4vw,34px)/1.3 'Lora',Georgia,serif;
+  letter-spacing:-.016em;text-transform:none;color:#30302b;
+}
+.case-page .edp-impact article p{
+  margin:0;max-width:49ch;
+  font:400 14px/1.9 'Noto Sans JP',Arial,sans-serif;
+  color:#64625b;
+}
+.case-page .edp-impact article:nth-child(1){
+  grid-column:1/6;grid-row:1;padding-right:30px;
+}
+.case-page .edp-impact article:nth-child(2){
+  grid-column:7/13;grid-row:1;padding-left:0;
+}
+.case-page .edp-impact article:nth-child(3){
+  grid-column:1/5;grid-row:2;padding-right:24px;
+}
+.case-page .edp-impact article:nth-child(4){
+  grid-column:5/9;grid-row:2;padding-right:24px;
+}
+.case-page .edp-impact article:nth-child(5){
+  grid-column:9/13;grid-row:2;
+}
+.case-page .edp-impact .edp-impact-metric{
+  max-width:620px;margin:24px 0 25px;
+  font:400 clamp(36px,3.9vw,58px)/1.16 'Lora',Georgia,serif;
+  letter-spacing:-.025em;color:#33342f;
+}
+.case-page .edp-impact .edp-impact-metric small{
+  display:block;margin-top:13px;
+  font:400 12px/1.5 'Noto Sans JP',Arial,sans-serif;
+  letter-spacing:.035em;color:#77766f;
+}
+@media(max-width:900px){
+ .case-page .edp-impact .case-shell>div{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:38px}
+ .case-page .edp-impact article:nth-child(n){
+   grid-column:auto;grid-row:auto;padding-right:0;
+ }
+ .case-page .edp-impact article:nth-child(1),
+ .case-page .edp-impact article:nth-child(2){grid-row:1}
+ .case-page .edp-impact article:nth-child(3),
+ .case-page .edp-impact article:nth-child(4){grid-row:2}
+ .case-page .edp-impact article:nth-child(5){grid-row:3}
+}
+@media(max-width:700px){
+ .case-page .edp-impact{padding:90px 0 105px}
+ .case-page .edp-impact .case-shell{width:calc(100% - 36px)}
+ .case-page .edp-impact h2{font-size:clamp(49px,11vw,67px);margin-bottom:54px}
+ .case-page .edp-impact .case-shell>div{display:block}
+ .case-page .edp-impact article:nth-child(n){
+   display:block;padding:32px 0 43px;margin:0;
+ }
+ .case-page .edp-impact article h3{font-size:27px}
+ .case-page .edp-impact .edp-impact-metric{font-size:clamp(39px,9vw,55px)}
+}
