@@ -1780,3 +1780,13 @@ html,body{max-width:100%;overflow-x:clip}
 .case-page.edp-case #overview .case-details{align-items:start}
 .case-page.edp-case #overview .case-details>div,
 .case-page.edp-case #overview .case-details>div+div{margin-top:0;align-self:start}
+
+/* EDP: give the chapter index a calm gap after the hero image. */
+.case-page.edp-case .case-chapter-nav{
+  margin-top:clamp(56px,5.5vw,80px);
+  padding-top:24px;
+  padding-bottom:24px;
+}
+@media(max-width:700px){
+  .case-page.edp-case .case-chapter-nav{margin-top:48px;padding-block:22px}
+}
