@@ -385,3 +385,18 @@ html,body{max-width:100%;overflow-x:clip}
    width:100%;
  }
 }
+
+/* AskEDP introduction uses the same outer left/right grid boundaries as EDP. */
+@media(min-width:901px){
+ .ma-page .ma-askedp-sequence .ma-askedp-heading{
+   grid-column:1/-1;
+   width:100%;
+   transform:none;
+ }
+ .ma-page .ma-askedp-sequence .ma-askedp-heading .ma-body,
+ .ma-page .ma-askedp-sequence .ma-askedp-heading .ma-project-link{
+   grid-column:7/-1;
+   justify-self:end;
+   width:min(100%,370px);
+ }
+}
