@@ -1382,3 +1382,24 @@ html,body{max-width:100%;overflow-x:clip}
 .case-page .case-next {
   border:0;
 }
+
+/* One black divider between top-level case study sections, never within them. */
+.case-page main > section ~ section{
+  position:relative;
+}
+.case-page main > section ~ section::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:min(var(--case-page-width,1312px),calc(100% - 2 * var(--case-page-gutter,5vw)));
+  height:1px;
+  background:#171717;
+  pointer-events:none;
+}
+@media(max-width:700px){
+  .case-page main > section ~ section::before{
+    width:calc(100% - 36px);
+  }
+}
