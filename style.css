@@ -1852,3 +1852,48 @@ html,body{max-width:100%;overflow-x:clip}
 .case-page.edp-case #outcome.edp-impact article:nth-child(n){
   padding-block:0;
 }
+
+/* Unified editorial case-study system, based on EDP (other project pages). */
+.case-page.unified-case{--case-ink:#000;--case-muted:#000;--reading-ink:#000;--reading-muted:#000;--edp-label-gap:clamp(23px,2.4vw,34px);--edp-paragraph-gap:24px;--edp-major-group-gap:clamp(72px,7vw,100px);--edp-chapter-space:clamp(68px,6.5vw,104px);color:#000}
+.case-page.unified-case main>section~section::before{content:none!important}
+.case-page.unified-case main :is(h1,h2,h3,h4,p,span,dt,dd,li,strong,small,a,.case-section-label,.case-kicker){color:#000;opacity:1}
+.case-page.unified-case .case-hero{display:flex!important;flex-direction:column!important;width:min(var(--case-page-width,1312px),calc(100% - 2 * var(--case-page-gutter,5vw)));margin-inline:auto}
+.case-page.unified-case .case-hero-copy{display:flex!important;flex-direction:column!important;align-items:flex-start!important;order:0!important;width:100%;padding:0 0 clamp(20px,2.5vw,38px)!important;margin:0}
+.case-page.unified-case .case-hero-copy>.unified-hero-eyebrow{display:block!important;margin:0 0 30px!important;font:400 12px/1.7 'Noto Sans JP',Arial,sans-serif}
+.case-page.unified-case .case-hero-copy>h1{margin:0!important;max-width:100%;font:400 clamp(48px,5.1vw,78px)/1.15 'Lora',Georgia,serif!important;letter-spacing:-.025em}
+.case-page.unified-case .case-hero>img{order:1!important;position:static!important;display:block!important;width:84%!important;height:auto!important;max-height:none!important;object-fit:contain;margin:0 0 0 auto!important;filter:none!important;transform:none!important}
+.case-page.unified-case .case-hero-shade{display:none!important}
+.case-page.unified-case .case-chapter-nav{margin-top:clamp(56px,5.5vw,80px);padding-block:24px}
+.case-page.unified-case #overview.case-intro,.case-page.unified-case #challenge.case-dual,.case-page.unified-case #process.unified-process,.case-page.unified-case .protected,.case-page.unified-case .case-gallery,.case-page.unified-case .case-demos,.case-page.unified-case #outcome.edp-impact{padding-top:var(--edp-chapter-space)!important;padding-bottom:var(--edp-chapter-space)!important}
+.case-page.unified-case #overview.case-intro>.case-section-label,.case-page.unified-case #challenge .case-section-label,.case-page.unified-case #process>.case-section-label,.case-page.unified-case #outcome .case-section-label,.case-page.unified-case .protected>.case-section-label,.case-page.unified-case .case-gallery>.case-section-label,.case-page.unified-case .case-demos>.case-section-label{margin-bottom:var(--edp-label-gap)!important}
+.case-page.unified-case #overview .case-prose-lead p:first-child{margin-bottom:clamp(36px,3.5vw,52px)}
+.case-page.unified-case #overview .case-prose-lead p:not(:first-child),.case-page.unified-case #challenge .case-prose p:not(:last-child){margin-bottom:24px}
+.case-page.unified-case #overview .case-details{margin-top:var(--edp-major-group-gap);padding-top:0;border-top:0;align-items:start}
+.case-page.unified-case #overview .case-details>div{margin-top:0;align-self:start}
+.case-page.unified-case #challenge.case-dual article,.case-page.unified-case #challenge.case-dual article:nth-child(2){margin-top:0}
+.case-page.unified-case #process.unified-process>.case-process,.case-page.unified-case #process.unified-process>.case-process:nth-of-type(n){display:grid!important;grid-template-columns:48px minmax(0,.75fr) minmax(0,1.25fr)!important;column-gap:clamp(28px,3.8vw,64px)!important;align-items:start;width:100%;margin:0 0 var(--edp-major-group-gap)!important;padding:0!important;border:0!important}
+.case-page.unified-case #process.unified-process>.case-process:last-child{margin-bottom:0!important}
+.case-page.unified-case #process.unified-process>.case-process>.case-kicker{display:block!important;grid-column:1!important;grid-row:1!important;margin:7px 0 0!important;font:400 12px/1.6 'Noto Sans JP',Arial,sans-serif}
+.case-page.unified-case #process.unified-process>.case-process>h3{display:block!important;grid-column:2!important;grid-row:1!important;margin:0!important;max-width:18ch;font:400 clamp(24px,2.4vw,32px)/1.35 'Lora',Georgia,serif!important;letter-spacing:-.012em}
+.case-page.unified-case #process.unified-process>.case-process>.case-process-copy{display:block!important;grid-column:3!important;grid-row:1!important;min-width:0}
+.case-page.unified-case #process.unified-process>.case-process>.case-process-copy p,.case-page.unified-case #process.unified-process>.case-process>.case-process-copy p:first-of-type{display:block!important;width:100%;max-width:65ch;margin:0 0 24px!important;grid-column:auto!important;grid-row:auto!important;font:400 14px/1.8 'Noto Sans JP',Arial,sans-serif!important}
+.case-page.unified-case #process.unified-process>.case-process>.case-process-copy p:last-child{margin-bottom:0!important}
+.case-page.unified-case #process.unified-process>.case-process>.case-process-images,.case-page.unified-case #process.unified-process>.case-process>.case-videos{grid-column:3!important;grid-row:2!important;margin-top:24px;min-width:0;width:100%}
+.case-page.unified-case #outcome.edp-impact{background:#fff!important}
+.case-page.unified-case #outcome.edp-impact h2{margin-bottom:clamp(36px,3.5vw,52px)}
+.case-page.unified-case #outcome.edp-impact .case-shell>div{row-gap:var(--edp-major-group-gap)}
+.case-page.unified-case #outcome.edp-impact article,.case-page.unified-case #outcome.edp-impact article:nth-child(n){padding-block:0!important}
+.case-page.unified-case .case-next{background:#fff}
+@media(max-width:820px){
+.case-page.unified-case #process.unified-process>.case-process,.case-page.unified-case #process.unified-process>.case-process:nth-of-type(n){grid-template-columns:32px minmax(0,1fr)!important;column-gap:16px!important;row-gap:9px!important}
+.case-page.unified-case #process.unified-process>.case-process>h3{grid-column:2!important;grid-row:1!important;max-width:none}
+.case-page.unified-case #process.unified-process>.case-process>.case-process-copy{grid-column:2!important;grid-row:2!important}
+.case-page.unified-case #process.unified-process>.case-process>.case-process-images,.case-page.unified-case #process.unified-process>.case-process>.case-videos{grid-column:2!important;grid-row:3!important}
+}
+@media(max-width:700px){
+.case-page.unified-case{--edp-chapter-space:64px;--edp-major-group-gap:72px}
+.case-page.unified-case .case-hero>img{width:100%!important;margin:0!important}
+.case-page.unified-case .case-hero-copy>h1{font-size:clamp(42px,7.4vw,65px)!important}
+.case-page.unified-case .case-hero-copy>.unified-hero-eyebrow{margin-bottom:24px!important}
+.case-page.unified-case .case-chapter-nav{margin-top:48px;padding-block:22px}
+}
