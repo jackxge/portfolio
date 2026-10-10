@@ -1334,3 +1334,29 @@ html,body{max-width:100%;overflow-x:clip}
 
 /* Keep chapter dividers but remove separators between Process steps. */
 .case-page .case-process-list .case-process{border-top:0;border-bottom:0}
+
+/* Case-study dividers: consistently black, without restoring Process step rules.
+   Excludes project-image borders and form-control borders. */
+.case-page .case-header,
+.case-page .case-chapter-nav,
+.case-page .case-chapter-nav a,
+.case-page .case-hero dl,
+.case-page .case-details,
+.case-page .case-dual,
+.case-page .case-artifacts>.case-section-label,
+.case-page .case-process-list>.case-section-label,
+.case-page .case-demos>.case-section-label,
+.case-page .case-gallery>.case-section-label,
+.case-page .case-process,
+.case-page .artifact-grid,
+.case-page .artifact-grid article,
+.case-page .case-results article,
+.case-page .edp-impact .case-shell>div,
+.case-page .edp-impact article,
+.case-page .case-next {
+  border-color:#171717;
+}
+.case-page .case-process-list .case-process{
+  border-top:0;
+  border-bottom:0;
+}
