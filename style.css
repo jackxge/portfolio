@@ -543,3 +543,6 @@ html,body{max-width:100%;overflow-x:clip}
 
 /* Philosophy statement: italic in the site's chosen Lora family. */
 .ma-page .ma-statement .ma-statement-lines{font-family:var(--serif);font-style:italic;font-weight:400}
+
+/* Add visible editorial slant to Lora Italic without changing font family or line breaks. */
+.ma-page .ma-statement .ma-statement-lines span{transform:skewX(-6deg);transform-origin:left center}
