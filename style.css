@@ -164,3 +164,51 @@
 
 /* Sole scroll affordance aligns to the right edge. */
 .ma-page .ma-editorial-cover .ma-hero-bottom{justify-content:flex-end}
+
+/* Editorial opening: grounded image evidence, rather than decorative folios. */
+.ma-page .ma-visual-cover{
+  display:grid;grid-template-columns:repeat(12,minmax(0,1fr));
+  grid-template-rows:1fr auto;
+  min-height:max(690px,calc(100svh - 100px));
+  padding-top:30px;padding-bottom:80px;
+  align-content:stretch;
+}
+.ma-page .ma-visual-cover .ma-hero-copy{
+  grid-column:1/12;grid-row:1;align-self:center;transform:translateY(-24px);
+  margin:0;padding:0;position:relative;z-index:1;
+}
+.ma-page .ma-visual-cover h1{
+  font-size:clamp(61px,6.4vw,94px);line-height:1.16;
+  letter-spacing:-.036em;
+}
+.ma-page .ma-visual-cover .ma-cover-aside{
+  grid-column:8/13;grid-row:2;display:grid;
+  grid-template-columns:minmax(0,1fr);gap:23px;
+  width:100%;max-width:410px;margin-left:auto;
+}
+.ma-page .ma-visual-cover .ma-cover-detail{
+  margin:0;width:100%;max-width:350px;justify-self:end;
+  aspect-ratio:1.85/1;overflow:hidden;
+}
+.ma-page .ma-visual-cover .ma-cover-detail img{
+  display:block;width:100%;height:100%;
+  object-fit:cover;object-position:48% 48%;
+  filter:contrast(1.13) saturate(.94);
+}
+.ma-page .ma-visual-cover .ma-hero-lead{
+  max-width:350px;margin:0!important;justify-self:end;
+  font:400 15px/1.8 var(--sans);color:#514e48;
+}
+@media(max-width:900px){
+ .ma-page .ma-visual-cover{min-height:700px;padding-top:20px;padding-bottom:55px}
+ .ma-page .ma-visual-cover .ma-hero-copy{grid-column:1/-1;transform:none}
+ .ma-page .ma-visual-cover h1{font-size:clamp(46px,7.9vw,72px)}
+ .ma-page .ma-visual-cover .ma-cover-aside{grid-column:7/13;max-width:340px}
+}
+@media(max-width:600px){
+ .ma-page .ma-visual-cover{min-height:690px;grid-template-rows:1fr auto;padding-top:10px;padding-bottom:48px}
+ .ma-page .ma-visual-cover h1{font-size:clamp(37px,9vw,53px);line-height:1.2}
+ .ma-page .ma-visual-cover .ma-cover-aside{grid-column:4/13;max-width:310px;gap:19px}
+ .ma-page .ma-visual-cover .ma-cover-detail{max-width:260px}
+ .ma-page .ma-visual-cover .ma-hero-lead{font-size:14px;line-height:1.75}
+}
