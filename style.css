@@ -1242,3 +1242,11 @@ html,body{max-width:100%;overflow-x:clip}
 @media(max-width:700px){
  .case-page .case-dual article:nth-child(2){margin-top:65px}
 }
+
+/* Honor the native hidden attribute for password-protected case-study content.
+   The gallery's display:grid rule previously overrode [hidden], making it visible. */
+.case-page [data-protected-gallery][hidden],
+.case-page .protected-lock[hidden],
+.case-page .form-error[hidden]{
+  display:none!important;
+}
