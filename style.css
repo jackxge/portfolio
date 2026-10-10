@@ -371,3 +371,11 @@ html,body{max-width:100%;overflow-x:clip}
 .ma-page .ma-statement{padding-left:0;padding-right:0;align-items:stretch}
 .ma-page .ma-statement-inner{width:max-content;max-width:100%;margin-inline:auto}
 @media(max-width:900px){.ma-page .ma-statement-inner{width:100%}}
+
+/* Balance the visible AskEDP intro group against the viewport edges.
+   Its internal two-column typography and project imagery stay unchanged. */
+@media(min-width:901px){
+ .ma-page .ma-askedp-sequence .ma-askedp-heading{
+   transform:translateX(clamp(24px,4.15vw,85px));
+ }
+}
