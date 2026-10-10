@@ -524,3 +524,19 @@ html,body{max-width:100%;overflow-x:clip}
  }
  .ma-page .ma-editorial-cover .ma-cover-aside .ma-hero-lead{text-align:left}
 }
+
+/* Project headings share one responsive typographic scale. */
+.ma-page .ma-edp-heading h2,
+.ma-page .ma-askedp-heading h2,
+.ma-page .ma-aquanaut-heading h2{
+  font-family:var(--serif);
+  font-size:clamp(36px,3.8vw,55px);
+  font-weight:400;
+  line-height:1.15;
+  letter-spacing:-.02em;
+}
+@media(max-width:600px){
+  .ma-page .ma-edp-heading h2,
+  .ma-page .ma-askedp-heading h2,
+  .ma-page .ma-aquanaut-heading h2{font-size:37px}
+}
