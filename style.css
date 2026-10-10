@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400&family=Noto+Sans+JP:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Noto+Sans+JP:wght@400;500&display=swap');
 html,body{margin:0;min-height:100%;background:#ffffff}
 /* MA — Japanese editorial rhythm. Scoped to homepage only. */
 .ma-page{--paper:#ffffff;--ink:#292823;--body:#55534c;--muted:#6b685f;--serif:'Lora',Georgia,serif;--sans:'Noto Sans JP',Arial,sans-serif;background:var(--paper);color:var(--ink);font:400 16px/1.8 var(--sans);min-height:100vh}
@@ -540,3 +540,6 @@ html,body{max-width:100%;overflow-x:clip}
   .ma-page .ma-askedp-heading h2,
   .ma-page .ma-aquanaut-heading h2{font-size:37px}
 }
+
+/* Philosophy statement: italic in the site's chosen Lora family. */
+.ma-page .ma-statement .ma-statement-lines{font-family:var(--serif);font-style:italic;font-weight:400}
