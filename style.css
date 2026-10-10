@@ -1677,11 +1677,13 @@ html,body{max-width:100%;overflow-x:clip}
 
 /* EDP hero — isolate layout from legacy display:contents and grid rules. */
 .case-page.edp-case .case-hero{
-  display:block!important;
+  display:flex!important;
+  flex-direction:column!important;
   width:min(var(--case-page-width,1312px),calc(100% - 2 * var(--case-page-gutter,5vw)));
   margin-inline:auto;
 }
 .case-page.edp-case .case-hero-copy{
+  order:0!important;
   display:grid!important;
   grid-template-columns:minmax(0,1fr) 230px!important;
   grid-template-rows:auto auto!important;
@@ -1722,6 +1724,7 @@ html,body{max-width:100%;overflow-x:clip}
 }
 .case-page.edp-case .case-hero-copy>dl>div{min-width:0}
 .case-page.edp-case .case-hero>img{
+  order:1!important;
   display:block!important;
   position:static!important;
   width:100%;
