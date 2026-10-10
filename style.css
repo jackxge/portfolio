@@ -1600,3 +1600,74 @@ html,body{max-width:100%;overflow-x:clip}
 
 /* EDP Overview: no rule above the Role / Tools metadata. */
 .case-page.edp-case .case-intro .case-details{border-top:0}
+
+/* EDP interior rhythm: consistent label/content, paragraph, and item spacing.
+   Section-to-section padding remains controlled by --edp-chapter-space. */
+.case-page.edp-case{
+  --edp-label-gap:clamp(23px,2.4vw,34px);
+  --edp-paragraph-gap:14px;
+  --edp-group-gap:clamp(36px,3.5vw,52px);
+}
+.case-page.edp-case #overview.case-intro>.case-section-label{
+  margin-bottom:var(--edp-label-gap);
+}
+.case-page.edp-case #overview .case-prose-lead p:first-child{
+  margin-bottom:var(--edp-group-gap);
+}
+.case-page.edp-case #overview .case-prose-lead p:not(:first-child){
+  margin-bottom:var(--edp-paragraph-gap);
+}
+.case-page.edp-case #overview .case-prose-lead p:last-child{margin-bottom:0}
+.case-page.edp-case #overview .case-details{
+  margin-top:var(--edp-group-gap);
+  padding-top:0;
+  border-top:0;
+}
+.case-page.edp-case #challenge.case-dual .case-section-label{
+  margin-bottom:var(--edp-label-gap);
+}
+.case-page.edp-case #challenge.case-dual article,
+.case-page.edp-case #challenge.case-dual article:nth-child(2){
+  margin-top:0;
+}
+.case-page.edp-case #challenge.case-dual .case-prose p{
+  margin-bottom:var(--edp-paragraph-gap);
+}
+.case-page.edp-case #challenge.case-dual .case-prose p:last-child{margin-bottom:0}
+.case-page.edp-case #process.edp-process>.case-section-label{
+  margin-bottom:var(--edp-group-gap);
+}
+.case-page.edp-case #process.edp-process>.case-process,
+.case-page.edp-case #process.edp-process>.case-process:nth-of-type(n){
+  margin-bottom:var(--edp-group-gap)!important;
+}
+.case-page.edp-case #process.edp-process>.case-process:last-child{margin-bottom:0!important}
+.case-page.edp-case #process.edp-process>.case-process>.case-process-copy p,
+.case-page.edp-case #process.edp-process>.case-process>.case-process-copy p:first-of-type{
+  margin-bottom:8px!important;
+}
+.case-page.edp-case #process.edp-process>.case-process>.case-process-copy p:last-child{margin-bottom:0!important}
+.case-page.edp-case .edp-examples>.case-section-label{
+  margin-bottom:var(--edp-label-gap);
+}
+.case-page.edp-case .edp-examples .protected-lock{
+  padding-block:clamp(40px,4vw,58px);
+}
+.case-page.edp-case .edp-examples .protected-lock h2{margin-bottom:16px}
+.case-page.edp-case #outcome.edp-impact .case-section-label{
+  margin-bottom:var(--edp-label-gap);
+}
+.case-page.edp-case #outcome.edp-impact h2{margin-bottom:var(--edp-group-gap)}
+.case-page.edp-case #outcome.edp-impact article,
+.case-page.edp-case #outcome.edp-impact article:nth-child(n){
+  padding-block:16px 20px;
+}
+.case-page.edp-case #outcome.edp-impact article h3{margin-bottom:10px}
+@media(max-width:700px){
+  .case-page.edp-case{
+    --edp-label-gap:22px;
+    --edp-paragraph-gap:12px;
+    --edp-group-gap:34px;
+  }
+  .case-page.edp-case .edp-examples .protected-lock{padding-block:36px}
+}
