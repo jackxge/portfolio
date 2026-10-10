@@ -250,3 +250,15 @@
   padding-left:2.5%;
   text-align:left;
 }
+
+/* Research archive: preserve irregular editorial composition; fine-tune rhythm only. */
+@media(min-width:901px){
+  .ma-page .ma-archive-entry-04{transform:translateX(clamp(20px,2.3vw,36px))}
+  .ma-page .ma-archive-entry-06{margin-top:clamp(466px,35vw,486px)}
+}
+.ma-page .ma-archive-entry figure,
+.ma-page .ma-archive-entry figcaption,
+.ma-page .ma-archive-entry h3,
+.ma-page .ma-archive-entry>p{box-sizing:border-box;text-align:left}
+.ma-page .ma-archive-entry-05 img{filter:contrast(1.08) saturate(1.04)}
+.ma-page .ma-archive-entry-06 img{filter:contrast(1.14) saturate(1.06)}
