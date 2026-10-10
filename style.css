@@ -1337,3 +1337,27 @@ html,body{max-width:100%;overflow-x:clip}
 .case-page .case-process-list .case-process,
 .case-page .case-process-list .case-process:nth-of-type(odd),
 .case-page .case-process-list .case-process:nth-of-type(even){border-top:0;border-bottom:0}
+
+/* EDP only: eliminate decorative divider strokes throughout the case study.
+   Preserve borders on actual project images and interactive controls. */
+.case-page.edp-case .case-header,
+.case-page.edp-case .case-chapter-nav,
+.case-page.edp-case .case-chapter-nav a,
+.case-page.edp-case .case-hero dl,
+.case-page.edp-case .case-details,
+.case-page.edp-case .case-dual,
+.case-page.edp-case .case-artifacts>.case-section-label,
+.case-page.edp-case .case-process-list>.case-section-label,
+.case-page.edp-case .case-gallery>.case-section-label,
+.case-page.edp-case .protected>.case-section-label,
+.case-page.edp-case .case-process,
+.case-page.edp-case .case-process:nth-of-type(n),
+.case-page.edp-case .case-results article,
+.case-page.edp-case .edp-impact .case-shell>div,
+.case-page.edp-case .edp-impact article,
+.case-page.edp-case .case-next {
+  border-top:0;
+  border-right:0;
+  border-bottom:0;
+  border-left:0;
+}
