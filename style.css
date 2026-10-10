@@ -1331,3 +1331,6 @@ html,body{max-width:100%;overflow-x:clip}
     width:calc(100% - 36px);
   }
 }
+
+/* Keep chapter dividers but remove separators between Process steps. */
+.case-page .case-process-list .case-process{border-top:0;border-bottom:0}
