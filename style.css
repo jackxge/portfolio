@@ -1814,3 +1814,6 @@ html,body{max-width:100%;overflow-x:clip}
 }
 .case-page.edp-case .lightbox button{color:#fff!important}
 .case-page.edp-case .protected-lock input::placeholder{color:#000;opacity:1}
+
+/* EDP Process: softer emphasis for needs labels. */
+.case-page.edp-case #process.edp-process .case-process-copy strong{font-weight:600}
