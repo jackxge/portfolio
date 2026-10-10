@@ -1214,3 +1214,31 @@ html,body{max-width:100%;overflow-x:clip}
  }
  .case-page .case-process-list .case-process-copy h3{font-size:25px}
 }
+
+/* Challenge / Approach: paired arguments, aligned rather than staggered. */
+@media(min-width:701px){
+ .case-page .case-dual{
+   display:grid;
+   grid-template-columns:repeat(2,minmax(0,1fr));
+   column-gap:clamp(65px,9vw,140px);
+   align-items:start;
+   padding-top:clamp(72px,8vw,110px);
+   padding-bottom:clamp(110px,12vw,165px);
+ }
+ .case-page .case-dual article,
+ .case-page .case-dual article:nth-child(2){
+   margin-top:0;
+   align-self:start;
+ }
+ .case-page .case-dual .case-section-label{margin-bottom:38px}
+ .case-page .case-dual .case-prose{
+   width:100%;
+   max-width:52ch;
+   font-size:15px;
+   line-height:1.95;
+ }
+ .case-page .case-dual .case-prose p{margin-bottom:1.7em}
+}
+@media(max-width:700px){
+ .case-page .case-dual article:nth-child(2){margin-top:65px}
+}
