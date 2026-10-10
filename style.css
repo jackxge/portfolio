@@ -84,3 +84,57 @@
   .ma-page .ma-observation .ma-hero-observation{margin-top:90px}
   .ma-page .ma-observation .ma-hero-observation>p{font-size:29px}
 }
+
+/* Editorial cover v2: one disciplined typographic composition. */
+.ma-page .ma-editorial-cover{
+  display:grid;grid-template-columns:repeat(12,minmax(0,1fr));
+  grid-template-rows:auto 1fr auto auto;align-content:stretch;
+  min-height:max(780px,calc(100svh - 80px));
+  padding-top:74px;padding-bottom:58px;
+}
+.ma-editorial-cover .ma-cover-top{
+  grid-column:1/-1;grid-row:1;
+  display:flex;justify-content:space-between;gap:28px;
+  font:400 12px/1.6 var(--sans);color:#66635b;letter-spacing:.025em;
+}
+.ma-page .ma-editorial-cover .ma-hero-copy{
+  grid-column:1/12;grid-row:2;padding:0;margin:0;
+  max-width:none;align-self:center;transform:translateY(-18px);
+}
+.ma-page .ma-editorial-cover h1{
+  font:400 clamp(64px,7.1vw,105px)/1.11 var(--serif);
+  letter-spacing:-.045em;max-width:1100px;
+}
+.ma-page .ma-editorial-cover .ma-hero-lead{
+  grid-column:8/13;grid-row:3;justify-self:start;
+  margin:0 0 98px!important;max-width:390px;
+  font:400 17px/1.8 var(--sans);color:#514e48;
+}
+.ma-page .ma-editorial-cover .ma-hero-bottom{
+  position:static;grid-column:1/-1;grid-row:4;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:0;margin:0;font-size:12px;
+}
+@media(max-width:900px){
+  .ma-page .ma-editorial-cover{
+    min-height:max(720px,calc(100svh - 90px));
+    padding-top:56px;padding-bottom:36px;
+    grid-template-rows:auto 1fr auto auto;
+  }
+  .ma-page .ma-editorial-cover .ma-hero-copy{
+    grid-column:1/-1;transform:none;align-self:center;
+  }
+  .ma-page .ma-editorial-cover h1{font-size:clamp(49px,8.4vw,78px)}
+  .ma-page .ma-editorial-cover .ma-hero-lead{
+    grid-column:6/13;max-width:340px;margin:0 0 70px!important;font-size:16px;
+  }
+}
+@media(max-width:500px){
+  .ma-page .ma-editorial-cover{min-height:max(680px,calc(100svh - 90px));padding-top:36px}
+  .ma-editorial-cover .ma-cover-top{font-size:10px;gap:12px}
+  .ma-page .ma-editorial-cover h1{font-size:clamp(40px,9.9vw,54px);line-height:1.16}
+  .ma-page .ma-editorial-cover .ma-hero-lead{
+    grid-column:4/13;margin:0 0 82px!important;font-size:14px;line-height:1.75;
+  }
+  .ma-page .ma-editorial-cover .ma-hero-bottom{font-size:11px}
+}
