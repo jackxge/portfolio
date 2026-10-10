@@ -546,3 +546,25 @@ html,body{max-width:100%;overflow-x:clip}
 
 /* Add visible editorial slant to Lora Italic without changing font family or line breaks. */
 .ma-page .ma-statement .ma-statement-lines span{transform:skewX(-6deg);transform-origin:left center}
+
+/* Accessible and visibly bounded password field on case-study pages. */
+.case-page .protected-lock form{width:min(100%,480px);max-width:480px;margin:32px auto 0;text-align:left}
+.case-page .protected-lock form>div{display:flex;align-items:stretch;gap:10px;width:100%}
+.case-page .protected-lock input[type="password"]{
+  appearance:none;-webkit-appearance:none;display:block;visibility:visible;
+  flex:1 1 auto;width:100%;min-width:0;min-height:48px;
+  padding:12px 14px;border:1px solid #aaa9a4;border-radius:0;
+  background:#fff;color:#292823;font:400 16px/1.4 Arial,sans-serif;
+  opacity:1;box-shadow:none;
+}
+.case-page .protected-lock input[type="password"]:focus-visible{
+  outline:2px solid #44463f;outline-offset:2px;
+}
+.case-page .protected-lock button[type="submit"]{
+  flex:0 0 auto;min-height:48px;padding:0 23px;cursor:pointer;
+}
+.case-page .protected-lock .form-error:not([hidden]){display:block;margin-top:12px}
+@media(max-width:500px){
+  .case-page .protected-lock form>div{flex-direction:column}
+  .case-page .protected-lock button[type="submit"]{min-height:48px}
+}
